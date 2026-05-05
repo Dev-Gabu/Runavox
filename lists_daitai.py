@@ -130,6 +130,49 @@ personagens_daitai = {
         }
     },
 
+    "Lidane Kurogane": {
+        "Titulo": "",
+        "Raça": "Bestial",
+        "Nivel": 7         ,
+        "Elementos": ["Aero","Electro","Umbra","Piro"],
+        "Especializacao": "Conjuração",
+        "Foto": "pp/lidane.jpg",
+
+        "Atributos": {
+            "FOR": 8,
+            "INT": 7,
+            "DES": 10,
+            "RES": 6,
+            "VON": 6
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 3, 
+            "Briga": 2,
+            "Linguística": 1, 
+            "Magia Teórica": 0, 
+            "Natureza": 0,
+            "Furtividade": 4, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 1, 
+            "Resiliência": 0, 
+            "Recuperação": 0,
+            "Liderança": 0, 
+            "Intimidação": 0, 
+            "Negociação": 0, 
+            "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Instinto Selvagem": "Uma vez por descanso longo, pode ativar uma forma híbrida. Por um minuto, recebe +2 FOR e +2 DES e Vantagem em testes de Faro e Percepção.",
+            "Natureza Primordial": "Sua forma mágica é inconstante. Ao rolar um 1 natural em um Teste de Habilidade, ele perde a concentração e sofre Desvantagem no próximo teste.",
+            "Faro Apurado": "Tem um faro sensível, recebe vantagem em percepção usando o olfato.",
+            "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA)."
+        }
+    }
+
     # "": {
     #     "Titulo": "",
     #     "Raça": "",
