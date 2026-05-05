@@ -67,7 +67,18 @@ def mostrar_ficha_daitai():
     at = p["Atributos"]
     
     # Grid de Atributos (Oficiais do Daitai Sunpo: FOR, INT, DES, RES, VON)
-    col_at1, col_at2, col_at3, col_at4, col_at5 = st.columns(5)
+    col_at1, col_at2, col_at3, col_at4, col_at5, col_btn1 = st.columns(6)
+
+    with col_btn1:
+        # Botão estilo Popover (abre uma janelinha por cima)
+        with st.popover("Ver Perícias"):
+            st.markdown(f"### Perícias de {char_sel}")
+            df_pericias = renderizar_pericias(p)
+            
+            # Exibe a tabela sem o índice lateral para ficar mais limpo
+            st.table(df_pericias)
+            
+            st.caption("Ponto de Perícia (PP) investido conforme o Nível.")
     
     atributos_lista = [
         (col_at1, "FOR", at["FOR"]),
@@ -98,31 +109,8 @@ def mostrar_ficha_daitai():
 
     st.divider()
 
-    # Colunas para organizar botões de utilitários
-    col_btn1, col_btn2 , col_btn3 = st.columns([1, 2, 3])
-
-    with col_btn1:
-        # Botão estilo Popover (abre uma janelinha por cima)
-        with st.popover("Ver Perícias"):
-            st.markdown(f"### Perícias de {char_sel}")
-            df_pericias = renderizar_pericias(p)
-            
-            # Exibe a tabela sem o índice lateral para ficar mais limpo
-            st.table(df_pericias)
-            
-            st.caption("Ponto de Perícia (PP) investido conforme o Nível.")
-
-    with col_btn2:
-        # Exemplo de outro botão utilitário que você pode querer futuramente
-        if st.button("Rolar Iniciativa"):
-            iniciativa = random.randint(1, 20) + get_mod(p["Atributos"]["DES"])
-            st.info(f"Resultado da Iniciativa: **{iniciativa}**")
-
-    with col_btn3:
-        # Exemplo de outro botão utilitário que você pode querer futuramente
-        if st.button("Ver Talentos"):
-            st.info(f"Talentos de {char_sel}:")
-            df_talentos = renderizar_talentos(p)
-            st.table(df_talentos)
+    st.info(f"Talentos de {char_sel}:")
+    df_talentos = renderizar_talentos(p)
+    st.table(df_talentos)
 
 mostrar_ficha_daitai()
