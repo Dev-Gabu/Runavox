@@ -1,5 +1,28 @@
 import streamlit as st
-from lists_daitai import personagens_daitai, get_rank, get_mod
+import pandas as pd
+from lists_daitai import personagens_daitai, get_rank, get_mod, MAPA_PERICIAS
+import random
+
+def renderizar_pericias(p):
+    """Gera os dados da tabela de perícias"""
+    dados_tabela = []
+    pericias_investidas = p.get("Pericias_Investidas", {})
+    atributos = p["Atributos"]
+
+    for pericia, atr_base in MAPA_PERICIAS.items():
+        mod_base = get_mod(atributos[atr_base])
+        pp_investidos = pericias_investidas.get(pericia, 0)
+        total = mod_base + pp_investidos
+        
+        # Formatação solicitada: Valor Total (Destaque nos Pontos Investidos)
+        destaque = f"{total} (+{pp_investidos} PP)" if pp_investidos > 0 else f"{total}"
+        
+        dados_tabela.append({
+            "Perícia": pericia,
+            "Atributo Base": atr_base,
+            "Modificador Total": destaque
+        })
+    return pd.DataFrame(dados_tabela)
 
 def mostrar_ficha_daitai():
     st.title("Academia Daitai Sunpo - Registro de Magos")
@@ -16,6 +39,7 @@ def mostrar_ficha_daitai():
     with col_info:
         st.header(char_sel)
         st.subheader(f"*{p['Titulo']}*")
+        st.subheader(f"*{p['Raça']}*")
         
         # Linha de Status (Nível e Rank)
         c1, c2, c3 = st.columns(3)
@@ -66,5 +90,28 @@ def mostrar_ficha_daitai():
     d1.metric("Pontos de Vida (PV)", pv_max)
     d2.metric("Pontos de Mana (PM)", pm_max)
     d3.metric("Defesa (PA)", pa_base)
+
+    st.divider()
+
+    # Colunas para organizar botões de utilitários
+    col_btn1, col_btn2 = st.columns([1, 2])
+
+    with col_btn1:
+        # Botão estilo Popover (abre uma janelinha por cima)
+        with st.popover("📜 Ver Perícias"):
+            st.markdown(f"### Perícias de {char_sel}")
+            df_pericias = renderizar_pericias(p)
+            
+            # Exibe a tabela sem o índice lateral para ficar mais limpo
+            st.table(df_pericias)
+            
+            st.caption("Ponto de Perícia (PP) investido conforme o Nível.")
+
+    with col_btn2:
+        # Exemplo de outro botão utilitário que você pode querer futuramente
+        if st.button("🎲 Rolar Iniciativa"):
+            iniciativa = random.randint(1, 20) + get_mod(p["Atributos"]["DES"])
+            st.info(f"Resultado da Iniciativa: **{iniciativa}**")
+
 
 mostrar_ficha_daitai()
