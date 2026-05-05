@@ -42,7 +42,134 @@ personagens_daitai = {
             "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
 
         }
-    }
+    },
+
+    "Hugo Antonelli Roux": {
+        "Titulo": "",
+        "Raça": "Elfo",
+        "Nivel": 6,
+        "Elementos": ["Aero", "Electro", "Vibro","Hidro"],
+        "Especializacao": "Conjuração",
+        "Foto": "pp/hugo.jpg",
+
+        "Atributos": {
+            "FOR": 2,
+            "INT": 14,
+            "DES": 7,
+            "RES": 6,
+            "VON": 12
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 0, 
+            "Briga": 0,
+            "Linguística": 1, 
+            "Magia Teórica": 2, 
+            "Natureza": 1,
+            "Furtividade": 0, 
+            "Pontaria": 1, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 0, 
+            "Resiliência": 1, 
+            "Recuperação": 1,
+            "Liderança": 0, 
+            "Intimidação": 0, 
+            "Negociação": 1, 
+            "Meditação": 1
+        },
+
+        "Talentos" : {
+            "Ventos Uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+            "Inteligência Aprimorada": "+2 em Inteligência",
+            "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%."
+        }
+    },
+
+    "Nana": {
+        "Titulo": "",
+        "Raça": "Bestial",
+        "Nivel": 3         ,
+        "Elementos": ["Geo","Fito"],
+        "Especializacao": "Magia Marcial",
+        "Foto": "pp/nana.jpg",
+
+        "Atributos": {
+            "FOR": 10,
+            "INT": 6,
+            "DES": 8,
+            "RES": 8,
+            "VON": 6
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 1, 
+            "Briga": 2,
+            "Linguística": 0, 
+            "Magia Teórica": 0, 
+            "Natureza": 1,
+            "Furtividade": 0, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 2, 
+            "Resiliência": 0, 
+            "Recuperação": 0,
+            "Liderança": 0, 
+            "Intimidação": 0, 
+            "Negociação": 0, 
+            "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Instinto Selvagem": "Uma vez por descanso longo, pode ativar uma forma híbrida. Por um minuto, recebe +2 FOR e +2 DES e Vantagem em testes de Faro e Percepção.",
+            "Natureza Primordial": "Sua forma mágica é inconstante. Ao rolar um 1 natural em um Teste de Habilidade, ele perde a concentração e sofre Desvantagem no próximo teste.",
+            "Afinidade Espiritual": "Você tem Vantagem (+1d6) em testes que envolvam interações espirituais",
+            "Atleta Arcano": "+2 em Destreza",
+            "Força Aprimorada": "+2 em Força"
+        }
+    },
+
+    # "": {
+    #     "Titulo": "",
+    #     "Raça": "",
+    #     "Nivel": 0         ,
+    #     "Elementos": [""],
+    #     "Especializacao": "",
+    #     "Foto": "pp/.jpg",
+
+    #     "Atributos": {
+    #         "FOR": 10,
+    #         "INT": 6,
+    #         "DES": 8,
+    #         "RES": 8,
+    #         "VON": 6
+    #     },
+
+    #     "Pericias_Investidas": {
+    #         "Atletismo": 0, 
+    #         "Briga": 0,
+    #         "Linguística": 0, 
+    #         "Magia Teórica": 0, 
+    #         "Natureza": 0,
+    #         "Furtividade": 0, 
+    #         "Pontaria": 0, 
+    #         "Prestididitação": 0, 
+    #         "Montaria": 0,
+    #         "Fortitude": 0, 
+    #         "Resiliência": 0, 
+    #         "Recuperação": 0,
+    #         "Liderança": 0, 
+    #         "Intimidação": 0, 
+    #         "Negociação": 0, 
+    #         "Meditação": 0
+    #     },
+
+    #     "Talentos" : {
+    #         "": ""
+    #     }
+    # }
+
 }
 
 def get_rank(nivel):
