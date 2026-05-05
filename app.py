@@ -95,6 +95,7 @@ def mostrar_ficha_daitai():
 
     # Valores Derivados Automáticos[cite: 3]
     st.markdown("---")
+    st.markdown("### Atributos Derivados")
     res_mod = get_mod(at["RES"])
     von_mod = get_mod(at["VON"])
     
@@ -108,8 +109,7 @@ def mostrar_ficha_daitai():
     d3.metric("Defesa (PA)", pa_base)
 
     st.divider()
-
-    st.info(f"Talentos de {char_sel}:")
+    st.markdown(f"### Talentos de {char_sel}:")
     df_talentos = renderizar_talentos(p)
     st.table(df_talentos)
 

@@ -5,13 +5,13 @@ personagens_daitai = {
         "Titulo": "O Açougueiro Infernal",
         "Raça": "Demônio",
         "Nivel": 6,
-        "Elementos": ["Piro", "Metalo", "Umbra"], # Nível 6 libera 2º Primário
+        "Elementos": ["Piro", "Metalo", "Umbra"],
         "Especializacao": "Conjuração",
         "Foto": "pp/zefiro.jpg",
 
         "Atributos": {
-            "FOR": 6,
-            "INT": 8,
+            "FOR": 7,
+            "INT": 10,
             "DES": 6,
             "RES": 6,
             "VON": 9
@@ -37,8 +37,10 @@ personagens_daitai = {
         },
 
         "Talentos" : {
-            "Chama Eterna": "Aumenta o dano de magias de fogo em 20%.",
-            "Resistência Demoníaca": "Reduz dano recebido de ataques físicos em 10%."
+            "Fúria Demoníaca": " Ativável com <50% PV. Recebe +2 em FOR e INT, mas sofre −3 em RES.",
+            "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
+            "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
+
         }
     }
 }
