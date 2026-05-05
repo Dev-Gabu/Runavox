@@ -23,6 +23,12 @@ def renderizar_pericias(p):
         })
     return pd.DataFrame(dados_tabela)
 
+def renderizar_talentos(p):
+    """Gera os dados da tabela de talentos"""
+    talentos = p.get("Talentos", {})
+    dados_tabela = [{"Talento": nome, "Descrição": desc} for nome, desc in talentos.items()]
+    return pd.DataFrame(dados_tabela)
+
 def mostrar_ficha_daitai():
     st.title("Academia Daitai Sunpo - Registro de Magos")
     
@@ -93,11 +99,11 @@ def mostrar_ficha_daitai():
     st.divider()
 
     # Colunas para organizar botões de utilitários
-    col_btn1, col_btn2 = st.columns([1, 2])
+    col_btn1, col_btn2 , col_btn3 = st.columns([1, 2, 3])
 
     with col_btn1:
         # Botão estilo Popover (abre uma janelinha por cima)
-        with st.popover("📜 Ver Perícias"):
+        with st.popover("Ver Perícias"):
             st.markdown(f"### Perícias de {char_sel}")
             df_pericias = renderizar_pericias(p)
             
@@ -108,9 +114,15 @@ def mostrar_ficha_daitai():
 
     with col_btn2:
         # Exemplo de outro botão utilitário que você pode querer futuramente
-        if st.button("🎲 Rolar Iniciativa"):
+        if st.button("Rolar Iniciativa"):
             iniciativa = random.randint(1, 20) + get_mod(p["Atributos"]["DES"])
             st.info(f"Resultado da Iniciativa: **{iniciativa}**")
 
+    with col_btn3:
+        # Exemplo de outro botão utilitário que você pode querer futuramente
+        if st.button("Ver Talentos"):
+            st.info(f"Talentos de {char_sel}:")
+            df_talentos = renderizar_talentos(p)
+            st.table(df_talentos)
 
 mostrar_ficha_daitai()

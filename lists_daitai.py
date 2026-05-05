@@ -34,6 +34,11 @@ personagens_daitai = {
             "Intimidação": 0, 
             "Negociação": 0, 
             "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Chama Eterna": "Aumenta o dano de magias de fogo em 20%.",
+            "Resistência Demoníaca": "Reduz dano recebido de ataques físicos em 10%."
         }
     }
 }
