@@ -18,22 +18,22 @@ personagens_daitai = {
         },
 
         "Pericias_Investidas": {
-            "Atletismo": "0", 
-            "Briga": "0",
-            "Linguística": "1", 
-            "Magia Teórica": "2", 
-            "Natureza": "0",
-            "Furtividade": "0", 
-            "Pontaria": "2", 
-            "Prestididitação": "0", 
-            "Montaria": "0",
-            "Fortitude": "0", 
-            "Resiliência": "1", 
-            "Recuperação": "0",
-            "Liderança": "0", 
-            "Intimidação": "0", 
-            "Negociação": "0", 
-            "Meditação": "0"
+            "Atletismo": 0, 
+            "Briga": 0,
+            "Linguística": 1, 
+            "Magia Teórica": 2, 
+            "Natureza": 0,
+            "Furtividade": 0, 
+            "Pontaria": 2, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 0, 
+            "Resiliência": 1, 
+            "Recuperação": 0,
+            "Liderança": 0, 
+            "Intimidação": 0, 
+            "Negociação": 0, 
+            "Meditação": 0
         }
     }
 }

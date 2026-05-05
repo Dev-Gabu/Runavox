@@ -14,7 +14,6 @@ def renderizar_pericias(p):
         pp_investidos = pericias_investidas.get(pericia, 0)
         total = mod_base + pp_investidos
         
-        # Formatação solicitada: Valor Total (Destaque nos Pontos Investidos)
         destaque = f"{total} (+{pp_investidos} PP)" if pp_investidos > 0 else f"{total}"
         
         dados_tabela.append({
