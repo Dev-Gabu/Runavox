@@ -171,6 +171,49 @@ personagens_daitai = {
             "Faro Apurado": "Tem um faro sensível, recebe vantagem em percepção usando o olfato.",
             "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA)."
         }
+    },
+
+     "Jade Rascki": {
+        "Titulo": "",
+        "Raça": "Vampiro",
+        "Nivel": 3         ,
+        "Elementos": ["Hidro", "Crio"],
+        "Especializacao": "",
+        "Foto": "pp/jade.jpg",
+
+        "Atributos": {
+            "FOR": 4,
+            "INT": 10,
+            "DES": 6,
+            "RES": 5,
+            "VON": 8
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 0, 
+            "Briga": 0,
+            "Linguística": 1, 
+            "Magia Teórica": 3, 
+            "Natureza": 0,
+            "Furtividade": 0, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 0, 
+            "Resiliência": 0, 
+            "Recuperação": 0,
+            "Liderança": 1, 
+            "Intimidação": 0, 
+            "Negociação": 0, 
+            "Meditação": 2
+        },
+
+        "Talentos" : {
+            "Sede de Mana": "Uma vez por combate, ao causar dano a uma criatura viva, recupera 1d4 PM (Pontos de Mana).",
+            "Fragilidade Solar": "Enquanto estiver sob luz solar direta, sofre Desvantagem em todos os Testes de Resistência e Vontade.",
+            "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
+            "Rastreador Mágico": "Tem vantagem em testes de detecção mágica"
+        }
     }
 
     # "": {
