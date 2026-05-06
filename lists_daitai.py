@@ -63,26 +63,26 @@ personagens_daitai = {
                 "Quantidade": 1
                 },
                 {
-                "Nome": "", 
+                "Nome": "Peitoral Iniciante", 
                 "Tipo": "Peitoral", 
-                "Descrição": "",
+                "Descrição": "+5 HP.",
                 "Quantidade": 1
                 },
                 {
-                "Nome": "", 
+                "Nome": "Calça Iniciante", 
                 "Tipo": "Calça", 
+                "Descrição": "+3 HP.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Bota", 
                 "Descrição": "",
                 "Quantidade": 1
                 },
                 {
                 "Nome": "", 
-                "Tipo": "Botas", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "", 
-                "Tipo": "Luvas", 
+                "Tipo": "Luva", 
                 "Descrição": "",
                 "Quantidade": 1
                 },
@@ -93,48 +93,31 @@ personagens_daitai = {
                 "Quantidade": 1
                 },
                 {
-                "Nome": "", 
+                "Nome": "Anel Arcano", 
                 "Tipo": "Acessório", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "", 
-                "Tipo": "Acessório", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "", 
-                "Tipo": "Colar", 
-                "Descrição": "",
-                "Quantidade": 1
-            }
-        ],
-
-        "Inventario": [
-            {
-                "Nome": "Catalizador de Essência", 
-                "Tipo": "Artefato", 
-                "Descrição": "Permite ao usuário armazenar e utilizar a alma de uma criatura para realizar um mimitismo bestial.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Machado Rústico", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+2 em dano corpo a corpo, +4 em inimigos de madeira.",
-                "Quantidade": 1
+                "Descrição": "+20 PM.",
+                "Quantidade": 2
                 },
                 {
                 "Nome": "Receptáculo da Piromania", 
-                "Tipo": "Artefato", 
+                "Tipo": "Acessório", 
                 "Descrição": "A cada três feitiços do elemento Piro, aumenta dano do próximo em 50%.",
                 "Quantidade": 1
                 },
                 {
-                "Nome": "Punhal Atordoante", 
+                "Nome": "Catalizador de Essência", 
+                "Tipo": "Colar", 
+                "Descrição": "Permite ao usuário armazenar e utilizar a alma de uma criatura para realizar um mimitismo bestial.",
+                "Quantidade": 1
+                },
+        ],
+
+        "Inventario": [
+            
+                {
+                "Nome": "Machado Rústico", 
                 "Tipo": "Equipamento", 
-                "Descrição": "A cada dois ataques bem-sucedidos, o alvo fica atordoado.",
+                "Descrição": "+2 em dano corpo a corpo, +4 em inimigos de madeira.",
                 "Quantidade": 1
                 },
                 {
@@ -150,27 +133,9 @@ personagens_daitai = {
                 "Quantidade": 1
                 },
                 {
-                "Nome": "Anel Arcano", 
-                "Tipo": "Artefato", 
-                "Descrição": "+20 PM.",
-                "Quantidade": 2
-                },
-                {
                 "Nome": "Anel magico", 
                 "Tipo": "Artefato", 
                 "Descrição": "+10 PM.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Calça Iniciante", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+3 HP.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Peitoral Iniciante", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+5 HP.",
                 "Quantidade": 1
                 },
                 {
