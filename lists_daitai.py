@@ -38,6 +38,7 @@ personagens_daitai = {
 
         "Talentos" : {
             "Fúria Demoníaca": " Ativável com <50% PV. Recebe +2 em FOR e INT, mas sofre −3 em RES.",
+            "A Alpha" : "Possui vantagem em interações com criaturas da categoria lupino, suas invocações lupinas recebem +2 em dano de ataques.",
             "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
             "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
 

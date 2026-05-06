@@ -30,7 +30,7 @@ def renderizar_talentos(p):
     return pd.DataFrame(dados_tabela)
 
 def mostrar_inventario(p):
-    st.markdown("###Inventário")
+    st.markdown("### Inventário")
     
     inventario = p.get("Inventario", [])
     
