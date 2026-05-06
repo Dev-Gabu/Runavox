@@ -41,7 +41,82 @@ personagens_daitai = {
             "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
             "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
 
-        }
+        },
+
+        "Inventario": [
+            {
+                "Nome": "Catalizador de Essência", 
+                "Tipo": "Artefato", 
+                "Descrição": "Permite ao usuário armazenar e utilizar a alma de uma criatura para realizar um mimitismo bestial.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Machado Rústico", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 em dano corpo a corpo, +4 em inimigos de madeira.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Receptáculo da Piromania", 
+                "Tipo": "Artefato", 
+                "Descrição": "A cada três feitiços do elemento Piro, aumenta dano do próximo em 50%.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Punhal Atordoante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "A cada dois ataques bem-sucedidos, o alvo fica atordoado.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Lança Rústica [Excelente]", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 dano corpo a corpo.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Lança Rústica", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 dano corpo a corpo.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Arcano", 
+                "Tipo": "Artefato", 
+                "Descrição": "+20 PM.",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "Anel magico", 
+                "Tipo": "Artefato", 
+                "Descrição": "+10 PM.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Calça Iniciante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+3 HP.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Peitoral Iniciante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+5 HP.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Projeto de Lança", 
+                "Tipo": "Consumivel", 
+                "Descrição": "Permite ao usuário criar [Lança Rústica].",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Presa de Batrogon", 
+                "Tipo": "Material", 
+                "Descrição": "A presa caída de um Batrogon.",
+                "Quantidade": 1
+                },
+        ],
     },
 
     "Hugo Antonelli Roux": {
@@ -83,7 +158,14 @@ personagens_daitai = {
             "Ventos Uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
             "Inteligência Aprimorada": "+2 em Inteligência",
             "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%."
-        }
+        },
+        "Inventario": [{
+            "Nome": "", 
+            "Tipo": "", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            ]
     },
 
     "Nana": {
@@ -127,7 +209,14 @@ personagens_daitai = {
             "Afinidade Espiritual": "Você tem Vantagem (+1d6) em testes que envolvam interações espirituais",
             "Atleta Arcano": "+2 em Destreza",
             "Força Aprimorada": "+2 em Força"
-        }
+        },
+        "Inventario": [{
+            "Nome": "", 
+            "Tipo": "", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            ]
     },
 
     "Lidane Kurogane": {
@@ -170,7 +259,14 @@ personagens_daitai = {
             "Natureza Primordial": "Sua forma mágica é inconstante. Ao rolar um 1 natural em um Teste de Habilidade, ele perde a concentração e sofre Desvantagem no próximo teste.",
             "Faro Apurado": "Tem um faro sensível, recebe vantagem em percepção usando o olfato.",
             "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA)."
-        }
+        },
+        "Inventario": [{
+            "Nome": "", 
+            "Tipo": "", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            ]
     },
 
      "Jade Rascki": {
@@ -213,8 +309,117 @@ personagens_daitai = {
             "Fragilidade Solar": "Enquanto estiver sob luz solar direta, sofre Desvantagem em todos os Testes de Resistência e Vontade.",
             "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
             "Rastreador Mágico": "Tem vantagem em testes de detecção mágica"
-        }
+        },
+        "Inventario": [{
+            "Nome": "", 
+            "Tipo": "", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            ]
+    },
+
+    "Akira Riri": {
+        "Titulo": "",
+        "Raça": "Elfo",
+        "Nivel": 9,
+        "Elementos": ["Piro, Metalo, Hidro e Crio"],
+        "Especializacao": "Conjuração",
+        "Foto": "pp/akira.jpg",
+
+        "Atributos": {
+            "FOR": 7,
+            "INT": 7,
+            "DES": 10,
+            "RES": 7,
+            "VON": 11
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 2, 
+            "Briga": 1,
+            "Linguística": 0, 
+            "Magia Teórica": 0, 
+            "Natureza": 2,
+            "Furtividade": 3, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 1, 
+            "Resiliência": 1, 
+            "Recuperação": 0,
+            "Liderança": 2, 
+            "Intimidação": 1, 
+            "Negociação": 0, 
+            "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Ventos Uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+            "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA).",
+            "Mente Blindada": "+2 VON",
+        },
+    "Inventario": [{
+                "Nome": "", 
+                "Tipo": "", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+               ]
+    },
+    
+    "Amara Sardothien": {
+        "Titulo": "A Alpha",
+        "Raça": "Demônio",
+        "Nivel": 4,
+        "Elementos": ["Piro", "Metalo"],
+        "Especializacao": "Invocação",
+        "Foto": "pp/amara.jpg",
+
+        "Atributos": {
+            "FOR": 6,
+            "INT": 11,
+            "DES": 7,
+            "RES": 3,
+            "VON": 10
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 0, 
+            "Briga": 0,
+            "Linguística": 0, 
+            "Magia Teórica": 3, 
+            "Natureza": 0,
+            "Furtividade": 0, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 0, 
+            "Resiliência": 1, 
+            "Recuperação": 0,
+            "Liderança": 2, 
+            "Intimidação": 2, 
+            "Negociação": 0, 
+            "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Fúria Demoníaca": " Ativável com <50% PV. Recebe +2 em FOR e INT, mas sofre −3 em RES.",
+            "Mente Blindada": "+2 VON",
+            "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
+
+        },
+    "Inventario": [{
+                "Nome": "", 
+                "Tipo": "", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+               ]
     }
+    
+
+}
 
     # "": {
     #     "Titulo": "",
@@ -253,10 +458,16 @@ personagens_daitai = {
 
     #     "Talentos" : {
     #         "": ""
-    #     }
+    #     },
+    # "Inventario": [{
+    #             "Nome": "", 
+    #             "Tipo": "", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #            ]
     # }
 
-}
 
 def get_rank(nivel):
     if nivel >= 12: return "Rank A/S"
@@ -275,4 +486,11 @@ MAPA_PERICIAS = {
     "Furtividade": "DES", "Pontaria": "DES", "Prestididitação": "DES", "Montaria": "DES",
     "Fortitude": "RES", "Resiliência": "RES", "Recuperação": "RES",
     "Liderança": "VON", "Intimidação": "VON", "Negociação": "VON", "Meditação": "VON"
+}
+
+ICON_MAP = {
+    "Equipamento": "assets/equipamento.png",
+    "Consumivel": "assets/consumivel.png",
+    "Artefato": "assets/artefato.png",
+    "Material": "assets/material.png"
 }

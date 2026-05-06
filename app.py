@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from lists_daitai import personagens_daitai, get_rank, get_mod, MAPA_PERICIAS
+from lists_daitai import ICON_MAP, personagens_daitai, get_rank, get_mod, MAPA_PERICIAS
 import random
 
 def renderizar_pericias(p):
@@ -29,11 +29,49 @@ def renderizar_talentos(p):
     dados_tabela = [{"Talento": nome, "Descrição": desc} for nome, desc in talentos.items()]
     return pd.DataFrame(dados_tabela)
 
+def mostrar_inventario(p):
+    st.markdown("###Inventário")
+    
+    inventario = p.get("Inventario", [])
+    
+    if not inventario:
+        st.info("O inventário está vazio.")
+        return
+
+    for item in inventario:
+        # Lógica do ícone conforme o tipo
+        icon_path = ICON_MAP.get(item["tipo"], "img/default.png")
+        
+        # Criar a linha do item usando colunas para alinhar ícone e botão
+        col_icon, col_btn = st.columns([1, 10])
+        
+        with col_icon:
+            try:
+                st.image(icon_path, width=30)
+            except:
+                st.write("📦") # Fallback caso a imagem não exista
+
+        with col_btn:
+            # Popover atua como a janela de detalhes ao clicar
+            with st.popover(f"{item['nome']} (x{item['quantidade']})", use_container_width=True):
+                st.markdown(f"**Nome:** {item['nome']}")
+                st.markdown(f"**Tipo:** {item['tipo']}")
+                st.markdown(f"**Quantidade:** {item['quantidade']}")
+                st.divider()
+                st.markdown(f"**Descrição:**\n{item['descricao']}")
+                
+                # Botão de uso rápido (Opcional)
+                if item["tipo"] == "Consumivel":
+                    if st.button(f"Usar {item['nome']}", key=f"use_{item['nome']}"):
+                        st.toast(f"Você usou {item['nome']}!")
+
 def mostrar_ficha_daitai():
     st.title("Academia Daitai Sunpo - Registro de Magos")
     
     char_sel = st.selectbox("Selecione o Personagem", list(personagens_daitai.keys()))
     p = personagens_daitai[char_sel]
+    
+    st.divider()
     
     # Cabeçalho da Ficha
     col_foto, col_info = st.columns([1, 3])
@@ -112,5 +150,8 @@ def mostrar_ficha_daitai():
     st.markdown(f"### Talentos de {char_sel}:")
     df_talentos = renderizar_talentos(p)
     st.table(df_talentos)
+
+    st.divider()
+    mostrar_inventario(p)
 
 mostrar_ficha_daitai()
