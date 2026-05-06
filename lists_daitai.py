@@ -193,13 +193,77 @@ personagens_daitai = {
             "Inteligência Aprimorada": "+2 em Inteligência",
             "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%."
         },
+
+        "Equipamento" : [
+                {
+                "Nome": "Lança Rústica", 
+                "Tipo": "Arma", 
+                "Descrição": "+2 dano corpo a corpo.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "",
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Peitoral", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Calça", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Bota", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Luva", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capa", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Arcano", 
+                "Tipo": "Acessório", 
+                "Descrição": "+20 PM.",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "Anel Mágico [Bom]", 
+                "Tipo": "Acessório", 
+                "Descrição": "+15 PM.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Colar", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+        ],
+
         "Inventario": [
-            {
-            "Nome": "Lança Rústica", 
-            "Tipo": "Equipamento", 
-            "Descrição": "+2 dano corpo a corpo.",
-            "Quantidade": 1
-            },
             {
             "Nome": "Anel Mágico", 
             "Tipo": "Equipamento", 
@@ -212,12 +276,7 @@ personagens_daitai = {
             "Descrição": "+15 MP",
             "Quantidade": 2
             },
-            {
-            "Nome": "Anel Arcano", 
-            "Tipo": "Equipamento", 
-            "Descrição": "+20 MP",
-            "Quantidade": 1
-            },
+            
         ]
     },
 
@@ -263,13 +322,78 @@ personagens_daitai = {
             "Atleta Arcano": "+2 em Destreza",
             "Força Aprimorada": "+2 em Força"
         },
-        "Inventario": [
-            {
+
+        "Equipamento" : [
+                {
                 "Nome": "Clava Rústica", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Arma", 
                 "Descrição": "+4 dano corpo a corpo.",
                 "Quantidade": 1
                 },
+                {
+                "Nome": "",
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Peitoral", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Calça", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Bota", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Luva", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capa", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Colar", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+        ],
+
+        "Inventario": [
+            
             ]
     },
 
@@ -314,41 +438,79 @@ personagens_daitai = {
             "Faro Apurado": "Tem um faro sensível, recebe vantagem em percepção usando o olfato.",
             "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA)."
         },
-        "Inventario": [
-            {
+        "Equipamento" : [
+                {
                 "Nome": "Lança Rústica [Excelente]", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Arma", 
                 "Descrição": "+4 dano corpo a corpo.",
                 "Quantidade": 1
                 },
                 {
-                "Nome": "Anel Arcano [Excelente]", 
-                "Tipo": "Artefato", 
-                "Descrição": "+40 PM.",
+                "Nome": "",
+                "Tipo": "Arma", 
+                "Descrição": "",
                 "Quantidade": 1
                 },
                 {
-                "Nome": "Anel Arcano", 
-                "Tipo": "Artefato", 
-                "Descrição": "+20 PM.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Anel magico", 
-                "Tipo": "Artefato", 
-                "Descrição": "+10 PM.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Capa Iniciante", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+2 HP.",
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
                 "Quantidade": 1
                 },
                 {
                 "Nome": "Peitoral Iniciante", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Peitoral", 
                 "Descrição": "+5 HP.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Calça", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Bota", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Luva", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Capa Iniciante", 
+                "Tipo": "Capa", 
+                "Descrição": "+2 HP.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Arcano [Excelente]", 
+                "Tipo": "Acessório", 
+                "Descrição": "+40 PM.",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "Anel Arcano", 
+                "Tipo": "Acessório", 
+                "Descrição": "+20 PM.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Colar", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+        ],
+        "Inventario": [
+                {
+                "Nome": "Anel magico", 
+                "Tipo": "Artefato", 
+                "Descrição": "+10 PM.",
                 "Quantidade": 1
                 },
             ]
@@ -395,12 +557,7 @@ personagens_daitai = {
             "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
             "Rastreador Mágico": "Tem vantagem em testes de detecção mágica"
         },
-        "Inventario": [{
-            "Nome": "", 
-            "Tipo": "", 
-            "Descrição": "",
-            "Quantidade": 1
-            },
+        "Inventario": [
             ]
     },
 
@@ -444,71 +601,81 @@ personagens_daitai = {
             "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA).",
             "Mente Blindada": "+2 VON",
         },
-    "Inventario": [{
-                "Nome": "Clava Rústica", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+4 dano corpo a corpo.",
-                "Quantidade": 1
-                },
+
+        "Equipamento" : [
                 {
                 "Nome": "Lança Rústica", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Arma", 
                 "Descrição": "+2 dano corpo a corpo.",
                 "Quantidade": 1
                 },
                 {
                 "Nome": "Punhal Atordoante", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Arma", 
                 "Descrição": "A cada dois ataques bem-sucedidos, o alvo fica atordoado.",
                 "Quantidade": 1
                 },
                 {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
                 "Nome": "Peitoral Simples", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Peitoral", 
                 "Descrição": "+10 HP",
                 "Quantidade": 1
                 },
                 {
                 "Nome": "Calça Simples", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Calça", 
                 "Descrição": "+6 HP",
                 "Quantidade": 1
                 },
                 {
                 "Nome": "Botas Simples", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Bota", 
                 "Descrição": "+4 HP",
                 "Quantidade": 1
                 },
                 {
                 "Nome": "Luvas Simples", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Luva", 
                 "Descrição": "+4 HP",
                 "Quantidade": 1
                 },
                 {
                 "Nome": "Capa Simples", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Capa", 
                 "Descrição": "+4 HP",
                 "Quantidade": 1
                 },
                 {
-                "Nome": "Cinto Iniciante", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+2 HP",
-                "Quantidade": 1
-                },
-                {
                 "Nome": "Anel Mágico", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Acessório", 
                 "Descrição": "+10 MP",
                 "Quantidade": 2
                 },
                 {
                 "Nome": "Anel Arcano", 
-                "Tipo": "Equipamento", 
+                "Tipo": "Acessório", 
                 "Descrição": "+20 MP",
                 "Quantidade": 2
+                },
+                {
+                "Nome": "Cinto Iniciante", 
+                "Tipo": "Colar", 
+                "Descrição": "+2 HP",
+                "Quantidade": 1
+                },
+        ],
+
+        "Inventario": [{
+                "Nome": "Clava Rústica", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 dano corpo a corpo.",
+                "Quantidade": 1
                 },
                 {
                 "Nome": "Poção Ignis", 
@@ -572,26 +739,77 @@ personagens_daitai = {
             "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
 
         },
-    "Inventario": [
-        {
-        "Nome": "Bracelete de Afrodite", 
-        "Tipo": "Artefato", 
-        "Descrição": "Quando ativado eleva muito o carisma do usuário, fazendo com que sua habilidade de persuasão e sedução aumente muito. O usuário recebe Vantagem (+1d6) em testes de perícias sociais.",
-        "Quantidade": 1
-        },
-        {
-        "Nome": "Lança Rústica", 
-        "Tipo": "Equipamento", 
-        "Descrição": "+2 dano corpo a corpo.",
-        "Quantidade": 1
-        },
-        {
-        "Nome": "Adaga Rústica", 
-        "Tipo": "Equipamento", 
-        "Descrição": "+2 dano corpo a corpo, +4 caso esteja furtivo.",
-        "Quantidade": 1
-        },
-            ]
+        "Equipamento" : [
+            {
+            "Nome": "Lança Rústica", 
+            "Tipo": "Arma", 
+            "Descrição": "+2 dano corpo a corpo.",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "Adaga Rústica", 
+            "Tipo": "Arma", 
+            "Descrição": "+2 dano corpo a corpo, +4 caso esteja furtivo.",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Capacete", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Peitoral", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Calça", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Bota", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Luva", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Capa", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "Bracelete de Afrodite", 
+            "Tipo": "Acessório", 
+            "Descrição": "Quando ativado eleva muito o carisma do usuário, fazendo com que sua habilidade de persuasão e sedução aumente muito. O usuário recebe Vantagem (+1d6) em testes de perícias sociais.",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Acessório", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Colar", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+        ],
+
+        "Inventario": [
+                ]
     }
     
 
@@ -635,6 +853,75 @@ personagens_daitai = {
     #     "Talentos" : {
     #         "": ""
     #     },
+
+    # "Equipamento" : [
+    #             {
+    #             "Nome": "Clava Rústica", 
+    #             "Tipo": "Arma", 
+    #             "Descrição": "+4 dano corpo a corpo.",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "",
+    #             "Tipo": "Arma", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Capacete", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Peitoral", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Calça", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Bota", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Luva", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Capa", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Acessório", 
+    #             "Descrição": "",
+    #             "Quantidade": 2
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Acessório", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Colar", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #     ],
     # "Inventario": [{
     #             "Nome": "", 
     #             "Tipo": "", 
@@ -674,8 +961,8 @@ ICON_MAP = {
     "Capacete" : "assets/capacete.png",
     "Peitoral": "assets/armaduras.png",
     "Calça": "assets/calca.png",
-    "Botas": "assets/botas.png",
-    "Luvas": "assets/luvas.png",
+    "Bota": "assets/bota.png",
+    "Luva": "assets/luva.png",
     "Capa": "assets/capa.png",
     "Acessório": "assets/anel.png",
     "Colar": "assets/colar.png",
