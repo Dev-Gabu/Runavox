@@ -40,7 +40,7 @@ def mostrar_inventario(p):
 
     for item in inventario:
         # Lógica do ícone conforme o tipo
-        icon_path = ICON_MAP.get(item["tipo"], "img/default.png")
+        icon_path = ICON_MAP.get(item["Tipo"], "assets/material.png")
         
         # Criar a linha do item usando colunas para alinhar ícone e botão
         col_icon, col_btn = st.columns([1, 10])
@@ -53,17 +53,17 @@ def mostrar_inventario(p):
 
         with col_btn:
             # Popover atua como a janela de detalhes ao clicar
-            with st.popover(f"{item['nome']} (x{item['quantidade']})", use_container_width=True):
-                st.markdown(f"**Nome:** {item['nome']}")
-                st.markdown(f"**Tipo:** {item['tipo']}")
-                st.markdown(f"**Quantidade:** {item['quantidade']}")
+            with st.popover(f"{item['Nome']} (x{item['Quantidade']})", use_container_width=True):
+                st.markdown(f"**Nome:** {item['Nome']}")
+                st.markdown(f"**Tipo:** {item['Tipo']}")
+                st.markdown(f"**Quantidade:** {item['Quantidade']}")
                 st.divider()
-                st.markdown(f"**Descrição:**\n{item['descricao']}")
+                st.markdown(f"**Descrição:**\n{item['Descrição']}")
                 
                 # Botão de uso rápido (Opcional)
-                if item["tipo"] == "Consumivel":
-                    if st.button(f"Usar {item['nome']}", key=f"use_{item['nome']}"):
-                        st.toast(f"Você usou {item['nome']}!")
+                if item["Tipo"] == "Consumivel":
+                    if st.button(f"Usar {item['Nome']}", key=f"use_{item['Nome']}"):
+                        st.toast(f"Você usou {item['Nome']}!")
 
 def mostrar_ficha_daitai():
     st.title("Academia Daitai Sunpo - Registro de Magos")
@@ -72,7 +72,7 @@ def mostrar_ficha_daitai():
     p = personagens_daitai[char_sel]
     
     st.divider()
-    
+
     # Cabeçalho da Ficha
     col_foto, col_info = st.columns([1, 3])
     
