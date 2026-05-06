@@ -160,13 +160,32 @@ personagens_daitai = {
             "Inteligência Aprimorada": "+2 em Inteligência",
             "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%."
         },
-        "Inventario": [{
-            "Nome": "", 
-            "Tipo": "", 
-            "Descrição": "",
+        "Inventario": [
+            {
+            "Nome": "Lança Rústica", 
+            "Tipo": "Equipamento", 
+            "Descrição": "+2 dano corpo a corpo.",
             "Quantidade": 1
             },
-            ]
+            {
+            "Nome": "Anel Mágico", 
+            "Tipo": "Equipamento", 
+            "Descrição": "+10 MP",
+            "Quantidade": 7
+            },
+            {
+            "Nome": "Anel Mágico [Bom]", 
+            "Tipo": "Equipamento", 
+            "Descrição": "+15 MP",
+            "Quantidade": 2
+            },
+            {
+            "Nome": "Anel Arcano", 
+            "Tipo": "Equipamento", 
+            "Descrição": "+20 MP",
+            "Quantidade": 1
+            },
+        ]
     },
 
     "Nana": {
@@ -211,12 +230,13 @@ personagens_daitai = {
             "Atleta Arcano": "+2 em Destreza",
             "Força Aprimorada": "+2 em Força"
         },
-        "Inventario": [{
-            "Nome": "", 
-            "Tipo": "", 
-            "Descrição": "",
-            "Quantidade": 1
-            },
+        "Inventario": [
+            {
+                "Nome": "Clava Rústica", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 dano corpo a corpo.",
+                "Quantidade": 1
+                },
             ]
     },
 
@@ -261,16 +281,47 @@ personagens_daitai = {
             "Faro Apurado": "Tem um faro sensível, recebe vantagem em percepção usando o olfato.",
             "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA)."
         },
-        "Inventario": [{
-            "Nome": "", 
-            "Tipo": "", 
-            "Descrição": "",
-            "Quantidade": 1
-            },
+        "Inventario": [
+            {
+                "Nome": "Lança Rústica [Excelente]", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 dano corpo a corpo.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Arcano [Excelente]", 
+                "Tipo": "Artefato", 
+                "Descrição": "+40 PM.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Arcano", 
+                "Tipo": "Artefato", 
+                "Descrição": "+20 PM.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel magico", 
+                "Tipo": "Artefato", 
+                "Descrição": "+10 PM.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Capa Iniciante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 HP.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Peitoral Iniciante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+5 HP.",
+                "Quantidade": 1
+                },
             ]
     },
 
-     "Jade Rascki": {
+    "Jade Rascki": {
         "Titulo": "",
         "Raça": "Vampiro",
         "Nivel": 3         ,
@@ -320,7 +371,7 @@ personagens_daitai = {
             ]
     },
 
-    "Akira Riri": {
+    "Akira Whitethorn": {
         "Titulo": "",
         "Raça": "Elfo",
         "Nivel": 9,
@@ -361,10 +412,88 @@ personagens_daitai = {
             "Mente Blindada": "+2 VON",
         },
     "Inventario": [{
-                "Nome": "", 
-                "Tipo": "", 
-                "Descrição": "",
+                "Nome": "Clava Rústica", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 dano corpo a corpo.",
                 "Quantidade": 1
+                },
+                {
+                "Nome": "Lança Rústica", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 dano corpo a corpo.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Punhal Atordoante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "A cada dois ataques bem-sucedidos, o alvo fica atordoado.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Peitoral Simples", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+10 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Calça Simples", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+6 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Botas Simples", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Luvas Simples", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Capa Simples", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Cinto Iniciante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Mágico", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+10 MP",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "Anel Arcano", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+20 MP",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "Poção Ignis", 
+                "Tipo": "Consumível", 
+                "Descrição": "Aumenta o dano de feitiços em 50% por dois turnos. Uma poção de coloração vermelha e que brilha como o fogo. Ao ser ingerida potencializa os ataques, porém arde como se o usuário tivesse comido a pior pimenta do mundo",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Frasco de Cura Menor", 
+                "Tipo": "Consumível", 
+                "Descrição": "Restaura 10 HP",
+                "Quantidade": 6
+                },
+                {
+                "Nome": "Frasco de Mana Menor", 
+                "Tipo": "Consumível", 
+                "Descrição": "Restaura 10 MP",
+                "Quantidade": 4
                 },
                ]
     },
@@ -410,13 +539,26 @@ personagens_daitai = {
             "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
 
         },
-    "Inventario": [{
-                "Nome": "", 
-                "Tipo": "", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-               ]
+    "Inventario": [
+        {
+        "Nome": "Bracelete de Afrodite", 
+        "Tipo": "Artefato", 
+        "Descrição": "Quando ativado eleva muito o carisma do usuário, fazendo com que sua habilidade de persuasão e sedução aumente muito. O usuário recebe Vantagem (+1d6) em testes de perícias sociais.",
+        "Quantidade": 1
+        },
+        {
+        "Nome": "Lança Rústica", 
+        "Tipo": "Equipamento", 
+        "Descrição": "+2 dano corpo a corpo.",
+        "Quantidade": 1
+        },
+        {
+        "Nome": "Adaga Rústica", 
+        "Tipo": "Equipamento", 
+        "Descrição": "+2 dano corpo a corpo, +4 caso esteja furtivo.",
+        "Quantidade": 1
+        },
+            ]
     }
     
 
