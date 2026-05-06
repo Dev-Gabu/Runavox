@@ -43,7 +43,7 @@ personagens_daitai = {
             "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
 
         },
-        "Equipamentos" : [
+        "Equipamento" : [
             {
                 "Nome": "Punhal Atordoante", 
                 "Tipo": "Arma", 
