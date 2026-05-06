@@ -43,6 +43,74 @@ personagens_daitai = {
             "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
 
         },
+        "Equipamentos" : [
+            {
+                "Nome": "Punhal Atordoante", 
+                "Tipo": "Arma", 
+                "Descrição": "A cada dois ataques bem-sucedidos, o alvo fica atordoado.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "",
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Peitoral", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Calça", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Botas", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Luvas", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capa", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Colar", 
+                "Descrição": "",
+                "Quantidade": 1
+            }
+        ],
 
         "Inventario": [
             {
@@ -635,5 +703,15 @@ ICON_MAP = {
     "Equipamento": "assets/equipamento.png",
     "Consumivel": "assets/consumivel.png",
     "Artefato": "assets/artefato.png",
-    "Material": "assets/material.png"
+    "Material": "assets/material.png",
+
+    "Arma": "assets/espada.png",
+    "Capacete" : "assets/capacete.png",
+    "Peitoral": "assets/armaduras.png",
+    "Calça": "assets/calca.png",
+    "Botas": "assets/botas.png",
+    "Luvas": "assets/luvas.png",
+    "Capa": "assets/capa.png",
+    "Acessório": "assets/anel.png",
+    "Colar": "assets/colar.png",
 }

@@ -65,6 +65,44 @@ def mostrar_inventario(p):
                     if st.button(f"Usar {item['Nome']}", key=f"use_{item['Nome']}"):
                         st.toast(f"Você usou {item['Nome']}!")
 
+def mostrar_equipamento(p):
+    st.markdown("### Equipamento")
+    
+    equipamento = p.get("Equipamento", [])
+    
+    if not equipamento:
+        st.info("O equipamento está vazio.")
+        return
+
+    for item in equipamento:
+        # Lógica do ícone conforme o tipo
+        icon_path = ICON_MAP.get(item["Tipo"], "assets/material.png")
+        
+        # Criar a linha do item usando colunas para alinhar ícone e botão
+        col_icon, col_btn = st.columns([1, 10])
+        
+        with col_icon:
+            try:
+                st.image(icon_path, width=30)
+            except:
+                st.write("📦") # Fallback caso a imagem não exista
+
+        with col_btn:
+            # Popover atua como a janela de detalhes ao clicar
+            if item['Nome']:
+                with st.popover(f"{item['Nome']}", use_container_width=True):
+                    st.markdown(f"**Nome:** {item['Nome']}")
+                    st.markdown(f"**Tipo:** {item['Tipo']}")
+                    st.divider()
+                    st.markdown(f"**Descrição:**\n{item['Descrição']}")
+                    
+                    if item["Tipo"] == "Consumivel":
+                        if st.button(f"Usar {item['Nome']}", key=f"use_{item['Nome']}"):
+                            st.toast(f"Você usou {item['Nome']}!")
+            else:
+                st.markdown(f"**Slot Vazio** - {item['Tipo']}")
+
+
 def mostrar_ficha_daitai():
     st.title("Academia Daitai Sunpo - Registro de Magos")
     
@@ -150,6 +188,9 @@ def mostrar_ficha_daitai():
     st.markdown(f"### Talentos de {char_sel}:")
     df_talentos = renderizar_talentos(p)
     st.table(df_talentos)
+
+    st.divider()
+    mostrar_equipamento(p)
 
     st.divider()
     mostrar_inventario(p)
