@@ -145,6 +145,12 @@ personagens_daitai = {
                 "Quantidade": 1
                 },
                 {
+                "Nome": "Projeto de Bonburedo", 
+                "Tipo": "Consumivel", 
+                "Descrição": "Permite ao usuário criar [Bonburedo].",
+                "Quantidade": 1
+                },
+                {
                 "Nome": "Presa de Batrogon", 
                 "Tipo": "Material", 
                 "Descrição": "A presa caída de um Batrogon.",
@@ -256,9 +262,9 @@ personagens_daitai = {
                 "Quantidade": 1
                 },
                 {
-                "Nome": "", 
+                "Nome": "Colar de Resistência Elemental [Hidro]", 
                 "Tipo": "Colar", 
-                "Descrição": "",
+                "Descrição": "Recebe resistência a ataques do elemento Hidro, reduzindo o dano em -7.",
                 "Quantidade": 1
                 },
         ],
@@ -604,9 +610,9 @@ personagens_daitai = {
 
         "Equipamento" : [
                 {
-                "Nome": "Lança Rústica", 
+                "Nome": "Katana Óssea", 
                 "Tipo": "Arma", 
-                "Descrição": "+2 dano corpo a corpo.",
+                "Descrição": "1d6 dano corpo a corpo. Em 15+ no dado de acerto, causa aumenta o dano para 2d6",
                 "Quantidade": 1
                 },
                 {
@@ -652,30 +658,56 @@ personagens_daitai = {
                 "Quantidade": 1
                 },
                 {
-                "Nome": "Anel Mágico", 
+                "Nome": "Anel de Inverno", 
                 "Tipo": "Acessório", 
-                "Descrição": "+10 MP",
-                "Quantidade": 2
+                "Descrição": "+20 MP +10 HP. Chamado de Aurora. (1 uso diário/ missão) : Em momento de risco, o usuário pode recitar o chamado 'Ressoe seu grito pelo vento gélido, cria de Aurora!', assim invocando uma Banshee Gélida que o defenderá. Banshee gélida tem força sobre-humana, garras cortantes e um grito atordoante, mas pode permanecer em campo por apenas um turno antes de desaparecer.",
+                "Quantidade": 1
                 },
                 {
                 "Nome": "Anel Arcano", 
                 "Tipo": "Acessório", 
                 "Descrição": "+20 MP",
-                "Quantidade": 2
+                "Quantidade": 1
                 },
                 {
-                "Nome": "Cinto Iniciante", 
+                "Nome": "Catalizador de Essência", 
                 "Tipo": "Colar", 
-                "Descrição": "+2 HP",
+                "Descrição": "Permite ao usuário armazenar e utilizar a alma de uma criatura para realizar um mimitismo bestial.",
                 "Quantidade": 1
                 },
         ],
 
-        "Inventario": [{
+        "Inventario": [
+            {
                 "Nome": "Clava Rústica", 
                 "Tipo": "Equipamento", 
                 "Descrição": "+4 dano corpo a corpo.",
                 "Quantidade": 1
+                },
+                {
+                "Nome": "Lança Rústica", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 dano corpo a corpo.",
+                "Quantidade": 1
+                },
+                
+                {
+                "Nome": "Cinto Iniciante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Arcano", 
+                "Tipo": "Acessório", 
+                "Descrição": "+20 MP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Mágico", 
+                "Tipo": "Acessório", 
+                "Descrição": "+10 MP",
+                "Quantidade": 2
                 },
                 {
                 "Nome": "Poção Ignis", 
@@ -693,7 +725,13 @@ personagens_daitai = {
                 "Nome": "Frasco de Mana Menor", 
                 "Tipo": "Consumível", 
                 "Descrição": "Restaura 10 MP",
-                "Quantidade": 4
+                "Quantidade": 6
+                },
+                {
+                "Nome": "Projeto de Poção Ignis", 
+                "Tipo": "Consumivel", 
+                "Descrição": "Permite ao usuário criar [Poção Ignis].",
+                "Quantidade": 1
                 },
                ]
     },
@@ -740,12 +778,13 @@ personagens_daitai = {
 
         },
         "Equipamento" : [
+            
             {
-            "Nome": "Lança Rústica", 
-            "Tipo": "Arma", 
-            "Descrição": "+2 dano corpo a corpo.",
-            "Quantidade": 1
-            },
+                "Nome": "Katana Óssea", 
+                "Tipo": "Arma", 
+                "Descrição": "1d6 dano corpo a corpo. Em 15+ no dado de acerto, causa aumenta o dano para 2d6",
+                "Quantidade": 1
+                },
             {
             "Nome": "Adaga Rústica", 
             "Tipo": "Arma", 
@@ -809,9 +848,136 @@ personagens_daitai = {
         ],
 
         "Inventario": [
+            {
+            "Nome": "Lança Rústica", 
+            "Tipo": "Arma", 
+            "Descrição": "+2 dano corpo a corpo.",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "Projeto de Katana Óssea", 
+            "Tipo": "Equipamento", 
+            "Descrição": "Permite ao usuário criar [Katana Óssea].",
+            "Quantidade": 1
+            },
                 ]
-    }
-    
+    },
+  
+    # "August Antonelli Roux": {
+    #     "Titulo": "",
+    #     "Raça": "Elfo",
+    #     "Nivel": 3,
+    #     "Elementos": [""],
+    #     "Especializacao": "",
+    #     "Foto": "pp/.jpg",
+
+    #     "Atributos": {
+    #         "FOR": 10,
+    #         "INT": 6,
+    #         "DES": 8,
+    #         "RES": 8,
+    #         "VON": 6
+    #     },
+
+    #     "Pericias_Investidas": {
+    #         "Atletismo": 0, 
+    #         "Briga": 0,
+    #         "Linguística": 0, 
+    #         "Magia Teórica": 0, 
+    #         "Natureza": 0,
+    #         "Furtividade": 0, 
+    #         "Pontaria": 0, 
+    #         "Prestididitação": 0, 
+    #         "Montaria": 0,
+    #         "Fortitude": 0, 
+    #         "Resiliência": 0, 
+    #         "Recuperação": 0,
+    #         "Liderança": 0, 
+    #         "Intimidação": 0, 
+    #         "Negociação": 0, 
+    #         "Meditação": 0
+    #     },
+
+    #     "Talentos" : {
+    #         "": ""
+    #     },
+
+    # "Equipamento" : [
+    #             {
+    #             "Nome": "Clava Rústica", 
+    #             "Tipo": "Arma", 
+    #             "Descrição": "+4 dano corpo a corpo.",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "",
+    #             "Tipo": "Arma", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Capacete", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Peitoral", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Calça", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Bota", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Luva", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Capa", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Acessório", 
+    #             "Descrição": "",
+    #             "Quantidade": 2
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Acessório", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #             {
+    #             "Nome": "", 
+    #             "Tipo": "Colar", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #     ],
+    # "Inventario": [{
+    #             "Nome": "", 
+    #             "Tipo": "", 
+    #             "Descrição": "",
+    #             "Quantidade": 1
+    #             },
+    #            ]
+    # }
 
 }
 
