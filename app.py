@@ -224,7 +224,7 @@ def mostrar_grimorio_e_forja(p):
                 if dados_tipo["Dano"] is not None:
                     if feitico["Dano"][1] < 12:
                         feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 2)
-                    if feitico["Dano"][1] == 12:
+                    elif feitico["Dano"][1] == 12:
                         feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 8)
                     else: feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 2)
             elif mod == "Multi-alvo":
