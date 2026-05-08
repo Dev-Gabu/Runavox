@@ -179,6 +179,8 @@ def mostrar_grimorio_e_forja(p):
         # Modificação do feitiço
 
         for mod in mods_selecionados_nomes:
+            descricao_mod = ""
+
             if mod == "Alcance Aumentado":
                 if feitico["Alcance"] is None:
                     feitico["Alcance"] = dados_tipo["Alcance"]
@@ -214,9 +216,9 @@ def mostrar_grimorio_e_forja(p):
                 elif feitico["Duração"] == "10 Turnos":
                     feitico["Duração"] = "Até o fim do combate"
             elif mod == "Área de Efeito (AoE)":
-                feitico["Descrição"] += "Ataque em área de afeito de curto alcance. "
+                descricao_mod += "Ataque em área de afeito de curto alcance. "
             elif mod == "Confiabilidade":
-                feitico["descrição"] += "CD para resistir ao efeito do feitiço aumenta em +2. "
+                descricao_mod += "CD para resistir ao efeito do feitiço aumenta em +2. "
             elif mod == "Potência Melhorada":
                 if dados_tipo["Dano"] is not None:
                     feitico["Dano"] = (feitico["Dano"][0] + 1, feitico["Dano"][1])
@@ -228,15 +230,19 @@ def mostrar_grimorio_e_forja(p):
                         feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 8)
                     else: feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 2)
             elif mod == "Multi-alvo":
-                feitico["descrição"] += "Pode atingir múltiplos alvos. "
+                descricao_mod += "Pode atingir múltiplos alvos. "
             elif mod == "Feitiço Sustentado":
                 if feitico["Duração"] is not None and feitico["Duração"] != "Instantâneo":
-                    feitico["descrição"] += "O mago deve gastar sua Ação Completa para manter o feitiço ativo. "
+                    descricao_mod += "O mago deve gastar sua Ação Completa para manter o feitiço ativo. "
             elif mod == "Requer Preparo":
-                feitico["descrição"] += "Requer um turno de preparação antes de ser lançado. "
+                descricao_mod += "Requer um turno de preparação antes de ser lançado. "
             elif mod == "Efeito Secundário":
-                feitico["descrição"] += "Esse feitiço possui um efeito secundário. "
+                descricao_mod += "Esse feitiço possui um efeito secundário. "
 
+            if descricao_mod:
+                if feitico["descricao"]:
+                    feitico["descricao"] += " " + descricao_mod
+                    
         # Soma os custos dos modificadores selecionados
         custo_mods = 0
         for m_nome in mods_selecionados_nomes:
