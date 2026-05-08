@@ -181,6 +181,10 @@ def mostrar_grimorio_e_forja(p):
         for mod in mods_selecionados_nomes:
             descricao_mod = ""
 
+            if feitico["tipo"] == "Construção":
+                int_mod = (p["Atributos"]["INT"] - 6) // 2
+                feitico["Duração"] = f"{int_mod} turnos" if int_mod > 1 else "1 turno"
+
             if mod == "Alcance Aumentado":
                 if feitico["Alcance"] is None:
                     feitico["Alcance"] = dados_tipo["Alcance"]
