@@ -216,7 +216,7 @@ def mostrar_grimorio_e_forja(p):
             elif mod == "Área de Efeito (AoE)":
                 feitico["Descrição"] += "Ataque em área de afeito de curto alcance. "
             elif mod == "Confiabilidade":
-                feitico["Descrição"] += "CD para resistir ao efeito do feitiço aumenta em +2. "
+                feitico["descrição"] += "CD para resistir ao efeito do feitiço aumenta em +2. "
             elif mod == "Potência Melhorada":
                 if dados_tipo["Dano"] is not None:
                     feitico["Dano"] = (feitico["Dano"][0] + 1, feitico["Dano"][1])
@@ -228,14 +228,14 @@ def mostrar_grimorio_e_forja(p):
                         feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 8)
                     else: feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 2)
             elif mod == "Multi-alvo":
-                feitico["Descrição"] += "Pode atingir múltiplos alvos. "
+                feitico["descrição"] += "Pode atingir múltiplos alvos. "
             elif mod == "Feitiço Sustentado":
                 if feitico["Duração"] is not None and feitico["Duração"] != "Instantâneo":
-                    feitico["Descrição"] += "O mago deve gastar sua Ação Completa para manter o feitiço ativo. "
+                    feitico["descrição"] += "O mago deve gastar sua Ação Completa para manter o feitiço ativo. "
             elif mod == "Requer Preparo":
-                feitico["Descrição"] += "Requer um turno de preparação antes de ser lançado. "
+                feitico["descrição"] += "Requer um turno de preparação antes de ser lançado. "
             elif mod == "Efeito Secundário":
-                feitico["Descrição"] += "Esse feitiço possui um efeito secundário. "
+                feitico["descrição"] += "Esse feitiço possui um efeito secundário. "
 
         # Soma os custos dos modificadores selecionados
         custo_mods = 0
