@@ -164,7 +164,11 @@ def mostrar_grimorio_e_forja(p):
             feitico["descricao"] = dados_tipo["Descrição"]
             feitico["Dano"] = dados_tipo["Dano"]
             feitico["Alcance"] = dados_tipo["Alcance"]
-            feitico["Duração"] = dados_tipo["Duração"]
+
+            if feitico["tipo"] == "Construção":
+                res_mod = (p["Atributos"]["RES"] - 6) // 2
+                feitico["Duração"] = f"{res_mod} turnos" if res_mod > 1 else "1 turno"
+            else: feitico["Duração"] = dados_tipo["Duração"]
 
             st.caption(f"**Descrição Base:** {dados_tipo['Descrição']}")
             st.caption(f"**Alcance:** {dados_tipo['Alcance'] if dados_tipo['Alcance'] else 'Não especificado'} | **Duração:** {dados_tipo['Duração'] if dados_tipo['Duração'] else 'Não especificada'} | **Dano:** {dados_tipo['Dano'] if dados_tipo['Dano'] else 'Não especificado'}**")
@@ -180,10 +184,6 @@ def mostrar_grimorio_e_forja(p):
 
         for mod in mods_selecionados_nomes:
             descricao_mod = ""
-
-            if feitico["tipo"] == "Construção":
-                int_mod = (p["Atributos"]["INT"] - 6) // 2
-                feitico["Duração"] = f"{int_mod} turnos" if int_mod > 1 else "1 turno"
 
             if mod == "Alcance Aumentado":
                 if feitico["Alcance"] is None:
