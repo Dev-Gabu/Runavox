@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-from lists_daitai import ICON_MAP, personagens_daitai, get_rank, get_mod, MAPA_PERICIAS
+from lists_daitai import ICON_MAP, TABELA_ELEMENTOS, get_rank, get_mod, MAPA_PERICIAS, TABELA_A_TIPOS, TABELA_B_MODS
+from personagens import personagens_daitai
 import random
 
 def renderizar_pericias(p):
@@ -102,6 +103,89 @@ def mostrar_equipamento(p):
             else:
                 st.markdown(f"**Slot Vazio** - {item['Tipo']}")
 
+def mostrar_grimorio_e_forja(p):
+    st.header("Grimório & Forja Mágica")
+    
+    aba1, aba2 = st.tabs(["Ver Grimório", "Criar Novo Feitiço"])
+    
+    with aba1:
+        st.subheader(f"Feitiços Conhecidos")
+        grimorio = p.get("Grimorio", [])
+        
+        if not grimorio:
+            st.info("Este mago ainda não transcreveu feitiços.")
+        else:
+            for spell in grimorio:
+                with st.expander(f"✨ {spell['nome']} (Comp: {spell['complexidade']} | PM: {spell['mana']})"):
+                    st.write(f"**Tipo:** {spell['tipo']}")
+                    st.write(f"**Custo:** {spell['mana']} PM")
+                    st.write(f"**Elemento:** {spell['Elemento']}")
+                    st.write(f"---")
+                    st.write(spell['descricao'])
+                    if spell['Dano']  is not None: st.write(f"**Dano:** {spell['Dano']}")
+                    if spell['Alcance'] is not None: st.write(f"**Alcance:** {spell['Alcance'] }")
+                    if spell['Duração'] is not None: st.write(f"**Duração:** {spell['Duração'] }")
+
+    with aba2:
+        st.subheader("Criar Feitiço")
+        
+        # Cálculo do LC do personagem
+        mod_int = get_mod(p["Atributos"]["INT"])
+        lc_max = p["Nivel"] + mod_int
+        st.info(f"Seu Limite de Complexidade (LC) Atual: **{lc_max}**")
+        
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            nome_f = st.text_input("Nome do Feitiço", placeholder="Ex: Sopro de Inverno")
+            
+            # Seleção do Elemento
+            elemento_selecionado = st.selectbox("Selecione o Elemento", TABELA_ELEMENTOS)
+
+            # Seleção do Tipo Base
+            lista_nomes_tipos = [t["Tipo"] for t in TABELA_A_TIPOS]
+            tipo_selecionado_nome = st.selectbox("Selecione o Tipo Base", lista_nomes_tipos)
+            
+            # Busca os dados do tipo selecionado
+            dados_tipo = next(t for t in TABELA_A_TIPOS if t["Tipo"] == tipo_selecionado_nome)
+            
+            st.caption(f"**Descrição Base:** {dados_tipo['Descrição']}")
+            st.caption(f"**Alcance Base:** {dados_tipo['Alcance']} | **Duração Base:** {dados_tipo['Duração']}")
+
+            # Seleção de Modificadores
+            lista_nomes_mods = [m["Modificador"] for m in TABELA_B_MODS]
+            mods_selecionados_nomes = st.multiselect("Adicionar Modificadores", lista_nomes_mods)
+            
+        # Lógica de Cálculo
+        comp_base = dados_tipo["Complexidade"]
+        
+        # Soma os custos dos modificadores selecionados
+        custo_mods = 0
+        for m_nome in mods_selecionados_nomes:
+            m_dados = next(m for m in TABELA_B_MODS if m["Modificador"] == m_nome)
+            custo_mods += m_dados["Custo"]
+            
+        complexidade_final = max(1, comp_base + custo_mods) # Complexidade mínima é 1
+        custo_mana = complexidade_final * 5
+        
+        with col2:
+            st.metric("Complexidade Total", f"{complexidade_final} / {lc_max}")
+            st.metric("Custo de Mana", f"{custo_mana} PM")
+            
+            if complexidade_final > lc_max:
+                st.error("⚠️ Complexidade excede seu limite!")
+            else:
+                st.success("✅ Feitiço viável!")
+
+        # Resumo Técnico para o Jogador
+        with st.expander("📝 Detalhes Técnicos do Feitiço"):
+            resumo = f"""
+            **Feitiço:** {nome_f if nome_f else 'Sem Nome'}
+            **Base:** {tipo_selecionado_nome} ({comp_base})
+            **Modificadores:** {', '.join(mods_selecionados_nomes) if mods_selecionados_nomes else 'Nenhum'}
+            **Custo Final:** {custo_mana} de Mana
+            """
+            st.write(resumo)
 
 def mostrar_ficha_daitai():
     st.title("Academia Daitai Sunpo - Registro de Magos")
@@ -194,5 +278,8 @@ def mostrar_ficha_daitai():
 
     st.divider()
     mostrar_inventario(p)
+
+    st.divider()
+    mostrar_grimorio_e_forja(p)
 
 mostrar_ficha_daitai()
