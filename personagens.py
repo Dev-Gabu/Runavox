@@ -1106,5 +1106,232 @@ personagens_daitai = {
         ],
     "Inventario": [
                ]
+    },
+
+    "Sathanael Varkhiel": {
+            "Titulo": "",
+            "Raça": "Nesferus",
+            "Nivel": 1         ,
+            "Elementos": ["Piro"],
+            "Especializacao": "",
+            "Foto": "pp/sathanael.jpg",
+
+            "Atributos": {
+                "FOR": 10,
+                "INT": 5,
+                "DES": 10,
+                "RES": 4,
+                "VON": 5
+            },
+
+            "Pericias_Investidas": {
+                "Atletismo": 2, 
+                "Briga": 1,
+                "Linguística": 0, 
+                "Magia Teórica": 0, 
+                "Natureza": 0,
+                "Furtividade": 0, 
+                "Pontaria": 0, 
+                "Prestididitação": 0, 
+                "Montaria": 0,
+                "Fortitude": 0, 
+                "Resiliência": 0, 
+                "Recuperação": 0,
+                "Liderança": 0, 
+                "Intimidação": 1, 
+                "Negociação": 0, 
+                "Meditação": 0
+            },
+
+            "Talentos" : {
+                "Premonição Demoníaca": "Pode receber uma visão de um evento futuro aleatoriamente. Pode ser ativada uma vez por combate para receber vantagem em uma esquiva.",
+                "Força Aprimorada": "+2 em FOR",
+                "Atleta Arcano": "+2 em DES",
+            },
+
+        "Equipamento" : [
+                    {
+                    "Nome": "", 
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "",
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capacete", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Peitoral", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Calça", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Bota", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Luva", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capa", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 2
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Colar", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+            ],
+        "Inventario": [
+                ],
+    },
+
+    "Angelus Varkhiel": {
+            "Titulo": "",
+            "Raça": "Nesferus",
+            "Nivel": 1         ,
+            "Elementos": ["Piro"],
+            "Especializacao": "",
+            "Foto": "pp/angelus.jpg",
+
+            "Atributos": {
+                "FOR": 4,
+                "INT": 8,
+                "DES": 5,
+                "RES": 5,
+                "VON": 8
+            },
+
+            "Pericias_Investidas": {
+                "Atletismo": 0, 
+                "Briga": 0,
+                "Linguística": 1, 
+                "Magia Teórica": 2, 
+                "Natureza": 0,
+                "Furtividade": 0, 
+                "Pontaria": 0, 
+                "Prestididitação": 0, 
+                "Montaria": 0,
+                "Fortitude": 0, 
+                "Resiliência": 0, 
+                "Recuperação": 0,
+                "Liderança": 1, 
+                "Intimidação": 0, 
+                "Negociação": 0, 
+                "Meditação": 0
+            },
+
+            "Talentos" : {
+                "Premonição Demoníaca": "Pode receber uma visão de um evento futuro aleatoriamente. Pode ser ativada uma vez por combate para receber vantagem em uma esquiva.",
+                "Conexão Elementar": "Recebe um bônus de +2 no Dano ou Efeito de todos os feitiços de seu Elemento Primário.",
+                "Rastreador Mágico": "Tem vantagem em testes de detecção mágica",
+            },
+
+        "Equipamento" : [
+                    {
+                    "Nome": "", 
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "",
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capacete", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Peitoral", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Calça", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Bota", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Luva", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capa", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 2
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Colar", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+            ],
+        "Inventario": [
+                ],
     }
+
 }
