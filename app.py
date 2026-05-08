@@ -278,16 +278,16 @@ def mostrar_grimorio_e_forja(p):
         # Resumo Técnico para o Jogador
         with st.expander("📝 Detalhes Técnicos do Feitiço"):
             resumo = f"""
-            {{
-                "Nome": "{feitico['nome'] if feitico['nome'] else 'Sem Nome'}",
-                "Tipo": "{feitico['tipo']}",
-                "Elemento": "{feitico['Elemento']}",
-                "Descrição": "{feitico['descricao'] if feitico['descricao'] else 'Sem descrição'}",
-                'Complexidade': {complexidade_final},
-                'Mana': {custo_mana}
-                "Dano": {f"({feitico['Dano'][0]}, {feitico['Dano'][1]})" if feitico["Dano"] else "None"},
-                "Alcance": {feitico["Alcance"] if feitico["Alcance"] else "None"},
-                "Duração": {feitico["Duração"] if feitico["Duração"] else "None"},
+            {{\n
+                "Nome": "{feitico['nome'] if feitico['nome'] else 'Sem Nome'}",\n
+                "Tipo": "{feitico['tipo']}",\n
+                "Elemento": "{feitico['Elemento']}",\n
+                "Descrição": "{feitico['descricao'] if feitico['descricao'] else 'Sem descrição'}",\n
+                'Complexidade': {complexidade_final},\n
+                'Mana': {custo_mana}\n
+                "Dano": {f"({feitico['Dano'][0]}, {feitico['Dano'][1]})" if feitico["Dano"] else "None"},\n
+                "Alcance": {feitico["Alcance"] if feitico["Alcance"] else "None"},\n
+                "Duração": {feitico["Duração"] if feitico["Duração"] else "None"},\n
                 }},
             """
             
