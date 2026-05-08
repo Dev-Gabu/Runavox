@@ -45,7 +45,7 @@ TABELA_A_TIPOS = [
    {
     "Tipo": "Dano Direto",
     "Descrição": "Projétil focado em um único alvo. Causa 2d6 de dano.",
-    "Dano": "2d6",
+    "Dano": (2, 6),
     "Duração": "Instantâneo",
     "Alcance": "Curto",
     "Complexidade": 2
@@ -133,6 +133,16 @@ TABELA_B_MODS = [
     {
     "Modificador": "Potência Melhorada",
     "Descrição": "Aumenta 1 dado na rolagem de dano ou efeito. Pode ser aplicado várias vezes.",
+    "Custo": +2
+    },
+    {
+    "Modificador": "Dano Aumentado",
+    "Descrição": "Aumenta 1 a categoria do dado na rolagem de dano ou efeito.",
+    "Custo": +2
+    },
+    {
+    "Modificador": "Multi-alvo",
+    "Descrição": "Aumenta 1 a quantidade de alvos.",
     "Custo": +2
     },
     {

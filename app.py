@@ -122,7 +122,7 @@ def mostrar_grimorio_e_forja(p):
                     st.write(f"**Elemento:** {spell['Elemento']}")
                     st.write(f"---")
                     st.write(spell['descricao'])
-                    if spell['Dano']  is not None: st.write(f"**Dano:** {spell['Dano']}")
+                    if spell['Dano']  is not None: st.write(f"**Dano:** {spell['Dano'][0]}d{spell['Dano'][1]}")
                     if spell['Alcance'] is not None: st.write(f"**Alcance:** {spell['Alcance'] }")
                     if spell['Duração'] is not None: st.write(f"**Duração:** {spell['Duração'] }")
 
@@ -137,20 +137,37 @@ def mostrar_grimorio_e_forja(p):
         col1, col2 = st.columns([2, 1])
         
         with col1:
-            nome_f = st.text_input("Nome do Feitiço", placeholder="Ex: Sopro de Inverno")
+            feitico = {
+                "nome": "",
+                "tipo": "",
+                "descricao": "",
+                "complexidade": 0,
+                "mana": 0,
+                "Elemento": "",
+                "Dano": None,
+                "Alcance": None,
+                "Duração": None
+            }
+
+            feitico["nome"] = st.text_input("Nome do Feitiço", placeholder="Ex: Sopro de Inverno")
             
             # Seleção do Elemento
-            elemento_selecionado = st.selectbox("Selecione o Elemento", TABELA_ELEMENTOS)
+            feitico["Elemento"] = st.selectbox("Selecione o Elemento", TABELA_ELEMENTOS)
 
             # Seleção do Tipo Base
             lista_nomes_tipos = [t["Tipo"] for t in TABELA_A_TIPOS]
-            tipo_selecionado_nome = st.selectbox("Selecione o Tipo Base", lista_nomes_tipos)
+            feitico["tipo"] = st.selectbox("Selecione o Tipo Base", lista_nomes_tipos)
             
             # Busca os dados do tipo selecionado
-            dados_tipo = next(t for t in TABELA_A_TIPOS if t["Tipo"] == tipo_selecionado_nome)
+            dados_tipo = next(t for t in TABELA_A_TIPOS if t["Tipo"] == feitico["tipo"])
             
+            feitico["descricao"] = dados_tipo["Descrição"]
+            feitico["Dano"] = dados_tipo["Dano"]
+            feitico["Alcance"] = dados_tipo["Alcance"]
+            feitico["Duração"] = dados_tipo["Duração"]
+
             st.caption(f"**Descrição Base:** {dados_tipo['Descrição']}")
-            st.caption(f"**Alcance Base:** {dados_tipo['Alcance']} | **Duração Base:** {dados_tipo['Duração']}")
+            st.caption(f"**Alcance:** {dados_tipo['Alcance'] if dados_tipo['Alcance'] else 'Não especificado'} | **Duração:** {dados_tipo['Duração'] if dados_tipo['Duração'] else 'Não especificada'} | **Dano:** {dados_tipo['Dano'] if dados_tipo['Dano'] else 'Não especificado'}**")
 
             # Seleção de Modificadores
             lista_nomes_mods = [m["Modificador"] for m in TABELA_B_MODS]
@@ -158,7 +175,68 @@ def mostrar_grimorio_e_forja(p):
             
         # Lógica de Cálculo
         comp_base = dados_tipo["Complexidade"]
-        
+
+        # Modificação do feitiço
+
+        for mod in mods_selecionados_nomes:
+            if mod == "Alcance Aumentado":
+                if feitico["Alcance"] is None:
+                    feitico["Alcance"] = dados_tipo["Alcance"]
+                if feitico["Alcance"] == "Pessoal":
+                    feitico["Alcance"] = "Curto"
+                elif feitico["Alcance"] == "Curto":
+                    feitico["Alcance"] = "Médio"
+                elif feitico["Alcance"] == "Médio":
+                    feitico["Alcance"] = "Longo"
+            elif mod == "Duração Aumentada":
+                if feitico["Duração"] is None:
+                    feitico["Duração"] = dados_tipo["Duração"]
+                if feitico["Duração"] == "Instantâneo":
+                    feitico["Duração"] = "1 Turno"
+                elif feitico["Duração"] == "1 Turno":
+                    feitico["Duração"] = "2 Turnos"
+                elif feitico["Duração"] == "2 Turnos":
+                    feitico["Duração"] = "3 Turnos"
+                elif feitico["Duração"] == "3 Turnos":
+                    feitico["Duração"] = "4 Turnos"
+                elif feitico["Duração"] == "4 Turnos":
+                    feitico["Duração"] = "5 Turnos"
+                elif feitico["Duração"] == "5 Turnos":
+                    feitico["Duração"] = "6 Turnos"
+                elif feitico["Duração"] == "6 Turnos":
+                    feitico["Duração"] = "7 Turnos"
+                elif feitico["Duração"] == "7 Turnos":
+                    feitico["Duração"] = "8 Turnos"
+                elif feitico["Duração"] == "8 Turnos":
+                    feitico["Duração"] = "9 Turnos"
+                elif feitico["Duração"] == "9 Turnos":
+                    feitico["Duração"] = "10 Turnos"
+                elif feitico["Duração"] == "10 Turnos":
+                    feitico["Duração"] = "Até o fim do combate"
+            elif mod == "Área de Efeito (AoE)":
+                feitico["Descrição"] += "Ataque em área de afeito de curto alcance. "
+            elif mod == "Confiabilidade":
+                feitico["Descrição"] += "CD para resistir ao efeito do feitiço aumenta em +2. "
+            elif mod == "Potência Melhorada":
+                if dados_tipo["Dano"] is not None:
+                    feitico["Dano"] = (feitico["Dano"][0] + 1, feitico["Dano"][1])
+            elif mod == "Dano Aumentado":
+                if dados_tipo["Dano"] is not None:
+                    if feitico["Dano"][1] < 12:
+                        feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 2)
+                    if feitico["Dano"][1] == 12:
+                        feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 8)
+                    else: feitico["Dano"] = (feitico["Dano"][0], feitico["Dano"][1] + 2)
+            elif mod == "Multi-alvo":
+                feitico["Descrição"] += "Pode atingir múltiplos alvos. "
+            elif mod == "Feitiço Sustentado":
+                if feitico["Duração"] is not None and feitico["Duração"] != "Instantâneo":
+                    feitico["Descrição"] += "O mago deve gastar sua Ação Completa para manter o feitiço ativo. "
+            elif mod == "Requer Preparo":
+                feitico["Descrição"] += "Requer um turno de preparação antes de ser lançado. "
+            elif mod == "Efeito Secundário":
+                feitico["Descrição"] += "Esse feitiço possui um efeito secundário. "
+
         # Soma os custos dos modificadores selecionados
         custo_mods = 0
         for m_nome in mods_selecionados_nomes:
@@ -180,11 +258,15 @@ def mostrar_grimorio_e_forja(p):
         # Resumo Técnico para o Jogador
         with st.expander("📝 Detalhes Técnicos do Feitiço"):
             resumo = f"""
-            **Feitiço:** {nome_f if nome_f else 'Sem Nome'}
-            **Base:** {tipo_selecionado_nome} ({comp_base})
-            **Modificadores:** {', '.join(mods_selecionados_nomes) if mods_selecionados_nomes else 'Nenhum'}
-            **Custo Final:** {custo_mana} de Mana
+            **Feitiço:** {feitico["nome"] if feitico["nome"] else 'Sem Nome'} **[** {feitico["Elemento"]} **]** \n
+            **Descrição:** {feitico["descricao"] if feitico["descricao"] else 'Sem descrição'}\n
+            **Custo Final:** {custo_mana} de Mana\n
+            **Modificadores:** {', '.join(mods_selecionados_nomes) if mods_selecionados_nomes else 'Nenhum'}\n
+            **Alcance:** {feitico["Alcance"] if feitico["Alcance"] else 'Não especificado'}\n
+            **Duração:** {feitico["Duração"] if feitico["Duração"] else 'Não especificada'}\n
+            **Dano:** {feitico["Dano"] if feitico["Dano"] else 'Não especificado'}\n
             """
+            
             st.write(resumo)
 
 def mostrar_ficha_daitai():
