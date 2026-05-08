@@ -124,7 +124,7 @@
     #             "Dano": None,
     #             "Alcance": None,
     #             "Duração": None,
-    #             }
+    #             },
     # ]
     # }
 

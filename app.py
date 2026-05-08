@@ -242,7 +242,7 @@ def mostrar_grimorio_e_forja(p):
             if descricao_mod:
                 if feitico["descricao"]:
                     feitico["descricao"] += " " + descricao_mod
-                    
+
         # Soma os custos dos modificadores selecionados
         custo_mods = 0
         for m_nome in mods_selecionados_nomes:
@@ -262,7 +262,7 @@ def mostrar_grimorio_e_forja(p):
                 st.success("✅ Feitiço viável!")
 
         # Resumo Técnico para o Jogador
-        with st.expander("📝 Detalhes Técnicos do Feitiço"):
+        with st.expander("🔮 Visualizar Feitiço"):
             resumo = f"""
             **Feitiço:** {feitico["nome"] if feitico["nome"] else 'Sem Nome'} **[** {feitico["Elemento"]} **]** \n
             **Descrição:** {feitico["descricao"] if feitico["descricao"] else 'Sem descrição'}\n
@@ -270,7 +270,25 @@ def mostrar_grimorio_e_forja(p):
             **Modificadores:** {', '.join(mods_selecionados_nomes) if mods_selecionados_nomes else 'Nenhum'}\n
             **Alcance:** {feitico["Alcance"] if feitico["Alcance"] else 'Não especificado'}\n
             **Duração:** {feitico["Duração"] if feitico["Duração"] else 'Não especificada'}\n
-            **Dano:** {feitico["Dano"] if feitico["Dano"] else 'Não especificado'}\n
+            **Dano:** {f"**Dano:** {feitico['Dano'][0]}d{feitico['Dano'][1]}" if feitico["Dano"] else 'Não especificado'}\n
+            """
+            
+            st.write(resumo)
+
+        # Resumo Técnico para o Jogador
+        with st.expander("📝 Detalhes Técnicos do Feitiço"):
+            resumo = f"""
+            {{
+                "Nome": "{feitico['nome'] if feitico['nome'] else 'Sem Nome'}",
+                "Tipo": "{feitico['tipo']}",
+                "Elemento": "{feitico['Elemento']}",
+                "Descrição": "{feitico['descricao'] if feitico['descricao'] else 'Sem descrição'}",
+                'Complexidade': {complexidade_final},
+                'Mana': {custo_mana}
+                "Dano": {f"({feitico['Dano'][0]}, {feitico['Dano'][1]})" if feitico["Dano"] else "None"},
+                "Alcance": {feitico["Alcance"] if feitico["Alcance"] else "None"},
+                "Duração": {feitico["Duração"] if feitico["Duração"] else "None"},
+                }},
             """
             
             st.write(resumo)

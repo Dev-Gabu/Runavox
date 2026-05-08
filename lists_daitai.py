@@ -44,7 +44,7 @@ TABELA_A_TIPOS = [
 
    {
     "Tipo": "Dano Direto",
-    "Descrição": "Projétil focado em um único alvo. Causa 2d6 de dano.",
+    "Descrição": "Projétil causa dano direto.",
     "Dano": (2, 6),
     "Duração": "Instantâneo",
     "Alcance": "Curto",
