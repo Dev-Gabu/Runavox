@@ -157,11 +157,11 @@ def mostrar_grimorio_conjurador(p):
             feitico["Elemento"] = st.selectbox("Selecione o Elemento", TABELA_ELEMENTOS)
 
             # Seleção do Tipo Base
-            lista_nomes_tipos = [t["Tipo"] for t in TABELA_A_TIPOS]
+            lista_nomes_tipos = [t["Tipo"] for t in TABELA_A_TIPO_FEITICO]
             feitico["tipo"] = st.selectbox("Selecione o Tipo Base", lista_nomes_tipos)
             
             # Busca os dados do tipo selecionado
-            dados_tipo = next(t for t in TABELA_A_TIPOS if t["Tipo"] == feitico["tipo"])
+            dados_tipo = next(t for t in TABELA_A_TIPO_FEITICO if t["Tipo"] == feitico["tipo"])
             
             feitico["descricao"] = dados_tipo["Descrição"]
             feitico["Dano"] = dados_tipo["Dano"]
@@ -176,7 +176,7 @@ def mostrar_grimorio_conjurador(p):
             st.caption(f"**Alcance:** {dados_tipo['Alcance'] if dados_tipo['Alcance'] else 'Não especificado'} | **Duração:** {dados_tipo['Duração'] if dados_tipo['Duração'] else 'Não especificada'} | **Dano:** {dados_tipo['Dano'] if dados_tipo['Dano'] else 'Não especificado'}**")
 
             # Seleção de Modificadores
-            lista_nomes_mods = [m["Modificador"] for m in TABELA_B_MODS]
+            lista_nomes_mods = [m["Modificador"] for m in TABELA_B_MOD_FEITICO]
             mods_selecionados_nomes = st.multiselect("Adicionar Modificadores", lista_nomes_mods)
             
         # Lógica de Cálculo
@@ -252,7 +252,7 @@ def mostrar_grimorio_conjurador(p):
         # Soma os custos dos modificadores selecionados
         custo_mods = 0
         for m_nome in mods_selecionados_nomes:
-            m_dados = next(m for m in TABELA_B_MODS if m["Modificador"] == m_nome)
+            m_dados = next(m for m in TABELA_B_MOD_FEITICO if m["Modificador"] == m_nome)
             custo_mods += m_dados["Custo"]
             
         complexidade_final = max(1, comp_base + custo_mods) # Complexidade mínima é 1
