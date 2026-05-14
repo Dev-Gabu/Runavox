@@ -118,12 +118,12 @@ def mostrar_grimorio_conjurador(p):
             st.info("Este mago ainda não transcreveu feitiços.")
         else:
             for spell in grimorio:
-                with st.expander(f"✨ {spell['nome']} (Comp: {spell['complexidade']} | PM: {spell['mana']})"):
-                    st.write(f"**Tipo:** {spell['tipo']}")
-                    st.write(f"**Custo:** {spell['mana']} PM")
+                with st.expander(f"✨ {spell['Nome']} (Comp: {spell['Complexidade']} | PM: {spell['Mana']})"):
+                    st.write(f"**Tipo:** {spell['Tipo']}")
+                    st.write(f"**Custo:** {spell['Mana']} PM")
                     st.write(f"**Elemento:** {spell['Elemento']}")
                     st.write(f"---")
-                    st.write(spell['descricao'])
+                    st.write(spell['Descrição'])
                     if spell['Dano']  is not None: st.write(f"**Dano:** {spell['Dano'][0]}d{spell['Dano'][1]}")
                     if spell['Alcance'] is not None: st.write(f"**Alcance:** {spell['Alcance'] }")
                     if spell['Duração'] is not None: st.write(f"**Duração:** {spell['Duração'] }")
