@@ -536,7 +536,7 @@ personagens_daitai = {
         "Raça": "Bestial",
         "Nivel": 7         ,
         "Elementos": ["Aero","Electro","Umbra","Piro"],
-        "Especializacao": "Conjuração",
+        "Especializacao": "Magia Marcial",
         "Foto": "pp/lidane.jpg",
 
         "Atributos": {
@@ -655,7 +655,7 @@ personagens_daitai = {
         "Raça": "Vampiro",
         "Nivel": 3         ,
         "Elementos": ["Hidro", "Crio"],
-        "Especializacao": "",
+        "Especializacao": "Conjuração",
         "Foto": "pp/jade.jpg",
 
         "Atributos": {
@@ -996,7 +996,7 @@ personagens_daitai = {
         "Raça": "Elfo",
         "Nivel": 3,
         "Elementos": ["Piro", "Metalo"],
-        "Especializacao": "Alquimista",
+        "Especializacao": "Conjuração",
         "Foto": "pp/august.jpg",
 
         "Atributos": {
@@ -1113,7 +1113,7 @@ personagens_daitai = {
             "Raça": "Nesferus",
             "Nivel": 1         ,
             "Elementos": ["Piro"],
-            "Especializacao": "",
+            "Especializacao": "Conjuração",
             "Foto": "pp/sathanael.jpg",
 
             "Atributos": {
@@ -1226,7 +1226,7 @@ personagens_daitai = {
             "Raça": "Nesferus",
             "Nivel": 1         ,
             "Elementos": ["Piro"],
-            "Especializacao": "",
+            "Especializacao": "Conjuração",
             "Foto": "pp/angelus.jpg",
 
             "Atributos": {
@@ -1332,6 +1332,237 @@ personagens_daitai = {
             ],
         "Inventario": [
                 ],
-    }
+    },
 
+    "Sóka Mo-Li": {
+        "Titulo": "",
+        "Raça": "Vampiro",
+        "Nivel": 1         ,
+        "Elementos": ["Geo"],
+        "Especializacao": "Conjurador",
+        "Foto": "pp/soka.jpg",
+
+        "Atributos": {
+            "FOR": 2,
+            "INT": 8,
+            "DES": 5,
+            "RES": 10,
+            "VON": 5
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 0, 
+            "Briga": 0,
+            "Linguística": 0, 
+            "Magia Teórica": 1, 
+            "Natureza": 0,
+            "Furtividade": 0, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 0, 
+            "Resiliência": 0, 
+            "Recuperação": 0,
+            "Liderança": 0, 
+            "Intimidação": 0, 
+            "Negociação": 2, 
+            "Meditação": 1
+        },
+
+        "Talentos" : {
+            "Inteligência Aprimorada": "+2 Inteligência",
+            "Conexão Elemental": "Recebe um bônus de +2 no Dano ou Efeito de todos os feitiços de seu Elemento Primário.",
+            "Sede de Mana": "Uma vez por combate, ao causar dano a uma criatura viva, recupera 1d4 PM (Pontos de Mana).",
+            "Fragilidade Solar": "Enquanto estiver sob luz solar direta, sofre Desvantagem em todos os Testes de Resistência e Vontade."
+        },
+
+        "Equipamento" : [
+                {
+                "Nome": "", 
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "",
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Peitoral", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Calça", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Bota", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Luva", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capa", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Colar", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+        ],
+        "Inventario": [
+               ],
+        "Grimório":[
+        ]
+    },
+
+    "Uriel Viollet": {
+        "Titulo": "",
+        "Raça": "Humano",
+        "Nivel": 3         ,
+        "Elementos": ["Geo","Fito"],
+        "Especializacao": "Mago Marcial",
+        "Foto": "pp/uriel.jpg",
+
+        "Atributos": {
+            "FOR": 12,
+            "INT": 5,
+            "DES": 5,
+            "RES": 10,
+            "VON": 2
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 2, 
+            "Briga": 1,
+            "Linguística": 0, 
+            "Magia Teórica": 0, 
+            "Natureza": 0,
+            "Furtividade": 0, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 0, 
+            "Resiliência": 2, 
+            "Recuperação": 0,
+            "Liderança": 0, 
+            "Intimidação": 1, 
+            "Negociação": 0, 
+            "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Força Aprimorada": "+2 Força",
+            "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA)."
+        },
+
+        "Equipamento" : [
+                {
+                "Nome": "", 
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "",
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Peitoral", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Calça", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Bota", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Luva", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capa", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Colar", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+        ],
+        
+        "Inventario": [
+               ],
+
+        "Grimório":[
+        ]
+    }
 }

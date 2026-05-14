@@ -103,8 +103,7 @@ def mostrar_equipamento(p):
             else:
                 st.markdown(f"**Slot Vazio** - {item['Tipo']}")
 
-def mostrar_grimorio_e_forja(p):
-    st.header("Grimório & Forja Mágica")
+def mostrar_grimorio_conjurador(p):
     
     aba1, aba2 = st.tabs(["Ver Grimório", "Criar Novo Feitiço"])
     
@@ -390,6 +389,15 @@ def mostrar_ficha_daitai():
     mostrar_inventario(p)
 
     st.divider()
-    mostrar_grimorio_e_forja(p)
+    
+    st.header("Grimório & Forja Mágica")
+    if p["Especializacao"] == "Conjuração":
+        mostrar_grimorio_conjurador(p)
+    elif p["Especializacao"] == "Invocação":
+        st.info("A seção de Forja Mágica ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+    elif p["Especializacao"] == "Magia Marcial":
+        st.info("A seção de Forja Mágica ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+    else:
+        st.info("Especialização indefinida. Não há seções adicionais para exibir.")
 
 mostrar_ficha_daitai()
