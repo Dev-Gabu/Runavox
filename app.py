@@ -290,10 +290,10 @@ def mostrar_grimorio_conjurador(p):
                 "Elemento": "{feitico['Elemento']}",\n
                 "Descrição": "{feitico['descricao'] if feitico['descricao'] else 'Sem descrição'}",\n
                 'Complexidade': {complexidade_final},\n
-                'Mana': {custo_mana}\n
+                'Mana': {custo_mana},\n
                 "Dano": {f"({feitico['Dano'][0]}, {feitico['Dano'][1]})" if feitico["Dano"] else "None"},\n
-                "Alcance": {feitico["Alcance"] if feitico["Alcance"] else "None"},\n
-                "Duração": {feitico["Duração"] if feitico["Duração"] else "None"},\n
+                "Alcance": "{feitico["Alcance"] if feitico["Alcance"] else None}",\n
+                "Duração": "{feitico["Duração"] if feitico["Duração"] else None}",\n
                 }},
             """
             

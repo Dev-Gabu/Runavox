@@ -155,6 +155,20 @@ personagens_daitai = {
                 "Quantidade": 1
                 },
         ],
+
+        "Grimorio": [
+            {
+            "Nome": "Baforada",
+            "Tipo": "Dano Direto",
+            "Elemento": "Piro",
+            "Descrição": "Projétil causa dano direto. Ataque em área de afeito de curto alcance. ",
+            'Complexidade': 8,
+            'Mana': 40,
+            "Dano": (3, 8),
+            "Alcance": "Curto",
+            "Duração": "Instantâneo",
+            },
+        ]
     },
 
     "Hugo Antonelli Roux": {
@@ -1434,6 +1448,135 @@ personagens_daitai = {
 
         "Grimório":[
         ]
-    }
+    },
 
+    "Erick Hoenn": {
+            "Titulo": "",
+            "Raça": "Humano",
+            "Nivel": 1         ,
+            "Elementos": ["Metalo"],
+            "Especializacao": "Invocador",
+            "Foto": "pp/erick.jpg",
+    
+            "Atributos": {
+                "FOR": 2,
+                "INT": 10,
+                "DES": 5,
+                "RES": 5,
+                "VON": 8
+            },
+    
+            "Pericias_Investidas": {
+                "Atletismo": 0, 
+                "Briga": 0,
+                "Linguística": 0, 
+                "Magia Teórica": 0, 
+                "Natureza": 0,
+                "Furtividade": 0, 
+                "Pontaria": 0, 
+                "Prestididitação": 0, 
+                "Montaria": 2,
+                "Fortitude": 0, 
+                "Resiliência": 0, 
+                "Recuperação": 0,
+                "Liderança": 2, 
+                "Intimidação": 0, 
+                "Negociação": 0, 
+                "Meditação": 0
+            },
+    
+            "Talentos" : {
+                "Afinidade com Animais": "Você tem Vantagem (+1d6)  em testes que envolvam interações com animais",
+                "Elemento Avançado" : "Começa com um elemento secundário que evolui para um primário."
+            },
+    
+        "Equipamento" : [
+                    {
+                    "Nome": "", 
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "",
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capacete", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Peitoral", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Calça", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Bota", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Luva", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capa", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 2
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Colar", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+            ],
+        "Inventario": [],
+        "Grimório":[
+            {
+                "Nome": "Beldum",
+                "Aparencia": "invocacoes/beldum.jpg",
+                "Elemento": "Metalo",
+                "Atributos": [
+                    {"FOR": 6},
+                    {"RES": 6},
+                    {"INT": 6},
+                    {"DES": 6},
+                    {"VON": 6}
+                ],
+                "PV": 20,
+                "PA": 10,
+                "Habilidades": [""],
+                "Dano fixo": 4,
+                "Dano dado": (1, 6)
+            }
+        ]
+        }
 }
