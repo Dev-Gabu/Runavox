@@ -1,0 +1,22 @@
+{
+	"Criar Feitiço": {
+		"prefix": "feitico",
+		"body": [
+			"{",
+			"\t\"Nome\": \"$1\",",
+			"\t\"Elemento\": \"$2\",",
+			"\t\"Tipo\": \"$3\",",
+			"\t\"Duração\": \"$4\",",
+			"\t\"Alcance\": \"$5\",",
+			"\t\"Descrição\": \"$6\"",
+			"\t\"Complexidade\": $7,",
+			"\t\"Mana\": $8,",
+			"\t\"Dano\": $9,",
+
+			
+			"}"
+		],
+		"description": "Snippet para criar um novo feitiço. Substitua os valores de exemplo pelos atributos reais do seu feitiço."
+	}
+}
+

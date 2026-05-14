@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
-from lists_daitai import ICON_MAP, TABELA_ELEMENTOS, get_rank, get_mod, MAPA_PERICIAS, TABELA_A_TIPOS, TABELA_B_MODS
+from lists_daitai import *
 from personagens import personagens_daitai
 import random
 
+## FICHA BASE
 def renderizar_pericias(p):
     """Gera os dados da tabela de perícias"""
     dados_tabela = []
@@ -30,6 +31,7 @@ def renderizar_talentos(p):
     dados_tabela = [{"Talento": nome, "Descrição": desc} for nome, desc in talentos.items()]
     return pd.DataFrame(dados_tabela)
 
+## ITENS
 def mostrar_inventario(p):
     st.markdown("### Inventário")
     
@@ -103,6 +105,7 @@ def mostrar_equipamento(p):
             else:
                 st.markdown(f"**Slot Vazio** - {item['Tipo']}")
 
+## GRIMÓRIO
 def mostrar_grimorio_conjurador(p):
     
     aba1, aba2 = st.tabs(["Ver Grimório", "Criar Novo Feitiço"])
@@ -296,6 +299,15 @@ def mostrar_grimorio_conjurador(p):
             
             st.write(resumo)
 
+def mostrar_grimorio_invocador(p):
+    
+        st.info("A seção de Grimório para Invocadores ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+
+def mostrar_grimorio_mago_marcial(p):
+    
+        st.info("A seção de Grimório para Magos Marciais ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+
+## PÁGINA PRINCIPAL
 def mostrar_ficha_daitai():
     st.title("Academia Daitai Sunpo - Registro de Magos")
     
@@ -394,9 +406,9 @@ def mostrar_ficha_daitai():
     if p["Especializacao"] == "Conjuração":
         mostrar_grimorio_conjurador(p)
     elif p["Especializacao"] == "Invocação":
-        st.info("A seção de Forja Mágica ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+        mostrar_grimorio_invocador(p)
     elif p["Especializacao"] == "Magia Marcial":
-        st.info("A seção de Forja Mágica ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+        mostrar_grimorio_mago_marcial(p)
     else:
         st.info("Especialização indefinida. Não há seções adicionais para exibir.")
 

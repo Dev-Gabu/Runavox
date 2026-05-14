@@ -1,0 +1,25 @@
+{
+	"Criar Invocação": {
+		"prefix": "invo",
+		"body": [
+			"{",
+			"\t\"Nome\": \"$1\",",
+			"\t\"Aparencia\": \"invocacoes/$2pg\",",
+			"\t\"Elemento\": \"$3\",",
+			"\t\"Atributos\": [",
+			"\t\t{\"FOR\": 6},",
+			"\t\t{\"RES\": 6},",
+			"\t\t{\"INT\": 6},",
+			"\t\t{\"DES\": 6},",
+			"\t\t{\"VON\": 6}",
+			"\t],",
+			"\t\"PV\": 20,",
+			"\t\"PA\": 10,",
+			"\t\"Habilidades\": [\"$4\"],",
+			"\t\"Dano fixo\": 4,",
+			"\t\"Dano dado\": (1, 6)",
+			"}"
+		],
+		"description": "Snippet para criar uma nova invocação. Substitua os valores de exemplo pelos atributos reais da sua invocação."
+	}
+}

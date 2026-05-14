@@ -1,133 +1,3 @@
-
-    # "": {
-    #     "Titulo": "",
-    #     "Raça": "",
-    #     "Nivel": 0         ,
-    #     "Elementos": [""],
-    #     "Especializacao": "",
-    #     "Foto": "pp/.jpg",
-
-    #     "Atributos": {
-    #         "FOR": 10,
-    #         "INT": 6,
-    #         "DES": 8,
-    #         "RES": 8,
-    #         "VON": 6
-    #     },
-
-    #     "Pericias_Investidas": {
-    #         "Atletismo": 0, 
-    #         "Briga": 0,
-    #         "Linguística": 0, 
-    #         "Magia Teórica": 0, 
-    #         "Natureza": 0,
-    #         "Furtividade": 0, 
-    #         "Pontaria": 0, 
-    #         "Prestididitação": 0, 
-    #         "Montaria": 0,
-    #         "Fortitude": 0, 
-    #         "Resiliência": 0, 
-    #         "Recuperação": 0,
-    #         "Liderança": 0, 
-    #         "Intimidação": 0, 
-    #         "Negociação": 0, 
-    #         "Meditação": 0
-    #     },
-
-    #     "Talentos" : {
-    #         "": ""
-    #     },
-
-    # "Equipamento" : [
-    #             {
-    #             "Nome": "Clava Rústica", 
-    #             "Tipo": "Arma", 
-    #             "Descrição": "+4 dano corpo a corpo.",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "",
-    #             "Tipo": "Arma", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Capacete", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Peitoral", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Calça", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Bota", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Luva", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Capa", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Acessório", 
-    #             "Descrição": "",
-    #             "Quantidade": 2
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Acessório", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #             {
-    #             "Nome": "", 
-    #             "Tipo": "Colar", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #     ],
-    # "Inventario": [{
-    #             "Nome": "", 
-    #             "Tipo": "", 
-    #             "Descrição": "",
-    #             "Quantidade": 1
-    #             },
-    #            ],
-    # "Grimório":[
-    #             {
-    #             "Nome": "",
-    #             "Tipo": "",
-    #             "Elemento": "",
-    #             "Descrição": "", 
-    #             'Complexidade': 0, 
-    #             'Mana': 0
-    #             "Dano": None,
-    #             "Alcance": None,
-    #             "Duração": None,
-    #             },
-    # ]
-    # }
-
 personagens_daitai = {
     "Zefiro Kruguel": {
         "Titulo": "O Açougueiro Infernal",
@@ -1455,7 +1325,7 @@ personagens_daitai = {
         "Raça": "Humano",
         "Nivel": 3         ,
         "Elementos": ["Geo","Fito"],
-        "Especializacao": "Mago Marcial",
+        "Especializacao": "Magia Marcial",
         "Foto": "pp/uriel.jpg",
 
         "Atributos": {
@@ -1558,11 +1428,12 @@ personagens_daitai = {
                 "Quantidade": 1
                 },
         ],
-        
+
         "Inventario": [
                ],
 
         "Grimório":[
         ]
     }
+
 }

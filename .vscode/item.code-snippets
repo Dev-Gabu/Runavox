@@ -1,0 +1,14 @@
+{
+	"Criar Item": {
+		"prefix": "item",
+		"body": [
+			"{",
+			"\t\"Nome\": \"$1\",",
+			"\t\"Tipo\": \"$2\",",
+			"\t\"Descrição\": \"$3\",",
+			"\t\"Quantidade\": $4",
+			"}"
+		],
+		"description": "Snippet para criar um novo item. Substitua os valores de exemplo pelos atributos reais do seu item."
+	}
+}
