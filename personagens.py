@@ -1565,9 +1565,9 @@ personagens_daitai = {
                 "Aparencia": "invocacoes/beldum.jpg",
                 "Elemento": "Metalo",
                 "Atributos": {
-                    "FOR": 6,
+                    "FOR": 8,
                     "RES": 6,
-                    "INT": 6,
+                    "INT": 8,
                     "DES": 6,
                     "VON": 6
                 },

@@ -301,7 +301,7 @@ def mostrar_grimorio_conjurador(p):
 
 def mostrar_grimorio_invocador(p):
     
-    aba1, aba2, aba3= st.tabs(["Invocações", "Criar Habilidade", "Criar Invocação"])
+    aba1, aba2= st.tabs(["Invocações", "Criar Habilidade"])
     
     with aba1:
         grimorio = p.get("Grimorio", [])
@@ -430,9 +430,6 @@ def mostrar_grimorio_invocador(p):
             }
             
             st.json(objeto_habilidade)
-    
-    with aba3:
-        st.subheader("Criar Invocação")
         
 
 def mostrar_grimorio_mago_marcial(p):
