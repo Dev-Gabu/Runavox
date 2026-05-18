@@ -317,7 +317,6 @@ def mostrar_grimorio_invocador(p):
                     st.write(f"**Elemento:** {invocacao['Elemento']}")
                     st.write(f"**Dano:** {invocacao['Dano fixo']} + {invocacao['Dano dado'][0]}d{invocacao['Dano dado'][1]}")
                     st.write(f"---")
-                    st.write(invocacao['Descrição'])
                     
                     st.write("Atributos e Modificadores")
                     at = invocacao["Atributos"]
