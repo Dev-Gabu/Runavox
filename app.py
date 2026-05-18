@@ -429,8 +429,7 @@ def mostrar_grimorio_invocador(p):
                 "Custo": custo_mana
             }
             
-            st.json(objeto_habilidade)
-        
+            st.json(objeto_habilidade)        
 
 def mostrar_grimorio_mago_marcial(p):
     
@@ -472,7 +471,7 @@ def mostrar_ficha_daitai():
 
     st.divider()
     
-    abas = st.tabs(["Atributos", "Inventário","Equipamento", "Grimório"])
+    abas = st.tabs(["Atributos", "Inventário","Equipamento", "Grimório","Forja"])
 
     # Aba de Atributos
     with abas[0]:
@@ -527,6 +526,14 @@ def mostrar_ficha_daitai():
         st.markdown(f"### Talentos de {char_sel}:")
         df_talentos = renderizar_talentos(p)
         st.table(df_talentos)
+
+        st.markdown("Habilidade de Classe")
+        if p["Especializacao"] == "Conjuração":
+            st.markdown("** Versatilidade Mágica**: Uma vez por sessão de estudo, o Conjurador pode modificar temporariamente (sem gastar PMF) um Feitiço Base de seu Grimório, trocando um de seus Modificadores de Complexidade por outro.")
+        elif p["Especializacao"] == "Invocação":
+            st.markdown("** Vínculo Compartilhado**: O Invocador pode gastar uma ação de movimento e 30 Pontos de Mana (PM) para conceder uma Ação extra a uma de suas Invocações durante o turno dela.")
+        elif p["Especializacao"] == "Magia Marcial":
+            st.markdown("** Canalização Corporal**: Uma vez por turno, o Mago Marcial pode usar Mana para aumentar o dano de um ataque físico bem-sucedido em +1d6 (Custo: 10 PM).")
     # Aba de Inventário
     with abas[1]:
         mostrar_inventario(p)
@@ -544,5 +551,7 @@ def mostrar_ficha_daitai():
             mostrar_grimorio_mago_marcial(p)
         else:
             st.info("Especialização indefinida. Não há seções adicionais para exibir.")
-
+    # Aba de Forja
+    with abas[4]:
+            st.info("A seção de Forja ainda está em desenvolvimento. Fique atento para futuras atualizações!")
 mostrar_ficha_daitai()
