@@ -311,12 +311,11 @@ def mostrar_grimorio_invocador(p):
         else:
             for invocacao in grimorio:
                 with st.expander(f"🦉 {invocacao['Nome']} | PV: {invocacao['PV']} | PA: {invocacao['PA']})"):
-                    st.image(invocacao['Aparencia'], width=50)
+                    st.image(invocacao['Aparencia'], width=100)
                     st.write(f"**Descricao:** {invocacao['Descricao']}")
                     st.write(f"**Categoria:** {invocacao['Categoria']}")
                     st.write(f"**Elemento:** {invocacao['Elemento']}")
                     st.write(f"**Dano:** {invocacao['Dano fixo']} + {invocacao['Dano dado'][0]}d{invocacao['Dano dado'][1]}")
-                    st.write(f"**Custo:** {invocacao['Mana']} PM")
                     st.write(f"---")
                     st.write(invocacao['Descrição'])
                     
