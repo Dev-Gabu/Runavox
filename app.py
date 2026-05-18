@@ -472,7 +472,7 @@ def mostrar_ficha_daitai():
 
     st.divider()
     
-    abas = st.tabs(["Atributos", "Inventário", "Grimório"])
+    abas = st.tabs(["Atributos", "Inventário","Equipamento", "Grimório"])
 
     # Aba de Atributos
     with abas[0]:
@@ -529,11 +529,12 @@ def mostrar_ficha_daitai():
         st.table(df_talentos)
     # Aba de Inventário
     with abas[1]:
-        mostrar_equipamento(p)
-        st.divider()
         mostrar_inventario(p)
-    # Aba de Grimório
+    # Aba de Equipamento
     with abas[2]:
+        mostrar_equipamento(p)
+    # Aba de Grimório
+    with abas[3]:
         st.header("Grimório & Forja Mágica")
         if p["Especializacao"] == "Conjuração":
             mostrar_grimorio_conjurador(p)
