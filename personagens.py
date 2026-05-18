@@ -1575,7 +1575,17 @@ personagens_daitai = {
                 "PA": 10,
                 "Descricao": "Um ser metálico com um único olho vermelho. Flutua no ar e tem a capacidade de se fundir com outros objetos metálicos para aumentar seu poder. Beldum é conhecido por sua resistência e força, sendo um aliado valioso em combate.",
                 "Categoria": "Construto",
-                "Habilidades": [""],
+                "Habilidades": [
+                    {
+                        "Nome":"Iron Head",
+                        "Tipo":"Golpe Direto",
+                        "Descrição":"Ataque físico (mordida, garra, pancada). Adiciona um dano ao dano da habilidade.",
+                        "Dano":[2,8],
+                        "Duração":"Instantâneo",
+                        "Alcance":"Curto",
+                        "Complexidade":2,
+                        "Custo":10}
+                                ],
                 "Dano fixo": 4,
                 "Dano dado": (1, 6)
             }

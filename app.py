@@ -402,7 +402,7 @@ def mostrar_grimorio_invocador(p):
         else:
             st.success(f"✅ **Habilidade Aprovada!** Habilidade pronta para ser transcrita nas suas Páginas de Grimório.")
             
-            
+            ## Atualizar os modificadores
             ## Adicionando efeitos aos modificadores
             # for mod in modificadores_escolhidos:
             #     if mod["Modificador"] == "Alcance Elástico":

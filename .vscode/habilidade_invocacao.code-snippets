@@ -1,0 +1,18 @@
+{
+	"Criar Habilidade": {
+		"prefix": "habilidade",
+		"body": [
+			"{",
+			"\t\"Nome\": \"$1\",",
+			"\t\"Tipo\": \"$2\",",
+			"\t\"Descrição\": \"$3\",",
+			"\t\"Dano\": \"$4\",",
+			"\t\"Duração\": \"$5\",",
+			"\t\"Alcance\": \"$6\",",
+			"\t\"Complexidade\": \"$7\",",
+			"\t\"Custo\": \"$8\"",
+			"},"
+		],
+		"description": "Snippet para criar uma nova habilidade. Substitua os valores de exemplo pelos atributos reais da sua habilidade."
+	}
+}
