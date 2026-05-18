@@ -471,74 +471,77 @@ def mostrar_ficha_daitai():
             cols_elem[i].markdown(f"**:{cor}[{elem}]**")
 
     st.divider()
-
-    # Seção de Atributos
-    st.markdown("### Atributos e Modificadores")
-    at = p["Atributos"]
     
-    # Grid de Atributos (Oficiais do Daitai Sunpo: FOR, INT, DES, RES, VON)
-    col_at1, col_at2, col_at3, col_at4, col_at5, col_btn1 = st.columns(6)
+    abas = st.tabs(["Atributos", "Inventário", "Grimório"])
 
-    with col_btn1:
-        # Botão estilo Popover (abre uma janelinha por cima)
-        with st.popover("Ver Perícias"):
-            st.markdown(f"### Perícias de {char_sel}")
-            df_pericias = renderizar_pericias(p)
-            
-            # Exibe a tabela sem o índice lateral para ficar mais limpo
-            st.table(df_pericias)
-            
-            st.caption("Ponto de Perícia (PP) investido conforme o Nível.")
-    
-    atributos_lista = [
-        (col_at1, "FOR", at["FOR"]),
-        (col_at2, "INT", at["INT"]),
-        (col_at3, "DES", at["DES"]),
-        (col_at4, "RES", at["RES"]),
-        (col_at5, "VON", at["VON"])
-    ]
+    # Aba de Atributos
+    with abas[0]:
 
-    for col, nome, valor in atributos_lista:
-        mod = get_mod(valor)
-        sinal = "+" if mod >= 0 else ""
-        col.metric(label=nome, value=valor, delta=f"{sinal}{mod}")
+        # Seção de Atributos
+        st.markdown("### Atributos e Modificadores")
+        at = p["Atributos"]
+        
+        # Grid de Atributos (Oficiais do Daitai Sunpo: FOR, INT, DES, RES, VON)
+        col_at1, col_at2, col_at3, col_at4, col_at5, col_btn1 = st.columns(6)
 
-    # Valores Derivados Automáticos[cite: 3]
-    st.markdown("---")
-    st.markdown("### Atributos Derivados")
-    res_mod = get_mod(at["RES"])
-    von_mod = get_mod(at["VON"])
-    
-    pv_max = 50 + (5 * res_mod) + (15 * (p["Nivel"] - 1))
-    pm_max = 100 + (10 * von_mod) + (20 * (p["Nivel"] - 1))
-    pa_base = 10 + get_mod(at["DES"]) + von_mod
-    
-    d1, d2, d3 = st.columns(3)
-    d1.metric("Pontos de Vida (PV)", pv_max)
-    d2.metric("Pontos de Mana (PM)", pm_max)
-    d3.metric("Defesa (PA)", pa_base)
+        with col_btn1:
+            # Botão estilo Popover (abre uma janelinha por cima)
+            with st.popover("Ver Perícias"):
+                st.markdown(f"### Perícias de {char_sel}")
+                df_pericias = renderizar_pericias(p)
+                
+                # Exibe a tabela sem o índice lateral para ficar mais limpo
+                st.table(df_pericias)
+                
+                st.caption("Ponto de Perícia (PP) investido conforme o Nível.")
+        
+        atributos_lista = [
+            (col_at1, "FOR", at["FOR"]),
+            (col_at2, "INT", at["INT"]),
+            (col_at3, "DES", at["DES"]),
+            (col_at4, "RES", at["RES"]),
+            (col_at5, "VON", at["VON"])
+        ]
 
-    st.divider()
-    st.markdown(f"### Talentos de {char_sel}:")
-    df_talentos = renderizar_talentos(p)
-    st.table(df_talentos)
+        for col, nome, valor in atributos_lista:
+            mod = get_mod(valor)
+            sinal = "+" if mod >= 0 else ""
+            col.metric(label=nome, value=valor, delta=f"{sinal}{mod}")
 
-    st.divider()
-    mostrar_equipamento(p)
+        # Valores Derivados Automáticos[cite: 3]
+        st.markdown("---")
+        st.markdown("### Atributos Derivados")
+        res_mod = get_mod(at["RES"])
+        von_mod = get_mod(at["VON"])
+        
+        pv_max = 50 + (5 * res_mod) + (15 * (p["Nivel"] - 1))
+        pm_max = 100 + (10 * von_mod) + (20 * (p["Nivel"] - 1))
+        pa_base = 10 + get_mod(at["DES"]) + von_mod
+        
+        d1, d2, d3 = st.columns(3)
+        d1.metric("Pontos de Vida (PV)", pv_max)
+        d2.metric("Pontos de Mana (PM)", pm_max)
+        d3.metric("Defesa (PA)", pa_base)
 
-    st.divider()
-    mostrar_inventario(p)
-
-    st.divider()
-    
-    st.header("Grimório & Forja Mágica")
-    if p["Especializacao"] == "Conjuração":
-        mostrar_grimorio_conjurador(p)
-    elif p["Especializacao"] == "Invocação":
-        mostrar_grimorio_invocador(p)
-    elif p["Especializacao"] == "Magia Marcial":
-        mostrar_grimorio_mago_marcial(p)
-    else:
-        st.info("Especialização indefinida. Não há seções adicionais para exibir.")
+        st.divider()
+        st.markdown(f"### Talentos de {char_sel}:")
+        df_talentos = renderizar_talentos(p)
+        st.table(df_talentos)
+    # Aba de Inventário
+    with abas[1]:
+        mostrar_equipamento(p)
+        st.divider()
+        mostrar_inventario(p)
+    # Aba de Grimório
+    with abas[2]:
+        st.header("Grimório & Forja Mágica")
+        if p["Especializacao"] == "Conjuração":
+            mostrar_grimorio_conjurador(p)
+        elif p["Especializacao"] == "Invocação":
+            mostrar_grimorio_invocador(p)
+        elif p["Especializacao"] == "Magia Marcial":
+            mostrar_grimorio_mago_marcial(p)
+        else:
+            st.info("Especialização indefinida. Não há seções adicionais para exibir.")
 
 mostrar_ficha_daitai()
