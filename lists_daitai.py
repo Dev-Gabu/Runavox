@@ -203,7 +203,7 @@ TABELA_C_TIPO_HABILIDADE = [
    {
     "Tipo": "Projétil Orgânico",
     "Descrição": "Disparo de espinhos, cuspe ácido ou penas.",
-    "Dano": (1, 8),
+    "Dano": (1, 6),
     "Duração": "Instantâneo",
     "Alcance": "Médio",
     "Complexidade": 2

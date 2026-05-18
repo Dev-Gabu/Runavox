@@ -404,16 +404,16 @@ def mostrar_grimorio_invocador(p):
             
             
             ## Adicionando efeitos aos modificadores
-            for mod in modificadores_escolhidos:
-                if mod["Modificador"] == "Alcance Elástico":
-                    if hab_base["Alcance"] is not None and hab_base["Alcance"] != "Pessoal":
-                        hab_base["Alcance"] = "Longo" if hab_base["Alcance"] == "Médio" else "Médio"
-                elif mod["Modificador"] == "Sacrifício":
-                    hab_base["Dano"] = (hab_base["Dano"][0] + 1, hab_base["Dano"][1]) if hab_base["Dano"] else None
-                elif mod["Modificador"] == "Dano Aumentado":
-                    hab_base["Dano"] = (hab_base["Dano"][0] + 1, hab_base["Dano"][1]) if hab_base["Dano"] else None
-                elif mod["Modificador"] == "Potência aumentada":
-                    hab_base["Dano"] = (hab_base["Dano"][0], hab_base["Dano"][1] + 2 if hab_base["Dano"] < 12 else hab_base["Dano"][1] + 8) if hab_base["Dano"] else None
+            # for mod in modificadores_escolhidos:
+            #     if mod["Modificador"] == "Alcance Elástico":
+            #         if hab_base["Alcance"] is not None and hab_base["Alcance"] != "Pessoal":
+            #             hab_base["Alcance"] = "Longo" if hab_base["Alcance"] == "Médio" else "Médio"
+            #     elif mod["Modificador"] == "Sacrifício":
+            #         hab_base["Dano"] = (hab_base["Dano"][0] + 1, hab_base["Dano"][1]) if hab_base["Dano"] else None
+            #     elif mod["Modificador"] == "Dano Aumentado":
+            #         hab_base["Dano"] = (hab_base["Dano"][0] + 1, hab_base["Dano"][1]) if hab_base["Dano"] else None
+            #     elif mod["Modificador"] == "Potência aumentada":
+            #         hab_base["Dano"] = (hab_base["Dano"][0], hab_base["Dano"][1] + 2 if hab_base["Dano"] < 12 else hab_base["Dano"][1] + 8) if hab_base["Dano"] else None
 
             objeto_habilidade = {
                 "Nome": nome_tecnica if nome_tecnica else tipo_selecionado,
