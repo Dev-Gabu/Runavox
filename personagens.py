@@ -424,7 +424,7 @@ personagens_daitai = {
         "Foto": "pp/lidane.jpg",
 
         "Atributos": {
-            "FOR": 8,
+            "FOR": 9,
             "INT": 7,
             "DES": 10,
             "RES": 6,
@@ -1455,7 +1455,7 @@ personagens_daitai = {
             "Raça": "Humano",
             "Nivel": 1         ,
             "Elementos": ["Metalo"],
-            "Especializacao": "Invocador",
+            "Especializacao": "Invocação",
             "Foto": "pp/erick.jpg",
     
             "Atributos": {

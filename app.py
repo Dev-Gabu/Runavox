@@ -301,7 +301,54 @@ def mostrar_grimorio_conjurador(p):
 
 def mostrar_grimorio_invocador(p):
     
-        st.info("A seção de Grimório para Invocadores ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+    aba1, aba2, aba3= st.tabs(["Invocações", "Criar Habilidade", "Criar Invocação"])
+    
+    with aba1:
+        st.subheader(f"Feitiços Conhecidos")
+        grimorio = p.get("Grimorio", [])
+        
+        if not grimorio:
+            st.info("Este mago ainda não transcreveu feitiços.")
+        else:
+            for invocacao in grimorio:
+                with st.expander(f"🦉 {invocacao['Nome']} | PV: {invocacao['PV']} | PA: {invocacao['PA']})"):
+                    st.image(invocacao['Aparencia'], width=50)
+                    st.write(f"**Descricao:** {invocacao['Descricao']}")
+                    st.write(f"**Categoria:** {invocacao['Categoria']}")
+                    st.write(f"**Elemento:** {invocacao['Elemento']}")
+                    st.write(f"**Dano:** {invocacao['Dano fixo']} + {invocacao['Dano dado'][0]}d{invocacao['Dano dado'][1]}")
+                    st.write(f"**Custo:** {invocacao['Mana']} PM")
+                    st.write(f"---")
+                    st.write(invocacao['Descrição'])
+                    
+                    st.write("Atributos e Modificadores")
+                    at = invocacao["Atributos"]
+                    
+                    col_at1, col_at2, col_at3, col_at4, col_at5, col_btn1 = st.columns(6)
+                    
+                    atributos_lista = [
+                        (col_at1, "FOR", at["FOR"]),
+                        (col_at2, "INT", at["INT"]),
+                        (col_at3, "DES", at["DES"]),
+                        (col_at4, "RES", at["RES"]),
+                        (col_at5, "VON", at["VON"])
+                    ]
+
+                    for col, nome, valor in atributos_lista:
+                        mod = get_mod(valor)
+                        sinal = "+" if mod >= 0 else ""
+                        col.metric(label=nome, value=valor, delta=f"{sinal}{mod}")
+
+                    for habilidade in invocacao.get("Habilidades", []):
+                        # Lógica para exibir habilidades da invocação
+                        pass
+
+    with aba2:
+        st.subheader("Criar Habilidade")
+    
+    with aba3:
+        st.subheader("Criar Invocação")
+        
 
 def mostrar_grimorio_mago_marcial(p):
     

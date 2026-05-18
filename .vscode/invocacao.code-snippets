@@ -15,7 +15,9 @@
 			"\t],",
 			"\t\"PV\": 20,",
 			"\t\"PA\": 10,",
-			"\t\"Habilidades\": [\"$4\"],",
+			"\t\"Descricao\" : \"$5\",",
+			"\t\"Categoria\": \"$6\",",
+			"\t\"Habilidades\": [\"$7\"],",
 			"\t\"Dano fixo\": 4,",
 			"\t\"Dano dado\": (1, 6)",
 			"}"
