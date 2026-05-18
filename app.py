@@ -337,8 +337,11 @@ def mostrar_grimorio_invocador(p):
 
                     with st.expander("💢 Habilidades da Invocação"):
                         for habilidade in invocacao.get("Habilidades", []):
-                            # Lógica para exibir habilidades da invocação
-                            pass
+                            with st.expander(f"✨ {habilidade['Nome']} (Custo: {habilidade['Custo']} PM)"):
+                                st.write(f"**Descrição:** {habilidade['Descrição']}")
+                                if habilidade['Dano'] is not None: st.write(f"**Dano:** {habilidade['Dano'][0]}d{habilidade['Dano'][1]}")
+                                if habilidade['Alcance'] is not None: st.write(f"**Alcance:** {habilidade['Alcance'] }")
+                                if habilidade['Duração'] is not None: st.write(f"**Duração:** {habilidade['Duração'] }")
 
     with aba2:
         st.subheader("Criar Habilidade")
