@@ -404,7 +404,6 @@ def mostrar_grimorio_invocador(p):
             
             
             ## Adicionando efeitos aos modificadores
-
             for mod in modificadores_escolhidos:
                 if mod["Modificador"] == "Alcance Elástico":
                     if hab_base["Alcance"] is not None and hab_base["Alcance"] != "Pessoal":
