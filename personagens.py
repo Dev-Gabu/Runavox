@@ -906,7 +906,7 @@ personagens_daitai = {
                         "Nome": "Marca da Caçada",
                         "Tipo": "Efeito",
                         "Descrição": "Morde o alvo e o marca. A caçada possui um efeito especial, Amarok consegue sentir a presença da presa ferida pelo cheiro, e ganha uma ação extra de movimento para se mover em direção a mesma. Margem de crítico de 18-20.",
-                        "Dano": "2d8",
+                        "Dano": (2,8),
                         "Duração": "2 Turnos",
                         "Alcance": "Curto",
                         "Complexidade": "6",
