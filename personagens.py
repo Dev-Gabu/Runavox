@@ -1564,13 +1564,13 @@ personagens_daitai = {
                 "Nome": "Beldum",
                 "Aparencia": "invocacoes/beldum.jpg",
                 "Elemento": "Metalo",
-                "Atributos": [
-                    {"FOR": 6},
-                    {"RES": 6},
-                    {"INT": 6},
-                    {"DES": 6},
-                    {"VON": 6}
-                ],
+                "Atributos": {
+                    "FOR": 6,
+                    "RES": 6,
+                    "INT": 6,
+                    "DES": 6,
+                    "VON": 6
+                },
                 "PV": 20,
                 "PA": 10,
                 "Descricao": "Um ser metálico com um único olho vermelho. Flutua no ar e tem a capacidade de se fundir com outros objetos metálicos para aumentar seu poder. Beldum é conhecido por sua resistência e força, sendo um aliado valioso em combate.",
