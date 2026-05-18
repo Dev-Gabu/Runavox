@@ -350,7 +350,7 @@ def mostrar_grimorio_invocador(p):
         nivel_atual = p.get("Nivel", 1)
         lc_limite = nivel_atual + mod_von 
         
-        st.write(f"**Mago:** {p.get('Nome', 'Desconhecido')} | **Nível:** {nivel_atual} | **Modificador de VON:** {mod_von}")
+        st.write(f"**Nível:** {nivel_atual} | **Modificador de VON:** {mod_von}")
         st.info(f"🔮 Seu **Limite de Complexidade (LC)** para criar habilidades é: **{lc_limite}**")
 
         st.markdown("---")
@@ -362,7 +362,7 @@ def mostrar_grimorio_invocador(p):
         
         # Encontra os dados da habilidade escolhida
         hab_base = next(h for h in TABELA_C_TIPO_HABILIDADE if h["Tipo"] == tipo_selecionado)
-        st.caption(f"ℹ️ *Descrição base:* {hab_base['Descrição']}")
+        st.caption(f"ℹ️ {hab_base['Descrição']}")
         comp_base = hab_base["Complexidade"]
 
         st.markdown("---")
@@ -406,7 +406,7 @@ def mostrar_grimorio_invocador(p):
             ## Adicionando efeitos aos modificadores
 
             for mod in modificadores_escolhidos:
-                if mod["Modificador"] == "Alcance Elétrico":
+                if mod["Modificador"] == "Alcance Elástico":
                     if hab_base["Alcance"] is not None and hab_base["Alcance"] != "Pessoal":
                         hab_base["Alcance"] = "Longo" if hab_base["Alcance"] == "Médio" else "Médio"
                 elif mod["Modificador"] == "Sacrifício":
