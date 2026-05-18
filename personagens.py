@@ -786,7 +786,8 @@ personagens_daitai = {
         "Talentos" : {
             "Fúria Demoníaca": " Ativável com <50% PV. Recebe +2 em FOR e INT, mas sofre −3 em RES.",
             "Mente Blindada": "+2 VON",
-            "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
+            "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior.",
+            "Alpha": "Possui vantagem em interações com criaturas da categoria lupino, suas invocações lupinas recebem +2 em dano de ataques."
 
         },
         "Equipamento" : [
@@ -872,7 +873,50 @@ personagens_daitai = {
             "Descrição": "Permite ao usuário criar [Katana Óssea].",
             "Quantidade": 1
             },
-                ]
+                ],
+
+        "Grimorio": [
+            {
+                "Nome": "Balerion",
+                "Aparencia": "invocacoes/balerion.jpg",
+                "Elemento": "Geo",
+                "Atributos": {
+                    "FOR": 10,
+                    "RES": 6,
+                    "INT": 6,
+                    "DES": 10,
+                    "VON": 6
+                },
+                "PV": 35,
+                "PA": 10,
+                "Descricao" : "Criaturas ligadas às sombras, esses lobos noturnos nasceram do sofrimento após anos presos e torturados por caçadores. solitários e implacáveis, odeiam humanos — especialmente homens — e caçam apenas sob a proteção da noite, evitando a luz do dia.",
+                "Categoria": "Lupino",
+                "Habilidades": [
+                    {
+                        "Nome": "Hora da Caçada",
+                        "Tipo": "Buff",
+                        "Descrição": "O lobo uiva ferozmente para a lua, ganhando assim um aumento em sua força e velocidade. Ele recebe +2 em FOR e DES até o fim da noite.",
+                        "Dano": None,
+                        "Duração": "Indefinido",
+                        "Alcance": "Pessoal",
+                        "Complexidade": "5",
+                        "Custo": "25"
+                    },
+                    {
+                        "Nome": "Marca da Caçada",
+                        "Tipo": "Efeito",
+                        "Descrição": "Morde o alvo e o marca. A caçada possui um efeito especial, Amarok consegue sentir a presença da presa ferida pelo cheiro, e ganha uma ação extra de movimento para se mover em direção a mesma. Margem de crítico de 18-20.",
+                        "Dano": "2d8",
+                        "Duração": "2 Turnos",
+                        "Alcance": "Curto",
+                        "Complexidade": "6",
+                        "Custo": "30"
+                    },
+                ],
+                "Dano fixo": 4,
+                "Dano dado": (1, 6)
+            }
+        ]
     },
 
     "August Antonelli Roux": {
