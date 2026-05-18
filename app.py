@@ -527,13 +527,13 @@ def mostrar_ficha_daitai():
         df_talentos = renderizar_talentos(p)
         st.table(df_talentos)
 
-        st.markdown("Habilidade de Classe")
+        st.markdown("### Habilidade de Classe")
         if p["Especializacao"] == "Conjuração":
-            st.markdown("** Versatilidade Mágica**: Uma vez por sessão de estudo, o Conjurador pode modificar temporariamente (sem gastar PMF) um Feitiço Base de seu Grimório, trocando um de seus Modificadores de Complexidade por outro.")
+            st.markdown("Versatilidade Mágica: Uma vez por sessão de estudo, o Conjurador pode modificar temporariamente (sem gastar PMF) um Feitiço Base de seu Grimório, trocando um de seus Modificadores de Complexidade por outro.")
         elif p["Especializacao"] == "Invocação":
-            st.markdown("** Vínculo Compartilhado**: O Invocador pode gastar uma ação de movimento e 30 Pontos de Mana (PM) para conceder uma Ação extra a uma de suas Invocações durante o turno dela.")
+            st.markdown("Vínculo Compartilhado: O Invocador pode gastar uma ação de movimento e 30 Pontos de Mana (PM) para conceder uma Ação extra a uma de suas Invocações durante o turno dela.")
         elif p["Especializacao"] == "Magia Marcial":
-            st.markdown("** Canalização Corporal**: Uma vez por turno, o Mago Marcial pode usar Mana para aumentar o dano de um ataque físico bem-sucedido em +1d6 (Custo: 10 PM).")
+            st.markdown("Canalização Corporal: Uma vez por turno, o Mago Marcial pode usar Mana para aumentar o dano de um ataque físico bem-sucedido em +1d6 (Custo: 10 PM).")
     # Aba de Inventário
     with abas[1]:
         mostrar_inventario(p)
