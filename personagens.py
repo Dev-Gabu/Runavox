@@ -915,6 +915,46 @@ personagens_daitai = {
                 ],
                 "Dano fixo": 4,
                 "Dano dado": (1, 6)
+            },
+            {
+                "Nome": "Lorcan",
+                "Aparencia": "invocacoes/lorcan.jpg",
+                "Elemento": "Geo",
+                "Atributos": {
+                    "FOR": 6,
+                    "RES": 10,
+                    "INT": 6,
+                    "DES": 6,
+                    "VON": 10
+                },
+                "PV": 35,
+                "PA": 10,
+                "Descricao" : "São criaturas ferozes e de boa índole, possuem um prazer imenso em defender os mais fracos, até mesmo chegando a ultilizar seus corpos para isso.",
+                "Categoria": "Lupino",
+                "Habilidades": [
+                    {
+                        "Nome": "Armadura Totem",
+                        "Tipo": "Defesa",
+                        "Descrição": "Cria uma armadura de rochas ao redor do seu corpo, aumentando sua resistência a danos físicos. Ele recebe +4 na PA. Pode ser usada no seu invocador",
+                        "Dano": None,
+                        "Duração": "2 turnos",
+                        "Alcance": "Pessoal",
+                        "Complexidade": "6",
+                        "Custo": "30"
+                    },
+                    {
+                        "Nome": "Dívida",
+                        "Tipo": "Projétil",
+                        "Descrição": "Atira um projétil de pedra em um inimigo. O projétil causa dano adicional equivalente à metade do dano sofrido no ultimo turno.",
+                        "Dano": (2,6),
+                        "Duração": None,
+                        "Alcance": "Longo",
+                        "Complexidade": "6",
+                        "Custo": "30"
+                    },
+                ],
+                "Dano fixo": 4,
+                "Dano dado": (1, 6)
             }
         ]
     },
