@@ -269,6 +269,16 @@ TABELA_C_TIPO_HABILIDADE = [
 
 TABELA_D_MOD_HABILIDADE = [
     {
+    "Modificador": "Dano aumentado",
+    "Descrição": "Adiciona um dano ao dano da habilidade.",
+    "Custo": 1
+    },
+    {
+    "Modificador": "Potência aumentada",
+    "Descrição": "Aumenta em um o grau do dado de dano da habilidade.",
+    "Custo": 3
+    },
+    {
     "Modificador": "Efeito",
     "Descrição": "Adiciona dano contínuo 1d4 por 2 turnos ao ataque.",
     "Custo": 2
@@ -290,7 +300,7 @@ TABELA_D_MOD_HABILIDADE = [
     },
     {
     "Modificador": "Simbiose",
-    "Descrição": "Parte do dano causado pela habilidade cura a Invocação ou o Mago.",
+    "Descrição": "Parte do dano causado pela habilidade cura a Invocação ou o Mago. Cura em 1/4 do dano causado.",
     "Custo": 3
     },
     {

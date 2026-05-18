@@ -311,14 +311,13 @@ def mostrar_grimorio_invocador(p):
         else:
             for invocacao in grimorio:
                 with st.expander(f"🦉 {invocacao['Nome']} | PV: {invocacao['PV']} | PA: {invocacao['PA']})"):
-                    st.image(invocacao['Aparencia'], width=100)
+                    st.image(invocacao['Aparencia'], width=150)
                     st.write(f"**Descricao:** {invocacao['Descricao']}")
                     st.write(f"**Categoria:** {invocacao['Categoria']}")
                     st.write(f"**Elemento:** {invocacao['Elemento']}")
                     st.write(f"**Dano:** {invocacao['Dano fixo']} + {invocacao['Dano dado'][0]}d{invocacao['Dano dado'][1]}")
-                    st.write(f"---")
                     
-                    st.write("Atributos e Modificadores")
+                    st.write("**== Atributos e Modificadores ==**")
                     at = invocacao["Atributos"]
                     
                     col_at1, col_at2, col_at3, col_at4, col_at5, col_btn1 = st.columns(6)
@@ -336,12 +335,99 @@ def mostrar_grimorio_invocador(p):
                         sinal = "+" if mod >= 0 else ""
                         col.metric(label=nome, value=valor, delta=f"{sinal}{mod}")
 
-                    for habilidade in invocacao.get("Habilidades", []):
-                        # Lógica para exibir habilidades da invocação
-                        pass
+                    with st.expander("💢 Habilidades da Invocação"):
+                        for habilidade in invocacao.get("Habilidades", []):
+                            # Lógica para exibir habilidades da invocação
+                            pass
 
     with aba2:
         st.subheader("Criar Habilidade")
+
+        st.markdown("Molda a essência e as técnicas de combate das criaturas através do grimório.")
+
+        at_personagem = p.get("Atributos", {"VON": 6})
+        mod_von = get_mod(at_personagem.get("VON", 6))
+        nivel_atual = p.get("Nivel", 1)
+        lc_limite = nivel_atual + mod_von 
+        
+        st.write(f"**Mago:** {p.get('Nome', 'Desconhecido')} | **Nível:** {nivel_atual} | **Modificador de VON:** {mod_von}")
+        st.info(f"🔮 Seu **Limite de Complexidade (LC)** para criar habilidades é: **{lc_limite}**")
+
+        st.markdown("---")
+        
+        # --- PASSO 1: SELEÇÃO DA HABILIDADE BASE ---
+        st.subheader("Definir a Habilidade Base")
+        opcoes_habilidades = [h["Tipo"] for h in TABELA_C_TIPO_HABILIDADE]
+        tipo_selecionado = st.selectbox("Selecione o tipo da habilidade:", opcoes_habilidades)
+        
+        # Encontra os dados da habilidade escolhida
+        hab_base = next(h for h in TABELA_C_TIPO_HABILIDADE if h["Tipo"] == tipo_selecionado)
+        st.caption(f"ℹ️ *Descrição base:* {hab_base['Descrição']}")
+        comp_base = hab_base["Complexidade"]
+
+        st.markdown("---")
+
+        # --- PASSO 2: APLICAÇÃO DE MODIFICADORES ---
+        st.subheader("Aplicar Modificadores")
+        st.write("Marque as alterações que deseja aplicar à habilidade base:")
+        
+        modificadores_escolhidos = []
+        comp_modificadores = 0
+        
+        # Renderiza os modificadores em formato de checkboxes funcionais
+        for mod in TABELA_D_MOD_HABILIDADE:
+            sinal = "+" if mod["Custo"] >= 0 else ""
+            label_checkbox = f"{mod['Modificador']} ({sinal}{mod['Custo']} LC) — {mod['Descrição']}"
+            
+            if st.checkbox(label_checkbox, key=f"mod_inv_{mod['Modificador']}"):
+                modificadores_escolhidos.append(mod["Modificador"])
+                comp_modificadores += mod["Custo"]
+
+        st.markdown("---")
+
+        # --- CÁLCULO E VALIDAÇÃO FINAL ---
+        st.subheader("✒️ Resumo e Validação da Habilidade")
+        
+        nome_tecnica = st.text_input("Dê um nome para a habilidade:", placeholder="Ex: Mordida de Titânio")
+        complexidade_total = comp_base + comp_modificadores
+        custo_mana = max(5, complexidade_total * 5) # Garante um custo mínimo caso os nerfs zerem o valor
+        
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Complexidade da Base", f"{comp_base} LC")
+        col2.metric("Complexidade Total", f"{complexidade_total} / {lc_limite} LC")
+        col3.metric("Custo de Mana (PM)", f"{custo_mana} PM")
+
+        if complexidade_total > lc_limite:
+            st.error(f"❌ **Habilidade Inválida!** A complexidade calculada ({complexidade_total}) ultrapassa o limite de sua Vontade atual ({lc_limite}).")
+        else:
+            st.success(f"✅ **Habilidade Aprovada!** Habilidade pronta para ser transcrita nas suas Páginas de Grimório.")
+            
+            
+            ## Adicionando efeitos aos modificadores
+
+            for mod in modificadores_escolhidos:
+                if mod["Modificador"] == "Alcance Elétrico":
+                    if hab_base["Alcance"] is not None and hab_base["Alcance"] != "Pessoal":
+                        hab_base["Alcance"] = "Longo" if hab_base["Alcance"] == "Médio" else "Médio"
+                elif mod["Modificador"] == "Sacrifício":
+                    hab_base["Dano"] = (hab_base["Dano"][0] + 1, hab_base["Dano"][1]) if hab_base["Dano"] else None
+                elif mod["Modificador"] == "Dano Aumentado":
+                    hab_base["Dano"] = (hab_base["Dano"][0] + 1, hab_base["Dano"][1]) if hab_base["Dano"] else None
+                elif mod["Modificador"] == "Potência aumentada":
+                    hab_base["Dano"] = (hab_base["Dano"][0], hab_base["Dano"][1] + 2 if hab_base["Dano"] < 12 else hab_base["Dano"][1] + 8) if hab_base["Dano"] else None
+
+            objeto_habilidade = {
+                "Nome": nome_tecnica if nome_tecnica else tipo_selecionado,
+                "Tipo": tipo_selecionado,
+                "Descrição": "".join([hab_base["Descrição"]] + [mod["Descrição"] for mod in TABELA_D_MOD_HABILIDADE if mod["Modificador"] in modificadores_escolhidos]),
+                "Dano": hab_base["Dano"] if hab_base["Dano"] else None,
+                "Duração": hab_base["Duração"] if hab_base["Duração"] else None,
+                "Alcance": hab_base["Alcance"] if hab_base["Alcance"] else None,
+                "Complexidade": complexidade_total,
+                "Custo": custo_mana
+            }
+            
+            st.json(objeto_habilidade)
     
     with aba3:
         st.subheader("Criar Invocação")
