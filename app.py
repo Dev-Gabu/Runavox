@@ -304,7 +304,6 @@ def mostrar_grimorio_invocador(p):
     aba1, aba2, aba3= st.tabs(["Invocações", "Criar Habilidade", "Criar Invocação"])
     
     with aba1:
-        st.subheader(f"Feitiços Conhecidos")
         grimorio = p.get("Grimorio", [])
         
         if not grimorio:

@@ -1330,7 +1330,7 @@ personagens_daitai = {
         ],
         "Inventario": [
                ],
-        "Grimório":[
+        "Grimorio":[
         ]
     },
 
@@ -1446,7 +1446,7 @@ personagens_daitai = {
         "Inventario": [
                ],
 
-        "Grimório":[
+        "Grimorio":[
         ]
     },
 
@@ -1559,7 +1559,7 @@ personagens_daitai = {
                     },
             ],
         "Inventario": [],
-        "Grimório":[
+        "Grimorio":[
             {
                 "Nome": "Beldum",
                 "Aparencia": "invocacoes/beldum.jpg",
@@ -1573,6 +1573,8 @@ personagens_daitai = {
                 ],
                 "PV": 20,
                 "PA": 10,
+                "Descricao": "Um ser metálico com um único olho vermelho. Flutua no ar e tem a capacidade de se fundir com outros objetos metálicos para aumentar seu poder. Beldum é conhecido por sua resistência e força, sendo um aliado valioso em combate.",
+                "Categoria": "Construto",
                 "Habilidades": [""],
                 "Dano fixo": 4,
                 "Dano dado": (1, 6)
