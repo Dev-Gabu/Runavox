@@ -798,11 +798,11 @@ def mostrar_bestiario_daitai():
                     c2.metric("Classe de Armadura", f"{monstro['PA']} PA")
                     c3.metric("Ações por Turno", f"{monstro['Ações']} AP")
 
-                    st.markdown(f"#### Modificadores: {monstro['Modificadores']}")
+                    st.markdown(f"*Modificadores: {monstro['Modificadores']}*")
                     
                     st.divider()
                     
-                    with st.expander(f"** Ataques Padrão:**"):
+                    with st.expander(f"**Ataques Padrão:**"):
                         for ataque in monstro.get("Ataques", []):
                             st.write(f"- {ataque}")
 
