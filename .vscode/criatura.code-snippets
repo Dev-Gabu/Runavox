@@ -1,0 +1,26 @@
+{
+	"Criar Criatura": {
+		"prefix": "cria",
+		"body": [
+			"{",
+			"\t\"Nome\": \"$1\",",
+			"\t\"Aparencia\": \"criaturas/$2jpg\",",
+			"\t\"Categoria\": \"$3\",",
+			"\t\"Descricao\" : \"$4\",",
+			"\t\"PV\": \"$5\",",
+			"\t\"PA\": \"$6\",",
+			"\t\"Ações\": \"$7\",",
+			"\t\"Modificadores\": \"FOR $8 | INT $9 | DES $10 | RES $11 | VON $12\",",
+			"\t\"Ataques\" : [",
+			"\t\t\"Ataque de Exemplo (1d6 + 2)\",",
+			"\t],",
+			"\t\"Ataques Especiais\": [",
+			"\t\t\"Habilidade Especial de Exemplo (1d8 + 2)\",",
+			"\t],",
+			"\t\"DropsComuns\": \"$15\",",
+			"\t\"DropsRaros\": \"$16\",",
+			"}"
+		],
+		"description": "Snippet para criar uma nova criatura. Substitua os valores de exemplo pelos atributos reais da sua criatura."
+	}
+}

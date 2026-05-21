@@ -4,7 +4,7 @@
 		"body": [
 			"{",
 			"\t\"Nome\": \"$1\",",
-			"\t\"Aparencia\": \"invocacoes/$2pg\",",
+			"\t\"Aparencia\": \"invocacoes/$2jpg\",",
 			"\t\"Elemento\": \"$3\",",
 			"\t\"Atributos\": {",
 			"\t\t\"FOR\": 6,",
