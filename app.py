@@ -770,8 +770,7 @@ def mostrar_bestiario_daitai():
             # Coluna 1: Imagem reduzida (Miniatura de 45px)
             with col_miniatura:
                 try:
-                    # Caminho da foto guardado na lista. Se falhar, usa um emoji padrão de monstro
-                    st.image(monstro.get("Foto", "assets/invocacao.jpg"), width=45)
+                    st.image(monstro.get("Aparencia", "assets/invocacao.jpg"), width=45)
                 except:
                     st.write("## 👾") # Fallback visual caso o arquivo de imagem falte no servidor
             
@@ -785,13 +784,12 @@ def mostrar_bestiario_daitai():
 
                     col_imagem, col_info = st.columns([1, 3])
                     with col_imagem:
-                        st.image(monstro.get("Foto", "assets/invocacao.jpg"), width=200)
+                        st.image(monstro.get("Aparencia", "assets/invocacao.jpg"), width=200)
                     with col_info:
                         st.subheader(f"{monstro['Nome']}")
                         st.markdown(f"**Categoria:** *{monstro['Categoria']}*")
 
                     st.markdown(f"**Descrição Ecológica:**\n{monstro['Descricao']}")
-                    st.divider()
                     st.divider()
                     
                     # Layout interno do Pop-up em colunas para os atributos de combate
@@ -801,6 +799,8 @@ def mostrar_bestiario_daitai():
                     c3.metric("Ações por Turno", f"{monstro['Ações']} AP")
 
                     st.markdown(f"#### Modificadores: {monstro['Modificadores']}")
+                    
+                    st.divider()
                     
                     with st.expander(f"** Ataques Padrão:**"):
                         for ataque in monstro.get("Ataques", []):
