@@ -839,4 +839,4 @@ def pagina_inicial():
     with abas_principais[3]: #Biblioteca
         st.info("A Biblioteca de Daitai Sunpo está em fase de desenvolvimento. Em breve, um acervo de livros, grimórios e conhecimentos para expandir o universo do jogo!")
                 
-mostrar_ficha_daitai()
+pagina_inicial()
