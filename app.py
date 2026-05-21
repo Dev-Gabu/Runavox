@@ -576,17 +576,16 @@ def mostrar_grimorio_mago_marcial(p):
                     comp_t_mods += custo_limpo
                     descricao_mods += f"{mod['Descrição']} "
 
-                for mod in mods_t_escolhidos:
-                    if mod == "Alcance Estendido":
+                    if nome_mod == "Alcance Estendido":
                         if t_base["Alcance"] == "Corpo a Corpo":
                             t_base["Alcance"] = "Curto"
                         elif t_base["Alcance"] == "Curto":
                             t_base["Alcance"] = "Médio"
                         elif t_base["Alcance"] == "Médio":
                             t_base["Alcance"] = "Longo"
-                    elif mod == "Golpe Carregado":
+                    elif nome_mod == "Golpe Carregado":
                         t_base["Dano"] = (t_base["Dano"][0] + 1, t_base["Dano"][1]) if t_base["Dano"] else None
-                    elif mod == "Golpe Devastador":
+                    elif nome_mod == "Golpe Devastador":
                         t_base["Dano"] = (t_base["Dano"][0], t_base["Dano"][1] + 2 if t_base["Dano"][1] < 12 else t_base["Dano"][1] + 8) if t_base["Dano"] else None
 
             st.markdown("---")
