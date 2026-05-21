@@ -497,9 +497,10 @@ def mostrar_grimorio_mago_marcial(p):
 
             elemento_formacao = "Neutro"
 
-            for elemento in TABELA_ELEMENTOS:
-                if st.checkbox(f"Selecionar elemento da formação: {elemento}"):
-                    elemento_formacao = elemento
+            with st.expander("Selecionar elemento da formação:"):
+                for elemento in TABELA_ELEMENTOS:
+                    if st.checkbox(elemento):
+                        elemento_formacao = elemento
 
             comp_f_base = int(f_base["Custo"])
 
