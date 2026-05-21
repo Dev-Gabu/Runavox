@@ -784,7 +784,7 @@ def mostrar_bestiario_daitai():
 
                     col_imagem, col_info = st.columns([1, 3])
                     with col_imagem:
-                        st.image(monstro.get("Aparencia", "assets/invocacao.jpg"), width=200)
+                        st.image(monstro.get("Aparencia", "assets/invocacao.jpg"), width=400)
                     with col_info:
                         st.subheader(f"{monstro['Nome']}")
                         st.markdown(f"**Categoria:** *{monstro['Categoria']}*")
