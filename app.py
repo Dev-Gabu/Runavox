@@ -782,8 +782,9 @@ def mostrar_bestiario_daitai():
                 
                 with st.popover(label_botao, use_container_width=True):
                     # Cabeçalho interno do Pop-up
-                    st.subheader(f"👹 {monstro['Nome']}")
-                    st.markdown(f"**🔬 Categoria:** *{monstro['Categoria']}*")
+                    st.image(monstro.get("Foto", "assets/invocacao.jpg"), width=200)
+                    st.subheader(f"{monstro['Nome']}")
+                    st.markdown(f"**Categoria:** *{monstro['Categoria']}*")
                     st.divider()
                     
                     # Layout interno do Pop-up em colunas para os atributos de combate
@@ -792,24 +793,24 @@ def mostrar_bestiario_daitai():
                     c2.metric("Classe de Armadura", f"{monstro['PA']} PA")
                     c3.metric("Ações por Turno", f"{monstro['Ações']} AP")
 
-                    st.markdown(f"## Modificadores: {monstro['Modificadores']}")
+                    st.markdown(f"#### Modificadores: {monstro['Modificadores']}")
                     
-                    with st.expander(f"**⚔️ Ataques Padrão:**"):
+                    with st.expander(f"** Ataques Padrão:**"):
                         for ataque in monstro.get("Ataques", []):
                             st.write(f"- {ataque}")
 
-                    with st.expander(f"**⚔️ Ataques Especiais:**"):
+                    with st.expander(f"**Ataques Especiais:**"):
                         for sataque in monstro.get("Ataques Especiais", []):
                             st.write(f"- {sataque}")
 
                     st.divider()
                     
                     # Descrição narrativa
-                    st.markdown(f"**📜 Descrição Ecológica:**\n{monstro['Descrição']}")
+                    st.markdown(f"**Descrição Ecológica:**\n{monstro['Descricao']}")
                     st.divider()
                     
                     # Área de pilhagem / Drops
-                    st.markdown("#### 💎 Espólios de Caça (Drops)")
+                    st.markdown("#### Espólios de Caça (Drops)")
                     col_drop1, col_drop2 = st.columns(2)
                     with col_drop1:
                         st.info(f"📦 **Comuns / Materiais:**\n{monstro['DropsComuns']}")
