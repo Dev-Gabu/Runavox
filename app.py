@@ -782,9 +782,16 @@ def mostrar_bestiario_daitai():
                 
                 with st.popover(label_botao, use_container_width=True):
                     # Cabeçalho interno do Pop-up
-                    st.image(monstro.get("Foto", "assets/invocacao.jpg"), width=200)
-                    st.subheader(f"{monstro['Nome']}")
-                    st.markdown(f"**Categoria:** *{monstro['Categoria']}*")
+
+                    col_imagem, col_info = st.columns([1, 3])
+                    with col_imagem:
+                        st.image(monstro.get("Foto", "assets/invocacao.jpg"), width=200)
+                    with col_info:
+                        st.subheader(f"{monstro['Nome']}")
+                        st.markdown(f"**Categoria:** *{monstro['Categoria']}*")
+
+                    st.markdown(f"**Descrição Ecológica:**\n{monstro['Descricao']}")
+                    st.divider()
                     st.divider()
                     
                     # Layout interno do Pop-up em colunas para os atributos de combate
@@ -805,17 +812,13 @@ def mostrar_bestiario_daitai():
 
                     st.divider()
                     
-                    # Descrição narrativa
-                    st.markdown(f"**Descrição Ecológica:**\n{monstro['Descricao']}")
-                    st.divider()
-                    
                     # Área de pilhagem / Drops
                     st.markdown("#### Espólios de Caça (Drops)")
                     col_drop1, col_drop2 = st.columns(2)
                     with col_drop1:
-                        st.info(f"📦 **Comuns / Materiais:**\n{monstro['DropsComuns']}")
+                        st.info(f"📦 **Comuns:**\n{monstro['DropsComuns']}")
                     with col_drop2:
-                        st.warning(f"✨ **Raros / Componentes:**\n{monstro['DropsRaros']}")
+                        st.warning(f"✨ **Raros:**\n{monstro['DropsRaros']}")
             
             # Pequeno espaçamento entre as linhas da lista
             st.write("")
