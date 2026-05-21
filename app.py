@@ -432,8 +432,170 @@ def mostrar_grimorio_invocador(p):
             st.json(objeto_habilidade)        
 
 def mostrar_grimorio_mago_marcial(p):
+
+    aba1, aba2 = st.tabs(["Ver Grimório Marcial", "Criar Nova Técnica"])
     
-        st.info("A seção de Grimório para Magos Marciais ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+    with aba1:
+        st.subheader(f"Técnicas Conhecidas")
+        grimorio = p.get("Grimorio", [])
+        
+        if not grimorio:
+            st.info("Este mago ainda não transcreveu técnicas.")
+        else:
+            for spell in grimorio:
+                if spell['Categoria'] == "tecnica":
+                    with st.expander(f"🥊 {spell['Nome']} (Comp: {spell['Complexidade']} | PM: {spell['Mana']})"):
+                        st.write(f"**Tipo:** {spell['Tipo']}")
+                        st.write(f"**Custo:** {spell['Mana']} PM")
+                        st.write(f"**Elemento:** {spell['Elemento']}")
+                        st.write(f"---")
+                        st.write(spell['Descrição'])
+                        if spell['Dano']  is not None: st.write(f"**Dano:** {spell['Dano'][0]}d{spell['Dano'][1]}")
+                        if spell['Alcance'] is not None: st.write(f"**Alcance:** {spell['Alcance'] }")
+                        if spell['Duração'] is not None: st.write(f"**Duração:** {spell['Duração'] }")
+                elif spell['Categoria'] == "formacao":
+                    with st.expander(f"🥋 {spell['Nome']} (Comp: {spell['Complexidade']} | PM: {spell['Mana']})"):
+                        st.write(f"**Tipo de Postura:** {spell['Tipo_Postura']}")
+                        st.write(f"**Custo para Ativar:** {spell['Custo_Ativacao_PM']} PM")
+                        st.write(f"---")
+                        st.write(spell['Descrição'])
+                        if spell['Modificadores']:
+                            st.write(f"**Modificadores de Postura:** {', '.join(spell['Modificadores'])}")
+    with aba2:
+        st.subheader("Criar Técnica")
+
+        # --- CÁLCULO DE CAPACIDADE BASEADO EM RESISTÊNCIA ---
+        at_personagem = p.get("Atributos", {"RES": 6})
+        mod_res = get_mod(at_personagem.get("RES", 6))
+        nivel_atual = p.get("Nivel", 1)
+        
+        # Regra oficial do Mago Marcial (Nível + Mod. RES)
+        lc_limite = nivel_atual + mod_res 
+        
+        st.write(f"**Nível:** {nivel_atual} | **Modificador de RES:** {mod_res}")
+        st.info(f"🛡️ Seu **Limite de Complexidade (LC)** para Magia Marcial é: **{lc_limite}**")
+
+        # Divisão interna por Sub-Abas para organizar as duas mecânicas distintas
+        sub_aba_formacao, sub_aba_tecnica = st.tabs(["🥋 Criar Formação", "👊 Criar Técnica"])
+
+        # ==========================================
+        # SUB-ABA 1: FORMAÇÕES ELEMENTAIS
+        # ==========================================
+        with sub_aba_formacao:
+            st.subheader("Passo 1: Definir o Arquétipo da Formação")
+            opcoes_formacao = [f["Tipo"] for f in TABELA_E_TIPO_FORMACAO]
+            formacao_sel = st.selectbox("Escolha a postura base do seu corpo:", opcoes_formacao)
+            
+            f_base = next(f for f in TABELA_E_TIPO_FORMACAO if f["Tipo"] == formacao_sel)
+            st.caption(f"ℹ️ *{f_base['Descrição']}*")
+            
+            # Exibição limpa de bônus e penalidades do arquétipo
+            col_f1, col_f2 = st.columns(2)
+            col_f1.success(f"**Bônus:** {f_base['Beneficio']}")
+            col_f2.error(f"**Penalidade:** {f_base['Maleficio']}")
+            
+            comp_f_base = int(f_base["Custo"])
+
+            st.markdown("---")
+            st.subheader("Passo 2: Aplicar Modificadores de Postura")
+            
+            mods_f_escolhidos = []
+            comp_f_mods = 0
+            
+            for mod in TABELA_F_MOD_FORMACAO:
+                # Tratamento caso o custo venha como string com sinal "+3" ou "-2"
+                custo_limpo = int(mod["Custo"].replace("+", "").strip())
+                label = f"{mod['Modificador']} (+{custo_limpo} LC) — {mod['Descrição']}"
+                
+                if st.checkbox(label, key=f"form_mod_{mod['Modificador']}"):
+                    mods_f_escolhidos.append(mod["Modificador"])
+                    comp_f_mods += custo_limpo
+
+            st.markdown("---")
+            st.subheader("✒️ Selar Formação Elemental")
+            nome_formacao = st.text_input("Nome da Formação (Ex: Postura do Titã de Pedra)", key="input_nome_form")
+            
+            total_lc_f = comp_f_base + comp_f_mods
+            pm_f = total_lc_f * 5
+
+            c1, c2, c3 = st.columns(3)
+            c1.metric("Complexidade Base", f"{comp_f_base} LC")
+            c2.metric("Complexidade Final", f"{total_lc_f} / {lc_limite} LC")
+            c3.metric("Custo para Ativar", f"{pm_f} PM")
+
+            if total_lc_f > lc_limite:
+                st.error(f"❌ **Formação Inválida!** A complexidade ({total_lc_f}) excede seu limite de RES ({lc_limite}).")
+            else:
+                st.success("✅ **Formação aprovada!** Pronta para ser assumida em combate.")
+                objeto_formacao = {
+                    "Nome": nome_formacao if nome_formacao else formacao_sel,
+                    "Tipo_Postura": formacao_sel,
+                    "Modificadores": mods_f_escolhidos,
+                    "Complexidade": total_lc_f,
+                    "Custo_Ativacao_PM": pm_f
+                }
+                st.json(objeto_formacao)
+
+        # ==========================================
+        # SUB-ABA 2: TÉCNICAS MARCIAIS
+        # ==========================================
+        with sub_aba_tecnica:
+            st.subheader("Passo 1: Definir o Estilo de Golpe")
+            opcoes_tecnica = [t["Tipo"] for t in TABELA_G_TIPO_TECNICA]
+            tecnica_sel = st.selectbox("Escolha o ataque físico condutor de mana:", opcoes_tecnica)
+            
+            t_base = next(t for t in TABELA_G_TIPO_TECNICA if t["Tipo"] == tecnica_sel)
+            st.caption(f"ℹ️ *{t_base['Descrição']}*")
+            
+            col_t1, col_t2 = st.columns(2)
+            col_t1.metric("Dano Inicial da Técnica", f"{t_base['Dano'][0]}d{t_base['Dano'][1]}")
+            col_t2.metric("Alcance Padrão", t_base["Alcance"])
+            
+            comp_t_base = t_base["Complexidade"]
+
+            st.markdown("---")
+            st.subheader("Passo 2: Aplicar Modificadores de Impacto")
+            
+            mods_t_escolhidos = []
+            comp_t_mods = 0
+            
+            for mod in TABELA_H_MOD_TECNICA:
+                # Correção para o erro de digitação do caractere "'Modificador" contido na lista bruta
+                chave_mod = "Modificador" if "Modificador" in mod else "'Modificador"
+                nome_mod = mod[chave_mod]
+                
+                custo_limpo = int(mod["Custo"].replace("+", "").strip())
+                sinal = "+" if custo_limpo >= 0 else ""
+                label = f"{nome_mod} ({sinal}{mod['Custo']} LC) — {mod['Descrição']}"
+                
+                if st.checkbox(label, key=f"tec_mod_{nome_mod}"):
+                    mods_t_escolhidos.append(nome_mod)
+                    comp_t_mods += custo_limpo
+
+            st.markdown("---")
+            st.subheader("✒️ Transcrever Técnica no Grimório")
+            nome_tecnica = st.text_input("Nome da Técnica (Ex: Impacto Relâmpago de Electro)", key="input_nome_tec")
+            
+            total_lc_t = comp_t_base + comp_t_mods
+            pm_t = max(5, total_lc_t * 5) # Evita bugs com custos zerados ou negativos por debuffs
+
+            ct1, ct2, ct3 = st.columns(3)
+            ct1.metric("Complexidade Base", f"{comp_t_base} LC")
+            ct2.metric("Complexidade Final", f"{total_lc_t} / {lc_limite} LC")
+            ct3.metric("Custo de Execução", f"{pm_t} PM")
+
+            if total_lc_t > lc_limite:
+                st.error(f"❌ **Técnica Inválida!** A complexidade ({total_lc_t}) excede seu limite de RES ({lc_limite}).")
+            else:
+                st.success("✅ **Técnica aprovada!** Pronta para ser desferida na linha de frente.")
+                objeto_tecnica = {
+                    "Nome": nome_tecnica if nome_tecnica else tecnica_sel,
+                    "Estilo_Golpe": tecnica_sel,
+                    "Modificadores": mods_t_escolhidos,
+                    "Complexidade": total_lc_t,
+                    "Custo_Mana_PM": pm_t
+                }
+                st.json(objeto_tecnica)
 
 ## PÁGINA PRINCIPAL
 def mostrar_ficha_daitai():
@@ -554,4 +716,5 @@ def mostrar_ficha_daitai():
     # Aba de Forja
     with abas[4]:
             st.info("A seção de Forja ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+
 mostrar_ficha_daitai()
