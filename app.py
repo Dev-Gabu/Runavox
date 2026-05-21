@@ -782,7 +782,7 @@ def mostrar_bestiario_daitai():
                 with st.popover(label_botao, use_container_width=True):
                     # Cabeçalho interno do Pop-up
 
-                    col_imagem, col_info = st.columns([1, 3])
+                    col_imagem, col_info = st.columns([1, 5])
                     with col_imagem:
                         st.image(monstro.get("Aparencia", "assets/invocacao.jpg"), width=400)
                     with col_info:
