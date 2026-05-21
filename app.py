@@ -753,7 +753,7 @@ def mostrar_bestiario_daitai():
     st.markdown("*Criaturas do Terreno Paralelo*")
     locais = st.tabs(["Gaia","Eris","Moira","Interios","Nebulus","Infernus"])
     
-    lista_monstros = Bestiario[locais]
+    lista_monstros = Bestiario[locais[0]] # Exemplo: mostra os monstros de Gaia por padrão. O ideal seria criar uma função para atualizar a lista conforme a aba selecionada.
     
     st.divider()
     
