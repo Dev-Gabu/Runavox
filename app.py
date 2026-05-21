@@ -747,17 +747,17 @@ def mostrar_ficha_daitai():
 
     with abas_principais[1]: #Bestiário
         st.title("Bestiário")
-        st.info("Aqui estão listadas as criaturas e monstros que habitam o mundo de Daitai Sunpo e o Terreno Paralelo, com todos os dados de acesso público e/ou restritos aos alunos de classe especial da academia. Cada entrada inclui informações sobre suas características, habilidades e fraquezas, para ajudar os aventureiros a se prepararem para os encontros que terão pela frente!")
+        st.markdown("**Aqui estão listadas as criaturas e monstros que habitam o mundo de Daitai Sunpo e o Terreno Paralelo, com todos os dados de acesso público e/ou restritos aos alunos de classe especial da academia. Cada entrada inclui informações sobre suas características, habilidades e fraquezas, para ajudar os aventureiros a se prepararem para os encontros que terão pela frente!**")
 
         st.divider()
 
-        st.markdown("**Criaturas de Zenestria**")
+        st.markdown("***Criaturas de Zenestria***")
 
         ## Adicionar a lista de criaturas
 
         st.divider()
-        
-        st.markdown("**Criaturas do Terreno Paralelo**")
+
+        st.markdown("*Criaturas do Terreno Paralelo*")
         locais = st.tabs(["Gaia","Eris","Moira","Interios","Nebulus","Infernus"])
 
     with abas_principais[2]: #Loja
