@@ -488,12 +488,7 @@ def mostrar_grimorio_mago_marcial(p):
             col_f1.success(f"**Bônus:** {f_base['Beneficio']}")
             col_f2.error(f"**Penalidade:** {f_base['Maleficio']}")
 
-            elemento_formacao = "Neutro"
-
-            with st.expander("Selecionar elemento da formação:"):
-                for elemento in TABELA_ELEMENTOS:
-                    if st.checkbox(elemento):
-                        elemento_formacao = elemento
+            elemento_formacao = st.selectbox("Selecionar elemento da formação:", ["Neutro"] + TABELA_ELEMENTOS, key="elem_form_marcial")
 
             comp_f_base = int(f_base["Custo"])
 
@@ -559,12 +554,7 @@ def mostrar_grimorio_mago_marcial(p):
             
             comp_t_base = t_base["Complexidade"]
 
-            elemento_tecnica = "Neutro"
-
-            with st.expander("Selecionar elemento da formação:"):
-                for elemento in TABELA_ELEMENTOS:
-                    if st.checkbox(elemento):
-                        elemento_tecnica = elemento
+            elemento_tecnica = st.selectbox("Selecionar elemento da tecnica:", ["Neutro"] + TABELA_ELEMENTOS, key="elem_tecn_marcial")
 
             st.markdown("---")
             st.subheader("Passo 2: Aplicar Modificadores de Impacto")
