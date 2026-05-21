@@ -1,0 +1,20 @@
+{
+	"Criar Tecnica": {
+		"prefix": "tecnica",
+		"body": [
+			"{",
+			"\t\"Categoria\": \"tecnica\",",
+			"\t\"Nome\": \"$1\",",
+			"\t\"Elemento\": \"$2\",",
+			"\t\"Tipo\": \"$3\",",
+			"\t\"Descrição\": \"$4\",",
+			"\t\"Dano\": \"$5\",",
+			"\t\"Duração\": \"$6\",",
+			"\t\"Alcance\": \"$7\",",
+			"\t\"Complexidade\": \"$8\",",
+			"\t\"Custo\": \"$9\"",
+			"},"
+		],
+		"description": "Snippet para criar uma nova tecnica marcial. Substitua os valores de exemplo pelos atributos reais da sua habilidade."
+	}
+}

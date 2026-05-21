@@ -1,0 +1,19 @@
+{
+	"Criar Formacao": {
+		"prefix": "formacao",
+		"body": [
+			"{",
+			"\t\"Categoria\": \"formacao\",",
+			"\t\"Nome\": \"$1\",",
+			"\t\"Elemento\": \"$2\",",
+			"\t\"Tipo\": \"$3\",",
+			"\t\"Descrição\": \"$4\",",
+			"\t\"Buff\": \"$5\",",
+			"\t\"Debuff\": \"$6\",",
+			"\t\"Complexidade\": \"$8\",",
+			"\t\"Custo\": \"$9\"",
+			"},"
+		],
+		"description": "Snippet para criar uma nova formacao marcial. Substitua os valores de exemplo pelos atributos reais da sua habilidade."
+	}
+}

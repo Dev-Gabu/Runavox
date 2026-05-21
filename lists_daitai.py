@@ -359,27 +359,27 @@ TABELA_F_MOD_FORMACAO = [
     {
     "Modificador": "Reação Instintiva",
     "Descrição": "Permite realizar um contra-ataque físico se o inimigo falhar o ataque.",
-    "Custo": "+3"
+    "Custo": "3"
     },
     {
     "Modificador": "Aura Elemental",
     "Descrição": "Inimigos que terminam o turno em alcance curto recebem 1d6 de dano elemental.",
-    "Custo": "+2"
+    "Custo": "2"
     },
     {
     "Modificador": "Passo Leve",
     "Descrição": "O Mago ignora penalidades de terreno difícil enquanto na formação.",
-    "Custo": "+2"
+    "Custo": "2"
     },
     {
     "Modificador": "Pele de Éter",
     "Descrição": "Recebe Resistência Mágica (Reduz dano mágico em valor igual ao mod. VON).",
-    "Custo": "+2"
+    "Custo": "2"
     },
     {
     "Modificador": "Foco de Execução",
     "Descrição": "Aumenta a margem de Crítico em +1.",
-    "Custo": "+2"
+    "Custo": "2"
     }
 
 ]
@@ -427,37 +427,37 @@ TABELA_H_MOD_TECNICA = [
     {
         "'Modificador": "Golpe Carregado",
         "Descrição": "Aumenta em 1 a quantidade de dados bônus.",
-        "Custo": "+2"
+        "Custo": "2"
     },
     {
         "Modificador": "Golpe Devastador",
         "Descrição": "Aumenta em 1 a Categoria dos dados Bônus.",
-        "Custo": "+3"
+        "Custo": "3"
     },
     {
         "Modificador": "Impacto Penetrante",
         "Descrição": "O golpe ignora uma quantidade de PA igual ao Mod. de DES.",
-        "Custo": "+2"
+        "Custo": "2"
     },
     {
         "Modificador": "Vibração Ressonante",
         "Descrição": "O alvo deve passar num teste de RES ou ficar Atordoado.",
-        "Custo": "+3"
+        "Custo": "3"
     },
     {
         "Modificador": "Drenagem de Essência",
         "Descrição": "Metade do dano causado é convertido em cura para o Mago.",
-        "Custo": "+4"
+        "Custo": "4"
     },
     {
         "Modificador": "Golpe em Cadeia",
         "Descrição": "Se o golpe finalizar um inimigo, o Mago recebe uma ação de ataque extra nesse turno.",
-        "Custo": "+2"
+        "Custo": "2"
     },
     {
         "Modificador": "Velocidade da Luz",
         "Descrição": "A técnica pode ser usada como Ação Bónus em vez de uma Ação Padrão. Seu dano é reduzido pela metade.",
-        "Custo": "+3"
+        "Custo": "3"
     },
     {
         "Modificador": "Desgaste Físico",

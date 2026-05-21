@@ -453,16 +453,17 @@ def mostrar_grimorio_mago_marcial(p):
                         if spell['Dano']  is not None: st.write(f"**Dano:** {spell['Dano'][0]}d{spell['Dano'][1]}")
                         if spell['Alcance'] is not None: st.write(f"**Alcance:** {spell['Alcance'] }")
                         if spell['Duração'] is not None: st.write(f"**Duração:** {spell['Duração'] }")
+
                 elif spell['Categoria'] == "formacao":
                     with st.expander(f"🥋 {spell['Nome']} (Comp: {spell['Complexidade']} | PM: {spell['Mana']})"):
-                        st.write(f"**Tipo de Postura:** {spell['Tipo_Postura']}")
-                        st.write(f"**Custo para Ativar:** {spell['Custo_Ativacao_PM']} PM")
+                        st.write(f"**Tipo de Postura:** {spell['Tipo']}")
+                        st.write(f"**Elemento:** {spell['Elemento']}")
                         st.write(f"---")
                         st.write(spell['Descrição'])
-                        if spell['Modificadores']:
-                            st.write(f"**Modificadores de Postura:** {', '.join(spell['Modificadores'])}")
+                        st.write(f"Melhoria: {spell['Buff'] if 'Buff' in spell else 'Nenhum'}")
+                        st.write(f"Penalidade: {spell['Debuff'] if 'Debuff' in spell else 'Nenhum'}")
+
     with aba2:
-        st.subheader("Criar Técnica")
 
         # --- CÁLCULO DE CAPACIDADE BASEADO EM RESISTÊNCIA ---
         at_personagem = p.get("Atributos", {"RES": 6})
@@ -493,7 +494,13 @@ def mostrar_grimorio_mago_marcial(p):
             col_f1, col_f2 = st.columns(2)
             col_f1.success(f"**Bônus:** {f_base['Beneficio']}")
             col_f2.error(f"**Penalidade:** {f_base['Maleficio']}")
-            
+
+            elemento_formacao = "Neutro"
+
+            for elemento in TABELA_ELEMENTOS:
+                if st.checkbox(f"Selecionar elemento da formação: {elemento}"):
+                    elemento_formacao = elemento
+
             comp_f_base = int(f_base["Custo"])
 
             st.markdown("---")
@@ -501,7 +508,8 @@ def mostrar_grimorio_mago_marcial(p):
             
             mods_f_escolhidos = []
             comp_f_mods = 0
-            
+            descricao_mods = ""
+
             for mod in TABELA_F_MOD_FORMACAO:
                 # Tratamento caso o custo venha como string com sinal "+3" ou "-2"
                 custo_limpo = int(mod["Custo"].replace("+", "").strip())
@@ -510,6 +518,8 @@ def mostrar_grimorio_mago_marcial(p):
                 if st.checkbox(label, key=f"form_mod_{mod['Modificador']}"):
                     mods_f_escolhidos.append(mod["Modificador"])
                     comp_f_mods += custo_limpo
+                    descricao_mods += f"{mod['Descrição']} "
+
 
             st.markdown("---")
             st.subheader("✒️ Selar Formação Elemental")
@@ -528,11 +538,16 @@ def mostrar_grimorio_mago_marcial(p):
             else:
                 st.success("✅ **Formação aprovada!** Pronta para ser assumida em combate.")
                 objeto_formacao = {
-                    "Nome": nome_formacao if nome_formacao else formacao_sel,
-                    "Tipo_Postura": formacao_sel,
-                    "Modificadores": mods_f_escolhidos,
+                    
+                    "Categoria": "formacao",
+                    "Nome" : nome_formacao if nome_formacao else formacao_sel,
+                    "Elemento": elemento_formacao,
+                    "Tipo": formacao_sel,
+                    "Descrição": descricao_mods.strip() if descricao_mods else f_base["Descrição"],
+                    "Buff": f_base["Beneficio"],
+                    "Debuff": f_base["Maleficio"],
                     "Complexidade": total_lc_f,
-                    "Custo_Ativacao_PM": pm_f
+                    "Custo": pm_f
                 }
                 st.json(objeto_formacao)
 
