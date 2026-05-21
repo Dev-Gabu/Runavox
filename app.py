@@ -620,122 +620,149 @@ def mostrar_grimorio_mago_marcial(p):
 
 ## PÁGINA PRINCIPAL
 def mostrar_ficha_daitai():
-    st.title("Academia Daitai Sunpo - Registro de Magos")
-    
-    char_sel = st.selectbox("Selecione o Personagem", list(personagens_daitai.keys()))
-    p = personagens_daitai[char_sel]
-    
-    st.divider()
-
-    # Cabeçalho da Ficha
-    col_foto, col_info = st.columns([1, 3])
-    
-    with col_foto:
-        st.image(p["Foto"], use_container_width=True)
-        
-    with col_info:
-        st.header(char_sel)
-        st.subheader(f"*{p['Titulo']}*")
-        st.subheader(f"*{p['Raça']}*")
-        
-        # Linha de Status (Nível e Rank)
-        c1, c2, c3 = st.columns(3)
-        c1.write(f"**Nível:** {p['Nivel']}")
-        c2.write(f"**Rank:** {get_rank(p['Nivel'])}") # Rank Automático
-        c3.write(f"**Classe:** {p['Especializacao']}")
-
-        # Insígnias de Elementos
-        st.write("**Afinidades Elementais:**")
-        cols_elem = st.columns(len(p["Elementos"]))
-        for i, elem in enumerate(p["Elementos"]):
-            # Cores baseadas nos elementos do sistema
-            cor = {"Piro": "red", "Hidro": "blue", "Geo": "orange", "Aero": "gray"}.get(elem, "green")
-            cols_elem[i].markdown(f"**:{cor}[{elem}]**")
-
+    st.title("RUNAVOX")
+    st.title("O sistema integrado de Daitai Sunpo")
     st.divider()
     
-    abas = st.tabs(["Atributos", "Inventário","Equipamento", "Grimório","Forja"])
+    abas_principais = st.tabs(["Personagens", "Bestiário", "Loja", "Biblioteca"])
 
-    # Aba de Atributos
-    with abas[0]:
+    with abas_principais[0]: #Personagens
 
-        # Seção de Atributos
-        st.markdown("### Atributos e Modificadores")
-        at = p["Atributos"]
+        st.title("Ficha de Personagem")
+        char_sel = st.selectbox("Selecione o Personagem", list(personagens_daitai.keys()))
+        p = personagens_daitai[char_sel]
         
-        # Grid de Atributos (Oficiais do Daitai Sunpo: FOR, INT, DES, RES, VON)
-        col_at1, col_at2, col_at3, col_at4, col_at5, col_btn1 = st.columns(6)
+        st.divider()
 
-        with col_btn1:
-            # Botão estilo Popover (abre uma janelinha por cima)
-            with st.popover("Ver Perícias"):
-                st.markdown(f"### Perícias de {char_sel}")
-                df_pericias = renderizar_pericias(p)
-                
-                # Exibe a tabela sem o índice lateral para ficar mais limpo
-                st.table(df_pericias)
-                
-                st.caption("Ponto de Perícia (PP) investido conforme o Nível.")
+        # Cabeçalho da Ficha
+        col_foto, col_info = st.columns([1, 3])
         
-        atributos_lista = [
-            (col_at1, "FOR", at["FOR"]),
-            (col_at2, "INT", at["INT"]),
-            (col_at3, "DES", at["DES"]),
-            (col_at4, "RES", at["RES"]),
-            (col_at5, "VON", at["VON"])
-        ]
+        with col_foto:
+            st.image(p["Foto"], use_container_width=True)
+            
+        with col_info:
+            st.header(char_sel)
+            st.subheader(f"*{p['Titulo']}*")
+            st.subheader(f"*{p['Raça']}*")
+            
+            # Linha de Status (Nível e Rank)
+            c1, c2, c3 = st.columns(3)
+            c1.write(f"**Nível:** {p['Nivel']}")
+            c2.write(f"**Rank:** {get_rank(p['Nivel'])}") # Rank Automático
+            c3.write(f"**Classe:** {p['Especializacao']}")
 
-        for col, nome, valor in atributos_lista:
-            mod = get_mod(valor)
-            sinal = "+" if mod >= 0 else ""
-            col.metric(label=nome, value=valor, delta=f"{sinal}{mod}")
-
-        # Valores Derivados Automáticos[cite: 3]
-        st.markdown("---")
-        st.markdown("### Atributos Derivados")
-        res_mod = get_mod(at["RES"])
-        von_mod = get_mod(at["VON"])
-        
-        pv_max = 50 + (5 * res_mod) + (15 * (p["Nivel"] - 1))
-        pm_max = 100 + (10 * von_mod) + (20 * (p["Nivel"] - 1))
-        pa_base = 10 + get_mod(at["DES"]) + von_mod
-        
-        d1, d2, d3 = st.columns(3)
-        d1.metric("Pontos de Vida (PV)", pv_max)
-        d2.metric("Pontos de Mana (PM)", pm_max)
-        d3.metric("Defesa (PA)", pa_base)
+            # Insígnias de Elementos
+            st.write("**Afinidades Elementais:**")
+            cols_elem = st.columns(len(p["Elementos"]))
+            for i, elem in enumerate(p["Elementos"]):
+                # Cores baseadas nos elementos do sistema
+                cor = {"Piro": "red", "Hidro": "blue", "Geo": "orange", "Aero": "gray"}.get(elem, "green")
+                cols_elem[i].markdown(f"**:{cor}[{elem}]**")
 
         st.divider()
-        st.markdown(f"### Talentos de {char_sel}:")
-        df_talentos = renderizar_talentos(p)
-        st.table(df_talentos)
+        
+        abas = st.tabs(["Atributos", "Inventário","Equipamento", "Grimório","Forja"])
 
-        st.markdown("### Habilidade de Classe")
-        if p["Especializacao"] == "Conjuração":
-            st.markdown("Versatilidade Mágica: Uma vez por sessão de estudo, o Conjurador pode modificar temporariamente (sem gastar PMF) um Feitiço Base de seu Grimório, trocando um de seus Modificadores de Complexidade por outro.")
-        elif p["Especializacao"] == "Invocação":
-            st.markdown("Vínculo Compartilhado: O Invocador pode gastar uma ação de movimento e 30 Pontos de Mana (PM) para conceder uma Ação extra a uma de suas Invocações durante o turno dela.")
-        elif p["Especializacao"] == "Magia Marcial":
-            st.markdown("Canalização Corporal: Uma vez por turno, o Mago Marcial pode usar Mana para aumentar o dano de um ataque físico bem-sucedido em +1d6 (Custo: 10 PM).")
-    # Aba de Inventário
-    with abas[1]:
-        mostrar_inventario(p)
-    # Aba de Equipamento
-    with abas[2]:
-        mostrar_equipamento(p)
-    # Aba de Grimório
-    with abas[3]:
-        st.header("Grimório & Forja Mágica")
-        if p["Especializacao"] == "Conjuração":
-            mostrar_grimorio_conjurador(p)
-        elif p["Especializacao"] == "Invocação":
-            mostrar_grimorio_invocador(p)
-        elif p["Especializacao"] == "Magia Marcial":
-            mostrar_grimorio_mago_marcial(p)
-        else:
-            st.info("Especialização indefinida. Não há seções adicionais para exibir.")
-    # Aba de Forja
-    with abas[4]:
-            st.info("A seção de Forja ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+        # Aba de Atributos
+        with abas[0]:
 
+            # Seção de Atributos
+            st.markdown("### Atributos e Modificadores")
+            at = p["Atributos"]
+            
+            # Grid de Atributos (Oficiais do Daitai Sunpo: FOR, INT, DES, RES, VON)
+            col_at1, col_at2, col_at3, col_at4, col_at5, col_btn1 = st.columns(6)
+
+            with col_btn1:
+                # Botão estilo Popover (abre uma janelinha por cima)
+                with st.popover("Ver Perícias"):
+                    st.markdown(f"### Perícias de {char_sel}")
+                    df_pericias = renderizar_pericias(p)
+                    
+                    # Exibe a tabela sem o índice lateral para ficar mais limpo
+                    st.table(df_pericias)
+                    
+                    st.caption("Ponto de Perícia (PP) investido conforme o Nível.")
+            
+            atributos_lista = [
+                (col_at1, "FOR", at["FOR"]),
+                (col_at2, "INT", at["INT"]),
+                (col_at3, "DES", at["DES"]),
+                (col_at4, "RES", at["RES"]),
+                (col_at5, "VON", at["VON"])
+            ]
+
+            for col, nome, valor in atributos_lista:
+                mod = get_mod(valor)
+                sinal = "+" if mod >= 0 else ""
+                col.metric(label=nome, value=valor, delta=f"{sinal}{mod}")
+
+            # Valores Derivados Automáticos[cite: 3]
+            st.markdown("---")
+            st.markdown("### Atributos Derivados")
+            res_mod = get_mod(at["RES"])
+            von_mod = get_mod(at["VON"])
+            
+            pv_max = 50 + (5 * res_mod) + (15 * (p["Nivel"] - 1))
+            pm_max = 100 + (10 * von_mod) + (20 * (p["Nivel"] - 1))
+            pa_base = 10 + get_mod(at["DES"]) + von_mod
+            
+            d1, d2, d3 = st.columns(3)
+            d1.metric("Pontos de Vida (PV)", pv_max)
+            d2.metric("Pontos de Mana (PM)", pm_max)
+            d3.metric("Defesa (PA)", pa_base)
+
+            st.divider()
+            st.markdown(f"### Talentos de {char_sel}:")
+            df_talentos = renderizar_talentos(p)
+            st.table(df_talentos)
+
+            st.markdown("### Habilidade de Classe")
+            if p["Especializacao"] == "Conjuração":
+                st.markdown("Versatilidade Mágica: Uma vez por sessão de estudo, o Conjurador pode modificar temporariamente (sem gastar PMF) um Feitiço Base de seu Grimório, trocando um de seus Modificadores de Complexidade por outro.")
+            elif p["Especializacao"] == "Invocação":
+                st.markdown("Vínculo Compartilhado: O Invocador pode gastar uma ação de movimento e 30 Pontos de Mana (PM) para conceder uma Ação extra a uma de suas Invocações durante o turno dela.")
+            elif p["Especializacao"] == "Magia Marcial":
+                st.markdown("Canalização Corporal: Uma vez por turno, o Mago Marcial pode usar Mana para aumentar o dano de um ataque físico bem-sucedido em +1d6 (Custo: 10 PM).")
+        # Aba de Inventário
+        with abas[1]:
+            mostrar_inventario(p)
+        # Aba de Equipamento
+        with abas[2]:
+            mostrar_equipamento(p)
+        # Aba de Grimório
+        with abas[3]:
+            st.header("Grimório & Forja Mágica")
+            if p["Especializacao"] == "Conjuração":
+                mostrar_grimorio_conjurador(p)
+            elif p["Especializacao"] == "Invocação":
+                mostrar_grimorio_invocador(p)
+            elif p["Especializacao"] == "Magia Marcial":
+                mostrar_grimorio_mago_marcial(p)
+            else:
+                st.info("Especialização indefinida. Não há seções adicionais para exibir.")
+        # Aba de Forja
+        with abas[4]:
+                st.info("A seção de Forja ainda está em desenvolvimento. Fique atento para futuras atualizações!")
+
+    with abas_principais[1]: #Bestiário
+        st.title("Bestiário")
+        st.info("Aqui estão listadas as criaturas e monstros que habitam o mundo de Daitai Sunpo e o Terreno Paralelo, com todos os dados de acesso público e/ou restritos aos alunos de classe especial da academia. Cada entrada inclui informações sobre suas características, habilidades e fraquezas, para ajudar os aventureiros a se prepararem para os encontros que terão pela frente!")
+
+        st.divider()
+
+        st.markdown("**Criaturas de Zenestria**")
+
+        ## Adicionar a lista de criaturas
+
+        st.divider()
+        
+        st.markdown("**Criaturas do Terreno Paralelo**")
+        locais = st.tabs(["Gaia","Eris","Moira","Interios","Nebulus","Infernus"])
+
+    with abas_principais[2]: #Loja
+        st.info("A Loja de Daitai Sunpo está sendo preparada. Em breve, um espaço para adquirir itens mágicos, equipamentos e recursos para suas aventuras!")
+    
+    with abas_principais[3]: #Biblioteca
+        st.info("A Biblioteca de Daitai Sunpo está em fase de desenvolvimento. Em breve, um acervo de livros, grimórios e conhecimentos para expandir o universo do jogo!")
 mostrar_ficha_daitai()
