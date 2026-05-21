@@ -425,6 +425,11 @@ TABELA_G_TIPO_TECNICA = [
 
 TABELA_H_MOD_TECNICA = [
     {
+        "'Modificador": "Alcance Estendido",
+        "Descrição": "Aumenta o alcance da técnica em um estágio.",
+        "Custo": "3"
+    },
+    {
         "'Modificador": "Golpe Carregado",
         "Descrição": "Aumenta em 1 a quantidade de dados bônus.",
         "Custo": "2"

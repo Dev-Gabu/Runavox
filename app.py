@@ -465,23 +465,16 @@ def mostrar_grimorio_mago_marcial(p):
 
     with aba2:
 
-        # --- CÁLCULO DE CAPACIDADE BASEADO EM RESISTÊNCIA ---
         at_personagem = p.get("Atributos", {"RES": 6})
         mod_res = get_mod(at_personagem.get("RES", 6))
         nivel_atual = p.get("Nivel", 1)
-        
-        # Regra oficial do Mago Marcial (Nível + Mod. RES)
         lc_limite = nivel_atual + mod_res 
         
         st.write(f"**Nível:** {nivel_atual} | **Modificador de RES:** {mod_res}")
         st.info(f"🛡️ Seu **Limite de Complexidade (LC)** para Magia Marcial é: **{lc_limite}**")
 
-        # Divisão interna por Sub-Abas para organizar as duas mecânicas distintas
         sub_aba_formacao, sub_aba_tecnica = st.tabs(["🥋 Criar Formação", "👊 Criar Técnica"])
-
-        # ==========================================
-        # SUB-ABA 1: FORMAÇÕES ELEMENTAIS
-        # ==========================================
+       
         with sub_aba_formacao:
             st.subheader("Passo 1: Definir o Arquétipo da Formação")
             opcoes_formacao = [f["Tipo"] for f in TABELA_E_TIPO_FORMACAO]
@@ -552,9 +545,6 @@ def mostrar_grimorio_mago_marcial(p):
                 }
                 st.json(objeto_formacao)
 
-        # ==========================================
-        # SUB-ABA 2: TÉCNICAS MARCIAIS
-        # ==========================================
         with sub_aba_tecnica:
             st.subheader("Passo 1: Definir o Estilo de Golpe")
             opcoes_tecnica = [t["Tipo"] for t in TABELA_G_TIPO_TECNICA]
@@ -568,6 +558,13 @@ def mostrar_grimorio_mago_marcial(p):
             col_t2.metric("Alcance Padrão", t_base["Alcance"])
             
             comp_t_base = t_base["Complexidade"]
+
+            elemento_tecnica = "Neutro"
+
+            with st.expander("Selecionar elemento da formação:"):
+                for elemento in TABELA_ELEMENTOS:
+                    if st.checkbox(elemento):
+                        elemento_tecnica = elemento
 
             st.markdown("---")
             st.subheader("Passo 2: Aplicar Modificadores de Impacto")
@@ -587,13 +584,27 @@ def mostrar_grimorio_mago_marcial(p):
                 if st.checkbox(label, key=f"tec_mod_{nome_mod}"):
                     mods_t_escolhidos.append(nome_mod)
                     comp_t_mods += custo_limpo
+                    descricao_mods += f"{mod['Descrição']} "
+
+                for mod in mods_t_escolhidos:
+                    if mod == "Alcance Estendido":
+                        if t_base["Alcance"] == "Corpo a Corpo":
+                            t_base["Alcance"] = "Curto"
+                        elif t_base["Alcance"] == "Curto":
+                            t_base["Alcance"] = "Médio"
+                        elif t_base["Alcance"] == "Médio":
+                            t_base["Alcance"] = "Longo"
+                    elif mod == "Golpe Carregado":
+                        t_base["Dano"] = (t_base["Dano"][0] + 1, t_base["Dano"][1]) if t_base["Dano"] else None
+                    elif mod == "Golpe Devastador":
+                        t_base["Dano"] = (t_base["Dano"][0], t_base["Dano"][1] + 2 if t_base["Dano"][1] < 12 else t_base["Dano"][1] + 8) if t_base["Dano"] else None
 
             st.markdown("---")
             st.subheader("✒️ Transcrever Técnica no Grimório")
             nome_tecnica = st.text_input("Nome da Técnica (Ex: Impacto Relâmpago de Electro)", key="input_nome_tec")
             
             total_lc_t = comp_t_base + comp_t_mods
-            pm_t = max(5, total_lc_t * 5) # Evita bugs com custos zerados ou negativos por debuffs
+            pm_t = max(5, total_lc_t * 5)
 
             ct1, ct2, ct3 = st.columns(3)
             ct1.metric("Complexidade Base", f"{comp_t_base} LC")
@@ -605,12 +616,18 @@ def mostrar_grimorio_mago_marcial(p):
             else:
                 st.success("✅ **Técnica aprovada!** Pronta para ser desferida na linha de frente.")
                 objeto_tecnica = {
-                    "Nome": nome_tecnica if nome_tecnica else tecnica_sel,
-                    "Estilo_Golpe": tecnica_sel,
-                    "Modificadores": mods_t_escolhidos,
-                    "Complexidade": total_lc_t,
-                    "Custo_Mana_PM": pm_t
-                }
+                        "Categoria": "tecnica",
+                        "Nome": nome_tecnica if nome_tecnica else tecnica_sel,
+                        "Elemento": elemento_tecnica,
+                        "Tipo": tecnica_sel,
+                        "Descrição": descricao_mods.strip() if descricao_mods else t_base["Descrição"],
+                        "Dano": t_base["Dano"] if t_base["Dano"] else None,
+                        "Duração": t_base["Duração"] if t_base["Duração"] else None,
+                        "Alcance": t_base["Alcance"] if t_base["Alcance"] else "Curto",
+                        "Complexidade": total_lc_t,
+                        "Custo_Mana_PM": pm_t
+                    }
+                
                 st.json(objeto_tecnica)
 
 ## PÁGINA PRINCIPAL
