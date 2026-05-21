@@ -9,10 +9,9 @@
 			"\t\"Tipo\": \"$3\",",
 			"\t\"Descrição\": \"$4\",",
 			"\t\"Dano\": \"$5\",",
-			"\t\"Duração\": \"$6\",",
-			"\t\"Alcance\": \"$7\",",
-			"\t\"Complexidade\": \"$8\",",
-			"\t\"Custo\": \"$9\"",
+			"\t\"Alcance\": \"$6\",",
+			"\t\"Complexidade\": \"$7\",",
+			"\t\"Custo\": \"$8\"",
 			"},"
 		],
 		"description": "Snippet para criar uma nova tecnica marcial. Substitua os valores de exemplo pelos atributos reais da sua habilidade."

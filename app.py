@@ -612,7 +612,6 @@ def mostrar_grimorio_mago_marcial(p):
                         "Tipo": tecnica_sel,
                         "Descrição": descricao_mods.strip() if descricao_mods else t_base["Descrição"],
                         "Dano": t_base["Dano"] if t_base["Dano"] else None,
-                        "Duração": t_base["Duração"] if t_base["Duração"] else None,
                         "Alcance": t_base["Alcance"] if t_base["Alcance"] else "Curto",
                         "Complexidade": total_lc_t,
                         "Custo_Mana_PM": pm_t
