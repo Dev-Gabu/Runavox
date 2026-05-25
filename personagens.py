@@ -1300,6 +1300,31 @@ personagens_daitai = {
             ],
         "Inventario": [
                 ],
+        
+        "Grimorio": [
+            {
+            "Nome": "Cativeiro de Belial",
+            "Tipo": "Efeito / Condição",
+            "Elemento": "Piro",
+            "Descrição": "Imobiliza um alvo ao contato. O mago deve gastar sua Ação Completa para manter o feitiço ativo. ",
+            'Complexidade': 2,
+            'Mana': 10,
+            "Dano": None,
+            "Alcance": "Curto",
+            "Duração": "1 Turno"
+            },
+            {
+            "Nome": "Impacto  Abbadon",
+            "Tipo": "Dano Direto",
+            "Elemento": "Piro",
+            "Descrição": "Projétil causa dano direto.",
+            'Complexidade': 2,
+            'Mana': 10,
+            "Dano": (2, 6),
+            "Alcance": "Curto",
+            "Duração": "Instantâneo",
+            },
+        ]
     },
 
     "Sóka Mo-Li": {
@@ -1674,5 +1699,231 @@ personagens_daitai = {
                 "Dano dado": (1, 6)
             }
         ]
-        }
+        },
+
+    "Zyran Ivanov": {
+            "Titulo": "",
+            "Raça": "Elfo",
+            "Nivel": 1,
+            "Elementos": ["Piro"],
+            "Especializacao": "Magia Marcial", # type: ignore
+            "Foto": "pp/zyran.jpg",
+
+            "Atributos": {
+                "FOR": 8,
+                "INT": 9,
+                "DES": 4,
+                "RES": 5,
+                "VON": 4
+            },
+
+            "Pericias_Investidas": {
+                "Atletismo": 0, 
+                "Briga": 2,
+                "Linguística": 0, 
+                "Magia Teórica": 1, 
+                "Natureza": 0,
+                "Furtividade": 0, 
+                "Pontaria": 0, 
+                "Prestididitação": 0, 
+                "Montaria": 0,
+                "Fortitude": 1, 
+                "Resiliência": 0, 
+                "Recuperação": 0,
+                "Liderança": 0, 
+                "Intimidação": 0, 
+                "Negociação": 0, 
+                "Meditação": 0
+            },
+
+            "Talentos" : {
+                "Ventos uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+                "Força Aprimorada": "+2 Força",
+                "Conexão Elementar": "Recebe um bônus de +2 no Dano ou Efeito de todos os feitiços de seu Elemento Primário.",
+            },
+
+        "Equipamento" : [
+                    {
+                    "Nome": "", 
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "",
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capacete", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Peitoral", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Calça", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Bota", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Luva", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capa", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 2
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Colar", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+            ],
+        "Inventario": [],
+        "Grimório":[]
+        },
+
+    "Zahria Ivanov": {
+            "Titulo": "",
+            "Raça": "Elfo",
+            "Nivel": 1         ,
+            "Elementos": ["Aero"],
+            "Especializacao": "Conjurador",
+            "Foto": "pp/zahria.jpg",
+    
+            "Atributos": {
+                "FOR": 3,
+                "INT": 12,
+                "DES": 7,
+                "RES": 3,
+                "VON": 5
+            },
+    
+            "Pericias_Investidas": {
+                "Atletismo": 0, 
+                "Briga": 0,
+                "Linguística": 1, 
+                "Magia Teórica": 2, 
+                "Natureza": 0,
+                "Furtividade": 0, 
+                "Pontaria": 0, 
+                "Prestididitação": 0, 
+                "Montaria": 0,
+                "Fortitude": 0, 
+                "Resiliência": 0, 
+                "Recuperação": 0,
+                "Liderança": 0, 
+                "Intimidação": 0, 
+                "Negociação": 0, 
+                "Meditação": 1
+            },
+    
+            "Talentos" : {
+                "Ventos Uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+                "Canalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
+                "Erudito Mágico": "+2 slots de feitiço iniciais"
+            },
+    
+        "Equipamento" : [
+                    {
+                    "Nome": "", 
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "",
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capacete", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Peitoral", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Calça", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Bota", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Luva", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capa", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 2
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Colar", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+            ],
+        "Inventario": [],
+        "Grimório":[]
+        },
 }

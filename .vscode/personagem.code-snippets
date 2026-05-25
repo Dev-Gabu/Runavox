@@ -111,7 +111,7 @@
 		"        ],",
 		"    \"Inventario\": [],",
 		"    \"Grimório\":[]",
-		"    }"
+		"    },"
 	],
 	"description": "Snippet para criar um novo personagem. Substitua os valores de exemplo pelos atributos reais do seu personagem."
 	}
