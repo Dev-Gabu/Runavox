@@ -1324,6 +1324,17 @@ personagens_daitai = {
             "Alcance": "Curto",
             "Duração": "Instantâneo",
             },
+            {
+            "Nome": "Olhos de Ramiel",
+            "Tipo": "Informação",
+            "Elemento": "Piro",
+            "Descrição": "Concede percepção além do normal.",
+            'Complexidade': 2,
+            'Mana': 10,
+            "Dano": None,
+            "Alcance": "Pessoal",
+            "Duração": "1 minuto.",
+            },
         ]
     },
 
