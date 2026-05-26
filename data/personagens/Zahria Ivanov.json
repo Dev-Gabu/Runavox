@@ -1,0 +1,113 @@
+    {
+            "Nome": "Zahria Ivanov",
+            "Titulo": "",
+            "Raça": "Elfo",
+            "Nivel": 1         ,
+            "Elementos": ["Aero"],
+            "Especializacao": "Conjuração",
+            "Foto": "assets/pp/zahria.jpg",
+    
+            "Atributos": {
+                "FOR": 3,
+                "INT": 12,
+                "DES": 7,
+                "RES": 3,
+                "VON": 5
+            },
+    
+            "Pericias_Investidas": {
+                "Atletismo": 0, 
+                "Briga": 0,
+                "Linguística": 1, 
+                "Magia Teórica": 2, 
+                "Natureza": 0,
+                "Furtividade": 0, 
+                "Pontaria": 0, 
+                "Prestididitação": 0, 
+                "Montaria": 0,
+                "Fortitude": 0, 
+                "Resiliência": 0, 
+                "Recuperação": 0,
+                "Liderança": 0, 
+                "Intimidação": 0, 
+                "Negociação": 0, 
+                "Meditação": 1
+            },
+    
+            "Talentos" : {
+                "Ventos Uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+                "Canalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
+                "Erudito Mágico": "+2 slots de feitiço iniciais"
+            },
+    
+        "Equipamento" : [
+                    {
+                    "Nome": "", 
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "",
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capacete", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Peitoral", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Calça", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Bota", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Luva", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capa", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 2
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Colar", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    }
+            ],
+        "Inventario": [],
+        "Grimório":[]
+        }

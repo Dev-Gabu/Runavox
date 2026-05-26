@@ -1,0 +1,127 @@
+{
+    "Nome": "Hugo Antonelli Roux",
+    "Titulo": "",
+    "Raça": "Elfo",
+    "Nivel": 6,
+    "Elementos": ["Aero", "Electro", "Vibro","Hidro"],
+    "Especializacao": "Conjuração",
+    "Foto": "assets/pp/hugo.jpg",
+
+    "Atributos": {
+        "FOR": 2,
+        "INT": 14,
+        "DES": 7,
+        "RES": 6,
+        "VON": 12
+    },
+
+    "Pericias_Investidas": {
+        "Atletismo": 0, 
+        "Briga": 0,
+        "Linguística": 1, 
+        "Magia Teórica": 2, 
+        "Natureza": 1,
+        "Furtividade": 0, 
+        "Pontaria": 1, 
+        "Prestididitação": 0, 
+        "Montaria": 0,
+        "Fortitude": 0, 
+        "Resiliência": 1, 
+        "Recuperação": 1,
+        "Liderança": 0, 
+        "Intimidação": 0, 
+        "Negociação": 1, 
+        "Meditação": 1
+    },
+
+    "Talentos" : {
+        "Ventos Uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+        "Inteligência Aprimorada": "+2 em Inteligência",
+        "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%."
+    },
+
+    "Equipamento" : [
+            {
+            "Nome": "Lança Rústica", 
+            "Tipo": "Arma", 
+            "Descrição": "+2 dano corpo a corpo.",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "",
+            "Tipo": "Arma", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Capacete", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Peitoral", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Calça", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Bota", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Luva", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "", 
+            "Tipo": "Capa", 
+            "Descrição": "",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "Anel Arcano", 
+            "Tipo": "Acessório", 
+            "Descrição": "+20 PM.",
+            "Quantidade": 2
+            },
+            {
+            "Nome": "Anel Mágico [Bom]", 
+            "Tipo": "Acessório", 
+            "Descrição": "+15 PM.",
+            "Quantidade": 1
+            },
+            {
+            "Nome": "Colar de Resistência Elemental [Hidro]", 
+            "Tipo": "Colar", 
+            "Descrição": "Recebe resistência a ataques do elemento Hidro, reduzindo o dano em -7.",
+            "Quantidade": 1
+            }
+    ],
+
+    "Inventario": [
+        {
+        "Nome": "Anel Mágico", 
+        "Tipo": "Equipamento", 
+        "Descrição": "+10 MP",
+        "Quantidade": 7
+        },
+        {
+        "Nome": "Anel Mágico [Bom]", 
+        "Tipo": "Equipamento", 
+        "Descrição": "+15 MP",
+        "Quantidade": 2
+        }
+        
+    ]
+}

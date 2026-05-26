@@ -2,7 +2,6 @@ from bestiario import Bestiario
 import streamlit as st
 import pandas as pd
 from lists_daitai import *
-from personagens import personagens_daitai
 import random, json, os
 
 ## CARREGAMENTO DE PERSONAGEM EM CACHE

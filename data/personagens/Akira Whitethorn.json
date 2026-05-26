@@ -1,0 +1,170 @@
+{
+        "Nome": "Akira Whitethorn",
+        "Titulo": "",
+        "Raça": "Elfo",
+        "Nivel": 9,
+        "Elementos": ["Piro, Metalo, Hidro e Crio"],
+        "Especializacao": "Conjuração",
+        "Foto": "assets/pp/akira.jpg",
+
+        "Atributos": {
+            "FOR": 7,
+            "INT": 7,
+            "DES": 10,
+            "RES": 7,
+            "VON": 11
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 2, 
+            "Briga": 1,
+            "Linguística": 0, 
+            "Magia Teórica": 0, 
+            "Natureza": 2,
+            "Furtividade": 3, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 1, 
+            "Resiliência": 1, 
+            "Recuperação": 0,
+            "Liderança": 2, 
+            "Intimidação": 1, 
+            "Negociação": 0, 
+            "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Ventos Uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+            "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA).",
+            "Mente Blindada": "+2 VON"
+        },
+
+        "Equipamento" : [
+                {
+                "Nome": "Katana Óssea", 
+                "Tipo": "Arma", 
+                "Descrição": "1d6 dano corpo a corpo. Em 15+ no dado de acerto, causa aumenta o dano para 2d6",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Punhal Atordoante", 
+                "Tipo": "Arma", 
+                "Descrição": "A cada dois ataques bem-sucedidos, o alvo fica atordoado.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Peitoral Simples", 
+                "Tipo": "Peitoral", 
+                "Descrição": "+10 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Calça Simples", 
+                "Tipo": "Calça", 
+                "Descrição": "+6 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Botas Simples", 
+                "Tipo": "Bota", 
+                "Descrição": "+4 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Luvas Simples", 
+                "Tipo": "Luva", 
+                "Descrição": "+4 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Capa Simples", 
+                "Tipo": "Capa", 
+                "Descrição": "+4 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel de Inverno", 
+                "Tipo": "Acessório", 
+                "Descrição": "+20 MP +10 HP. Chamado de Aurora. (1 uso diário/ missão) : Em momento de risco, o usuário pode recitar o chamado 'Ressoe seu grito pelo vento gélido, cria de Aurora!', assim invocando uma Banshee Gélida que o defenderá. Banshee gélida tem força sobre-humana, garras cortantes e um grito atordoante, mas pode permanecer em campo por apenas um turno antes de desaparecer.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Arcano", 
+                "Tipo": "Acessório", 
+                "Descrição": "+20 MP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Catalizador de Essência", 
+                "Tipo": "Colar", 
+                "Descrição": "Permite ao usuário armazenar e utilizar a alma de uma criatura para realizar um mimitismo bestial.",
+                "Quantidade": 1
+                }
+        ],
+
+        "Inventario": [
+            {
+                "Nome": "Clava Rústica", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+4 dano corpo a corpo.",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Lança Rústica", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 dano corpo a corpo.",
+                "Quantidade": 1
+                },
+                
+                {
+                "Nome": "Cinto Iniciante", 
+                "Tipo": "Equipamento", 
+                "Descrição": "+2 HP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Arcano", 
+                "Tipo": "Acessório", 
+                "Descrição": "+20 MP",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Anel Mágico", 
+                "Tipo": "Acessório", 
+                "Descrição": "+10 MP",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "Poção Ignis", 
+                "Tipo": "Consumível", 
+                "Descrição": "Aumenta o dano de feitiços em 50% por dois turnos. Uma poção de coloração vermelha e que brilha como o fogo. Ao ser ingerida potencializa os ataques, porém arde como se o usuário tivesse comido a pior pimenta do mundo",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "Frasco de Cura Menor", 
+                "Tipo": "Consumível", 
+                "Descrição": "Restaura 10 HP",
+                "Quantidade": 6
+                },
+                {
+                "Nome": "Frasco de Mana Menor", 
+                "Tipo": "Consumível", 
+                "Descrição": "Restaura 10 MP",
+                "Quantidade": 6
+                },
+                {
+                "Nome": "Projeto de Poção Ignis", 
+                "Tipo": "Consumivel", 
+                "Descrição": "Permite ao usuário criar [Poção Ignis].",
+                "Quantidade": 1
+                }
+               ]
+    }
+    

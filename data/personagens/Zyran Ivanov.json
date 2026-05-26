@@ -1,0 +1,113 @@
+    {
+            "Nome": "Zyran Ivanov",
+            "Titulo": "",
+            "Raça": "Elfo",
+            "Nivel": 1,
+            "Elementos": ["Piro"],
+            "Especializacao": "Magia Marcial",
+            "Foto": "assets/pp/zyran.jpg",
+
+            "Atributos": {
+                "FOR": 8,
+                "INT": 9,
+                "DES": 4,
+                "RES": 5,
+                "VON": 4
+            },
+
+            "Pericias_Investidas": {
+                "Atletismo": 0, 
+                "Briga": 2,
+                "Linguística": 0, 
+                "Magia Teórica": 1, 
+                "Natureza": 0,
+                "Furtividade": 0, 
+                "Pontaria": 0, 
+                "Prestididitação": 0, 
+                "Montaria": 0,
+                "Fortitude": 1, 
+                "Resiliência": 0, 
+                "Recuperação": 0,
+                "Liderança": 0, 
+                "Intimidação": 0, 
+                "Negociação": 0, 
+                "Meditação": 0
+            },
+
+            "Talentos" : {
+                "Ventos uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+                "Força Aprimorada": "+2 Força",
+                "Conexão Elementar": "Recebe um bônus de +2 no Dano ou Efeito de todos os feitiços de seu Elemento Primário."
+            },
+
+        "Equipamento" : [
+                    {
+                    "Nome": "", 
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "",
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capacete", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Peitoral", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Calça", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Bota", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Luva", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capa", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 2
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Colar", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    }
+            ],
+        "Inventario": [],
+        "Grimório":[]
+        }

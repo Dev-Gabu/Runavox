@@ -1,0 +1,117 @@
+    {
+        "Nome": "August Antonelli Roux",
+        "Titulo": "",
+        "Raça": "Elfo",
+        "Nivel": 3,
+        "Elementos": ["Piro", "Metalo"],
+        "Especializacao": "Conjuração",
+        "Foto": "assets/pp/august.jpg",
+
+        "Atributos": {
+            "FOR": 4,
+            "INT": 8,
+            "DES": 5,
+            "RES": 6,
+            "VON": 10
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 0, 
+            "Briga": 0,
+            "Linguística": 1, 
+            "Magia Teórica": 2, 
+            "Natureza": 0,
+            "Furtividade": 1, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 0, 
+            "Resiliência": 0, 
+            "Recuperação": 1,
+            "Liderança": 0, 
+            "Intimidação": 0, 
+            "Negociação": 0, 
+            "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Ventos Uivantes": "Uma vez ao dia, pode obter informações úteis do NR.",
+            "Conexão Elemental": "Recebe um bônus de +2 no Dano ou Efeito de todos os feitiços de seu Elemento Primário.",
+            "Ilusionista Iniciante": "Sabe o feitiço neutro [Ilusão]"
+
+
+
+
+        },
+
+    "Equipamento" : [
+                {
+                "Nome": "", 
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "",
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Peitoral", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Calça", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Bota", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Luva", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capa", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Colar", 
+                "Descrição": "",
+                "Quantidade": 1
+                }
+        ],
+    "Inventario": [
+               ]
+    }

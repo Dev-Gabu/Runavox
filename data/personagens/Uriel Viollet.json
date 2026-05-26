@@ -1,0 +1,116 @@
+{
+        "Nome": "Uriel Viollet",
+        "Titulo": "",
+        "Raça": "Humano",
+        "Nivel": 3         ,
+        "Elementos": ["Geo","Fito"],
+        "Especializacao": "Magia Marcial",
+        "Foto": "assets/pp/uriel.jpg",
+
+        "Atributos": {
+            "FOR": 12,
+            "INT": 5,
+            "DES": 5,
+            "RES": 10,
+            "VON": 2
+        },
+
+        "Pericias_Investidas": {
+            "Atletismo": 2, 
+            "Briga": 1,
+            "Linguística": 0, 
+            "Magia Teórica": 0, 
+            "Natureza": 0,
+            "Furtividade": 0, 
+            "Pontaria": 0, 
+            "Prestididitação": 0, 
+            "Montaria": 0,
+            "Fortitude": 0, 
+            "Resiliência": 2, 
+            "Recuperação": 0,
+            "Liderança": 0, 
+            "Intimidação": 1, 
+            "Negociação": 0, 
+            "Meditação": 0
+        },
+
+        "Talentos" : {
+            "Força Aprimorada": "+2 Força",
+            "Foco na Batalha": "Quando está em combate direto (corpo a corpo), o Mago tem +1 em seu total de Pontos de Armadura (PA)."
+        },
+
+        "Equipamento" : [
+                {
+                "Nome": "", 
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "",
+                "Tipo": "Arma", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capacete", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Peitoral", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Calça", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Bota", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Luva", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Capa", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 2
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Acessório", 
+                "Descrição": "",
+                "Quantidade": 1
+                },
+                {
+                "Nome": "", 
+                "Tipo": "Colar", 
+                "Descrição": "",
+                "Quantidade": 1
+                }
+        ],
+
+        "Inventario": [
+               ],
+
+        "Grimorio":[
+        ]
+    }

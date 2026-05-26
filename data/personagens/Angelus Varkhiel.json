@@ -1,0 +1,149 @@
+ {
+            "Nome": "Angelus Varkhiel",
+            "Titulo": "",
+            "Raça": "Nesferus",
+            "Nivel": 1         ,
+            "Elementos": ["Piro"],
+            "Especializacao": "Conjuração",
+            "Foto": "assets/pp/angelus.jpg",
+
+            "Atributos": {
+                "FOR": 4,
+                "INT": 8,
+                "DES": 5,
+                "RES": 5,
+                "VON": 8
+            },
+
+            "Pericias_Investidas": {
+                "Atletismo": 0, 
+                "Briga": 0,
+                "Linguística": 1, 
+                "Magia Teórica": 2, 
+                "Natureza": 0,
+                "Furtividade": 0, 
+                "Pontaria": 0, 
+                "Prestididitação": 0, 
+                "Montaria": 0,
+                "Fortitude": 0, 
+                "Resiliência": 0, 
+                "Recuperação": 0,
+                "Liderança": 1, 
+                "Intimidação": 0, 
+                "Negociação": 0, 
+                "Meditação": 0
+            },
+
+            "Talentos" : {
+                "Premonição Demoníaca": "Pode receber uma visão de um evento futuro aleatoriamente. Pode ser ativada uma vez por combate para receber vantagem em uma esquiva.",
+                "Conexão Elementar": "Recebe um bônus de +2 no Dano ou Efeito de todos os feitiços de seu Elemento Primário.",
+                "Rastreador Mágico": "Tem vantagem em testes de detecção mágica"
+            },
+
+        "Equipamento" : [
+                    {
+                    "Nome": "", 
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "",
+                    "Tipo": "Arma", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capacete", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Peitoral", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Calça", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Bota", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Luva", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Capa", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 2
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Acessório", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    },
+                    {
+                    "Nome": "", 
+                    "Tipo": "Colar", 
+                    "Descrição": "",
+                    "Quantidade": 1
+                    }
+            ],
+        "Inventario": [
+                ],
+        
+        "Grimorio": [
+            {
+            "Nome": "Cativeiro de Belial",
+            "Tipo": "Efeito / Condição",
+            "Elemento": "Piro",
+            "Descrição": "Imobiliza um alvo ao contato. O mago deve gastar sua Ação Completa para manter o feitiço ativo. ",
+            "Complexidade": 2,
+            "Mana": 10,
+            "Dano": "",
+            "Alcance": "Curto",
+            "Duração": "1 Turno"
+            },
+            {
+            "Nome": "Impacto  Abbadon",
+            "Tipo": "Dano Direto",
+            "Elemento": "Piro",
+            "Descrição": "Projétil causa dano direto.",
+            "Complexidade": 2,
+            "Mana": 10,
+            "Dano": [2, 6],
+            "Alcance": "Curto",
+            "Duração": "Instantâneo"
+            },
+            {
+            "Nome": "Olhos de Ramiel",
+            "Tipo": "Informação",
+            "Elemento": "Piro",
+            "Descrição": "Concede percepção além do normal.",
+            "Complexidade": 2,
+            "Mana": 10,
+            "Dano": "",
+            "Alcance": "Pessoal",
+            "Duração": "1 minuto."
+            }
+        ]
+    }
