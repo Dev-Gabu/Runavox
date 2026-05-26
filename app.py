@@ -3,7 +3,23 @@ import streamlit as st
 import pandas as pd
 from lists_daitai import *
 from personagens import personagens_daitai
-import random
+import random, json, os
+
+## CARREGAMENTO DE PERSONAGEM EM CACHE
+@st.cache_data
+def carregar_todos_personagens():
+    pasta = "data/personagens"
+    personagens = {}
+    
+    if os.path.exists(pasta):
+        for arquivo in os.listdir(pasta):
+            if arquivo.endswith(".json"):
+                caminho_completo = os.path.join(pasta, arquivo)
+                with open(caminho_completo, "r", encoding="utf-8") as f:
+                    dados = json.load(f)
+                    # Usamos o nome como chave para facilitar a busca no selectbox
+                    personagens[dados["Nome"]] = dados
+    return personagens
 
 ## FICHA BASE
 def renderizar_pericias(p):
@@ -44,7 +60,7 @@ def mostrar_inventario(p):
 
     for item in inventario:
         # Lógica do ícone conforme o tipo
-        icon_path = ICON_MAP.get(item["Tipo"], "assets/material.png")
+        icon_path = ICON_MAP.get(item["Tipo"], "assets/ui/material.png")
         
         # Criar a linha do item usando colunas para alinhar ícone e botão
         col_icon, col_btn = st.columns([1, 10])
@@ -618,12 +634,13 @@ def mostrar_grimorio_mago_marcial(p):
                     }
                 
                 st.json(objeto_tecnica)
+
 ## FICHA COMPLETA
 def mostrar_ficha_daitai():
     st.title("Ficha de Personagem")
-    char_sel = st.selectbox("Selecione o Personagem", list(personagens_daitai.keys()))
-    p = personagens_daitai[char_sel]
-    
+    char_sel = st.selectbox("Selecione o Personagem", list(carregar_todos_personagens().keys()))
+    p = carregar_todos_personagens()[char_sel]
+
     st.divider()
 
     # Cabeçalho da Ficha
@@ -633,7 +650,7 @@ def mostrar_ficha_daitai():
         st.image(p["Foto"], use_container_width=True)
         
     with col_info:
-        st.header(char_sel)
+        st.header(f"*{p['Nome']}*")
         st.subheader(f"*{p['Titulo']}*")
         st.subheader(f"*{p['Raça']}*")
         
@@ -770,7 +787,7 @@ def mostrar_bestiario_daitai():
             # Coluna 1: Imagem reduzida (Miniatura de 45px)
             with col_miniatura:
                 try:
-                    st.image(monstro.get("Aparencia", "assets/invocacao.jpg"), width=45)
+                    st.image(monstro.get("Aparencia", "assets/ui/invocacao.jpg"), width=45)
                 except:
                     st.write("## 👾") # Fallback visual caso o arquivo de imagem falte no servidor
             

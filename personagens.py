@@ -1,183 +1,11 @@
 personagens_daitai = {
-    "Zefiro Kruguel": {
-        "Titulo": "O Açougueiro Infernal",
-        "Raça": "Demônio",
-        "Nivel": 6,
-        "Elementos": ["Piro", "Metalo", "Umbra"],
-        "Especializacao": "Conjuração",
-        "Foto": "pp/zefiro.jpg",
-
-        "Atributos": {
-            "FOR": 7,
-            "INT": 10,
-            "DES": 6,
-            "RES": 6,
-            "VON": 9
-        },
-
-        "Pericias_Investidas": {
-            "Atletismo": 0, 
-            "Briga": 0,
-            "Linguística": 1, 
-            "Magia Teórica": 2, 
-            "Natureza": 0,
-            "Furtividade": 0, 
-            "Pontaria": 2, 
-            "Prestididitação": 0, 
-            "Montaria": 0,
-            "Fortitude": 0, 
-            "Resiliência": 1, 
-            "Recuperação": 0,
-            "Liderança": 0, 
-            "Intimidação": 0, 
-            "Negociação": 0, 
-            "Meditação": 0
-        },
-
-        "Talentos" : {
-            "Fúria Demoníaca": " Ativável com <50% PV. Recebe +2 em FOR e INT, mas sofre −3 em RES.",
-            "A Alpha" : "Possui vantagem em interações com criaturas da categoria lupino, suas invocações lupinas recebem +2 em dano de ataques.",
-            "Catalizador de Mana": "O custo para todos os feitiços é reduzido em 10%.",
-            "Persuasão Forte": "Você tem Vantagem (+1d6) em testes de perícias sociais ao interagir com pessoas de uma hierarquia social inferior."
-
-        },
-        "Equipamento" : [
-            {
-                "Nome": "Punhal Atordoante", 
-                "Tipo": "Arma", 
-                "Descrição": "A cada dois ataques bem-sucedidos, o alvo fica atordoado.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "",
-                "Tipo": "Arma", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "", 
-                "Tipo": "Capacete", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Peitoral Iniciante", 
-                "Tipo": "Peitoral", 
-                "Descrição": "+5 HP.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Calça Iniciante", 
-                "Tipo": "Calça", 
-                "Descrição": "+3 HP.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "", 
-                "Tipo": "Bota", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "", 
-                "Tipo": "Luva", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "", 
-                "Tipo": "Capa", 
-                "Descrição": "",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Anel Arcano", 
-                "Tipo": "Acessório", 
-                "Descrição": "+20 PM.",
-                "Quantidade": 2
-                },
-                {
-                "Nome": "Receptáculo da Piromania", 
-                "Tipo": "Acessório", 
-                "Descrição": "A cada três feitiços do elemento Piro, aumenta dano do próximo em 50%.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Catalizador de Essência", 
-                "Tipo": "Colar", 
-                "Descrição": "Permite ao usuário armazenar e utilizar a alma de uma criatura para realizar um mimitismo bestial.",
-                "Quantidade": 1
-                },
-        ],
-
-        "Inventario": [
-            
-                {
-                "Nome": "Machado Rústico", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+2 em dano corpo a corpo, +4 em inimigos de madeira.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Lança Rústica [Excelente]", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+4 dano corpo a corpo.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Lança Rústica", 
-                "Tipo": "Equipamento", 
-                "Descrição": "+2 dano corpo a corpo.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Anel magico", 
-                "Tipo": "Artefato", 
-                "Descrição": "+10 PM.",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Projeto de Lança", 
-                "Tipo": "Consumivel", 
-                "Descrição": "Permite ao usuário criar [Lança Rústica].",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Projeto de Bonburedo", 
-                "Tipo": "Consumivel", 
-                "Descrição": "Permite ao usuário criar [Bonburedo].",
-                "Quantidade": 1
-                },
-                {
-                "Nome": "Presa de Batrogon", 
-                "Tipo": "Material", 
-                "Descrição": "A presa caída de um Batrogon.",
-                "Quantidade": 1
-                },
-        ],
-
-        "Grimorio": [
-            {
-            "Nome": "Baforada",
-            "Tipo": "Dano Direto",
-            "Elemento": "Piro",
-            "Descrição": "Projétil causa dano direto. Ataque em área de afeito de curto alcance. ",
-            'Complexidade': 8,
-            'Mana': 40,
-            "Dano": (3, 8),
-            "Alcance": "Curto",
-            "Duração": "Instantâneo",
-            },
-        ]
-    },
-
     "Hugo Antonelli Roux": {
         "Titulo": "",
         "Raça": "Elfo",
         "Nivel": 6,
         "Elementos": ["Aero", "Electro", "Vibro","Hidro"],
         "Especializacao": "Conjuração",
-        "Foto": "pp/hugo.jpg",
+        "Foto": "assets/pp/hugo.jpg",
 
         "Atributos": {
             "FOR": 2,
@@ -304,7 +132,7 @@ personagens_daitai = {
         "Nivel": 3         ,
         "Elementos": ["Geo","Fito"],
         "Especializacao": "Magia Marcial",
-        "Foto": "pp/nana.jpg",
+        "Foto": "assets/pp/nana.jpg",
 
         "Atributos": {
             "FOR": 10,
@@ -421,7 +249,7 @@ personagens_daitai = {
         "Nivel": 7         ,
         "Elementos": ["Aero","Electro","Umbra","Piro"],
         "Especializacao": "Magia Marcial",
-        "Foto": "pp/lidane.jpg",
+        "Foto": "assets/pp/lidane.jpg",
 
         "Atributos": {
             "FOR": 9,
@@ -540,7 +368,7 @@ personagens_daitai = {
         "Nivel": 3         ,
         "Elementos": ["Hidro", "Crio"],
         "Especializacao": "Conjuração",
-        "Foto": "pp/jade.jpg",
+        "Foto": "assets/pp/jade.jpg",
 
         "Atributos": {
             "FOR": 4,
@@ -585,7 +413,7 @@ personagens_daitai = {
         "Nivel": 9,
         "Elementos": ["Piro, Metalo, Hidro e Crio"],
         "Especializacao": "Conjuração",
-        "Foto": "pp/akira.jpg",
+        "Foto": "assets/pp/akira.jpg",
 
         "Atributos": {
             "FOR": 7,
@@ -754,7 +582,7 @@ personagens_daitai = {
         "Nivel": 4,
         "Elementos": ["Piro", "Metalo"],
         "Especializacao": "Invocação",
-        "Foto": "pp/amara.jpg",
+        "Foto": "assets/pp/amara.jpg",
 
         "Atributos": {
             "FOR": 6,
@@ -965,7 +793,7 @@ personagens_daitai = {
         "Nivel": 3,
         "Elementos": ["Piro", "Metalo"],
         "Especializacao": "Conjuração",
-        "Foto": "pp/august.jpg",
+        "Foto": "assets/pp/august.jpg",
 
         "Atributos": {
             "FOR": 4,
@@ -1082,7 +910,7 @@ personagens_daitai = {
             "Nivel": 1         ,
             "Elementos": ["Piro"],
             "Especializacao": "Magia Marcial",
-            "Foto": "pp/sathanael.jpg",
+            "Foto": "assets/pp/sathanael.jpg",
 
             "Atributos": {
                 "FOR": 10,
@@ -1195,7 +1023,7 @@ personagens_daitai = {
             "Nivel": 1         ,
             "Elementos": ["Piro"],
             "Especializacao": "Conjuração",
-            "Foto": "pp/angelus.jpg",
+            "Foto": "assets/pp/angelus.jpg",
 
             "Atributos": {
                 "FOR": 4,
@@ -1344,7 +1172,7 @@ personagens_daitai = {
         "Nivel": 1         ,
         "Elementos": ["Geo"],
         "Especializacao": "Conjurador",
-        "Foto": "pp/soka.jpg",
+        "Foto": "assets/pp/soka.jpg",
 
         "Atributos": {
             "FOR": 2,
@@ -1460,7 +1288,7 @@ personagens_daitai = {
         "Nivel": 3         ,
         "Elementos": ["Geo","Fito"],
         "Especializacao": "Magia Marcial",
-        "Foto": "pp/uriel.jpg",
+        "Foto": "assets/pp/uriel.jpg",
 
         "Atributos": {
             "FOR": 12,
@@ -1576,7 +1404,7 @@ personagens_daitai = {
             "Nivel": 1         ,
             "Elementos": ["Metalo"],
             "Especializacao": "Invocação",
-            "Foto": "pp/erick.jpg",
+            "Foto": "assets/pp/erick.jpg",
     
             "Atributos": {
                 "FOR": 2,
@@ -1718,7 +1546,7 @@ personagens_daitai = {
             "Nivel": 1,
             "Elementos": ["Piro"],
             "Especializacao": "Magia Marcial", # type: ignore
-            "Foto": "pp/zyran.jpg",
+            "Foto": "assets/pp/zyran.jpg",
 
             "Atributos": {
                 "FOR": 8,
@@ -1831,7 +1659,7 @@ personagens_daitai = {
             "Nivel": 1         ,
             "Elementos": ["Aero"],
             "Especializacao": "Conjuração",
-            "Foto": "pp/zahria.jpg",
+            "Foto": "assets/pp/zahria.jpg",
     
             "Atributos": {
                 "FOR": 3,

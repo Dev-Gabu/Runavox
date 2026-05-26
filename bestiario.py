@@ -2,7 +2,7 @@ Bestiario = {
     "Gaia": [
             {
                 "Nome": "Felidar",
-                "Aparencia": "criaturas/felidar.jpg",
+                "Aparencia": "assets/criaturas/felidar.jpg",
                 "Categoria": "Felino",
                 "Descricao" : "Um caçador rápido e hábil, que arma emboscadas em suas caçadas e ataca as presas com mordidas devastadoras. O tamanho de seus chifres determinam sua hierarquia dentro do bando.",
                 "PV": "20",
