@@ -1081,7 +1081,7 @@ personagens_daitai = {
             "Raça": "Nesferus",
             "Nivel": 1         ,
             "Elementos": ["Piro"],
-            "Especializacao": "Conjuração",
+            "Especializacao": "Magia Marcial",
             "Foto": "pp/sathanael.jpg",
 
             "Atributos": {
@@ -1830,7 +1830,7 @@ personagens_daitai = {
             "Raça": "Elfo",
             "Nivel": 1         ,
             "Elementos": ["Aero"],
-            "Especializacao": "Conjurador",
+            "Especializacao": "Conjuração",
             "Foto": "pp/zahria.jpg",
     
             "Atributos": {
