@@ -129,7 +129,7 @@
         "Grimorio": [
             {
                 "Nome": "Balerion",
-                "Aparencia": "invocacoes/balerion.jpg",
+                "Aparencia": "assets/invocacoes/balerion.jpg",
                 "Elemento": "Geo",
                 "Atributos": {
                     "FOR": 10,
@@ -169,7 +169,7 @@
             },
             {
                 "Nome": "Lorcan",
-                "Aparencia": "invocacoes/lorcan.jpg",
+                "Aparencia": "assets/invocacoes/lorcan.jpg",
                 "Elemento": "Geo",
                 "Atributos": {
                     "FOR": 6,

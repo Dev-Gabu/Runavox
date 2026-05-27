@@ -111,7 +111,7 @@
         "Grimorio":[
             {
                 "Nome": "Beldum",
-                "Aparencia": "invocacoes/beldum.jpg",
+                "Aparencia": "assets/invocacoes/beldum.jpg",
                 "Elemento": "Metalo",
                 "Atributos": {
                     "FOR": 8,

@@ -18,20 +18,20 @@ MAPA_PERICIAS = {
 }
 
 ICON_MAP = {
-    "Equipamento": "assets/equipamento.png",
-    "Consumivel": "assets/consumivel.png",
-    "Artefato": "assets/artefato.png",
-    "Material": "assets/material.png",
+    "Equipamento": "assets/ui/equipamento.png",
+    "Consumivel": "assets/ui/consumivel.png",
+    "Artefato": "assets/ui/artefato.png",
+    "Material": "assets/ui/material.png",
 
-    "Arma": "assets/espada.png",
-    "Capacete" : "assets/capacete.png",
-    "Peitoral": "assets/armaduras.png",
-    "Calça": "assets/calca.png",
-    "Bota": "assets/bota.png",
-    "Luva": "assets/luva.png",
-    "Capa": "assets/capa.png",
-    "Acessório": "assets/anel.png",
-    "Colar": "assets/colar.png",
+    "Arma": "assets/ui/espada.png",
+    "Capacete" : "assets/ui/capacete.png",
+    "Peitoral": "assets/ui/armaduras.png",
+    "Calça": "assets/ui/calca.png",
+    "Bota": "assets/ui/bota.png",
+    "Luva": "assets/ui/luva.png",
+    "Capa": "assets/ui/capa.png",
+    "Acessório": "assets/ui/anel.png",
+    "Colar": "assets/ui/colar.png",
 }
 
 TABELA_ELEMENTOS = [
